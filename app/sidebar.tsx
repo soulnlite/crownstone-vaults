@@ -52,7 +52,7 @@ export default function Sidebar() {
             padding: "0.6rem 1rem",
             borderRadius: "999px",
             border: "1px solid #C9A86A",
-            background: "#2E3442",
+            background: "#0D1B2A",
             color: "#F5F6F7",
             fontSize: "0.9rem",
             cursor: "pointer",
@@ -83,20 +83,22 @@ export default function Sidebar() {
         style={{
           width: "260px",
           minHeight: "100vh",
-          borderRight: "1px solid #333",
+          borderRight: "1px solid rgba(255,255,255,0.08)",
           padding: "2.5rem 1.8rem",
           boxSizing: "border-box",
           position: "fixed",
           left: 0,
           top: 0,
-          background: "linear-gradient(180deg, #2E3442 0%, #1A1F2B 60%, #151822 100%)",
+          background:
+            "linear-gradient(180deg, #0A1A2F 0%, #11243D 45%, #0B1623 100%)",
           color: "white",
           transform: open ? "translateX(0)" : "translateX(-100%)",
           transition: "transform 0.25s ease-out, box-shadow 0.25s ease-out",
-          boxShadow: "0 0 35px rgba(0,0,0,0.55)",
+          boxShadow: "0 0 40px rgba(0,0,0,0.55)",
           zIndex: 1002,
         }}
       >
+        {/* Brand Title */}
         <div
           style={{
             fontSize: "1.7rem",
@@ -104,6 +106,7 @@ export default function Sidebar() {
             fontWeight: 700,
             marginBottom: "2.8rem",
             letterSpacing: "0.06em",
+            color: "#FDF4E3",
           }}
         >
           Crownstone Vaults
@@ -118,6 +121,7 @@ export default function Sidebar() {
           ></div>
         </div>
 
+        {/* Navigation */}
         <nav style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
           {links.map((link) => {
             const active = isActive(link.href);
@@ -164,6 +168,7 @@ export default function Sidebar() {
                   }
                 }}
               >
+                {/* Gold Accent Bar */}
                 <div
                   style={{
                     width: "5px",
