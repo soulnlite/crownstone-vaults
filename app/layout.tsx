@@ -56,7 +56,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
 
-        <div style={{ flex: 1 }}>{children}</div>
+        {/* Global Wrapper */}
+        <div
+          style={{
+            flex: 1,
+            padding: "2rem",
+            maxWidth: "900px",
+            margin: "0 auto",
+            width: "100%",
+          }}
+        >
+          {children}
+        </div>
 
         <footer
           style={{
