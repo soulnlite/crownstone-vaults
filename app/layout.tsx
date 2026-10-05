@@ -35,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/governance" style={{ textDecoration: "none", color: "black" }}>Governance</a>
             <a href="/compliance" style={{ textDecoration: "none", color: "black" }}>Compliance</a>
             <a href="/accreditation" style={{ textDecoration: "none", color: "black" }}>Accreditation</a>
+            <a href="/risk" style={{ textDecoration: "none", color: "black" }}>Risk Management</a>
             <a href="/contact" style={{ textDecoration: "none", color: "black" }}>Contact</a>
           </nav>
         </header>
