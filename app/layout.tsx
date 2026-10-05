@@ -20,15 +20,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            padding: "1rem 2rem",
+            padding: "1.5rem 2.5rem",
             borderBottom: "1px solid #ddd",
           }}
         >
-          <div style={{ fontSize: "1.25rem", fontWeight: "bold" }}>
+          <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
             Crownstone Vaults Limited
           </div>
 
-          <nav style={{ display: "flex", gap: "1.5rem" }}>
+          <nav style={{ display: "flex", gap: "2rem" }}>
             <a href="/" style={{ textDecoration: "none", color: "black" }}>
               Home
             </a>
