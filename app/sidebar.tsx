@@ -83,31 +83,42 @@ export default function Sidebar() {
         style={{
           width: "260px",
           minHeight: "100vh",
-          borderRight: "1px solid #444",
+          borderRight: "1px solid #333",
           padding: "2.5rem 1.8rem",
           boxSizing: "border-box",
           position: "fixed",
           left: 0,
           top: 0,
-          background: "#2E3442",
+          background: "linear-gradient(180deg, #2E3442 0%, #1A1F2B 60%, #151822 100%)",
           color: "white",
           transform: open ? "translateX(0)" : "translateX(-100%)",
-          transition: "transform 0.25s ease-out",
+          transition: "transform 0.25s ease-out, box-shadow 0.25s ease-out",
+          boxShadow: "0 0 35px rgba(0,0,0,0.55)",
           zIndex: 1002,
         }}
       >
         <div
           style={{
-            fontSize: "1.6rem",
+            fontSize: "1.7rem",
             fontFamily: "Merriweather, serif",
             fontWeight: 700,
-            marginBottom: "2.5rem",
+            marginBottom: "2.8rem",
+            letterSpacing: "0.06em",
           }}
         >
-          Crownstone Vaults Limited
+          Crownstone Vaults
+          <div
+            style={{
+              marginTop: "0.4rem",
+              height: "2px",
+              width: "60%",
+              background:
+                "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.2) 70%, transparent 100%)",
+            }}
+          ></div>
         </div>
 
-        <nav style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
+        <nav style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
           {links.map((link) => {
             const active = isActive(link.href);
 
@@ -118,28 +129,51 @@ export default function Sidebar() {
                 onClick={() => isMobile && setOpen(false)}
                 style={{
                   textDecoration: "none",
-                  fontSize: "1rem",
+                  fontSize: "0.98rem",
                   fontWeight: 500,
-                  color: active ? "#C9A86A" : "#F5F6F7",
-                  padding: "0.4rem 0",
+                  color: active ? "#FDF4E3" : "#E3E6EB",
+                  padding: "0.55rem 0.2rem",
                   display: "flex",
                   alignItems: "center",
-                  gap: "0.6rem",
-                  transition: "color 0.25s ease, transform 0.25s ease",
+                  gap: "0.7rem",
+                  borderRadius: "999px",
+                  background: active
+                    ? "rgba(201,168,106,0.12)"
+                    : "transparent",
+                  transition:
+                    "color 0.22s ease, transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease",
+                  boxShadow: active
+                    ? "0 0 12px rgba(201,168,106,0.35)"
+                    : "none",
                 }}
                 onMouseEnter={(e) => {
-                  if (!isMobile) e.currentTarget.style.transform = "translateX(4px)";
+                  if (!isMobile) {
+                    e.currentTarget.style.transform = "translateX(6px)";
+                    e.currentTarget.style.background =
+                      active
+                        ? "rgba(201,168,106,0.18)"
+                        : "rgba(255,255,255,0.06)";
+                  }
                 }}
                 onMouseLeave={(e) => {
-                  if (!isMobile) e.currentTarget.style.transform = "translateX(0px)";
+                  if (!isMobile) {
+                    e.currentTarget.style.transform = "translateX(0px)";
+                    e.currentTarget.style.background = active
+                      ? "rgba(201,168,106,0.12)"
+                      : "transparent";
+                  }
                 }}
               >
                 <div
                   style={{
-                    width: "4px",
+                    width: "5px",
                     height: "100%",
-                    background: active ? "#C9A86A" : "transparent",
-                    transition: "background 0.25s ease",
+                    borderRadius: "999px",
+                    background: active
+                      ? "linear-gradient(180deg, #F3D39A 0%, #C9A86A 50%, #9C7C45 100%)"
+                      : "rgba(255,255,255,0.08)",
+                    opacity: active ? 1 : 0.6,
+                    transition: "background 0.22s ease, opacity 0.22s ease",
                   }}
                 ></div>
 
