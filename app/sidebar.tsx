@@ -27,7 +27,7 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Toggle button for small screens */}
+      {/* Toggle button (will be used in Phase 3) */}
       <button
         onClick={() => setOpen(!open)}
         style={{
@@ -76,20 +76,45 @@ export default function Sidebar() {
         </div>
 
         <nav style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              style={{
-                textDecoration: "none",
-                fontSize: "1rem",
-                fontWeight: 500,
-                color: isActive(link.href) ? "#C9A86A" : "#F5F6F7",
-              }}
-            >
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) => {
+            const active = isActive(link.href);
+
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                style={{
+                  textDecoration: "none",
+                  fontSize: "1rem",
+                  fontWeight: 500,
+                  color: active ? "#C9A86A" : "#F5F6F7",
+                  padding: "0.4rem 0",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.6rem",
+                  transition: "color 0.25s ease, transform 0.25s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateX(4px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateX(0px)";
+                }}
+              >
+                {/* Active bar */}
+                <div
+                  style={{
+                    width: "4px",
+                    height: "100%",
+                    background: active ? "#C9A86A" : "transparent",
+                    transition: "background 0.25s ease",
+                  }}
+                ></div>
+
+                {link.label}
+              </a>
+            );
+          })}
         </nav>
       </aside>
     </>
