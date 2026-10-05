@@ -12,23 +12,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           fontFamily: "Arial, sans-serif",
           minHeight: "100vh",
           display: "flex",
-          flexDirection: "column",
+          flexDirection: "row",
         }}
       >
-        <header
+        {/* Sidebar Navigation */}
+        <aside
           style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "1.5rem 2.5rem",
-            borderBottom: "1px solid #ddd",
+            width: "260px",
+            minHeight: "100vh",
+            borderRight: "1px solid #ddd",
+            padding: "2rem 1.5rem",
+            boxSizing: "border-box",
+            position: "fixed",
+            left: 0,
+            top: 0,
+            background: "#fafafa",
           }}
         >
-          <div style={{ fontSize: "1.4rem", fontWeight: "bold" }}>
+          <div style={{ fontSize: "1.4rem", fontWeight: "bold", marginBottom: "2rem" }}>
             Crownstone Vaults Limited
           </div>
 
-          <nav style={{ display: "flex", gap: "2rem" }}>
+          <nav style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             <a href="/" style={{ textDecoration: "none", color: "black" }}>Home</a>
             <a href="/about" style={{ textDecoration: "none", color: "black" }}>About</a>
             <a href="/services" style={{ textDecoration: "none", color: "black" }}>Services</a>
@@ -43,32 +48,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/terms" style={{ textDecoration: "none", color: "black" }}>Terms</a>
             <a href="/contact" style={{ textDecoration: "none", color: "black" }}>Contact</a>
           </nav>
-        </header>
+        </aside>
 
+        {/* Main Content Area */}
         <div
           style={{
+            marginLeft: "260px",
             flex: 1,
             padding: "2rem",
             maxWidth: "900px",
-            margin: "0 auto",
-            width: "100%",
+            boxSizing: "border-box",
           }}
         >
           {children}
-        </div>
 
-        <footer
-          style={{
-            marginTop: "3rem",
-            padding: "2rem",
-            borderTop: "1px solid #ddd",
-            textAlign: "center",
-            fontSize: "0.9rem",
-            color: "#555",
-          }}
-        >
-          © {new Date().getFullYear()} Crownstone Vaults Limited — All Rights Reserved
-        </footer>
+          <footer
+            style={{
+              marginTop: "3rem",
+              paddingTop: "2rem",
+              borderTop: "1px solid #ddd",
+              textAlign: "center",
+              fontSize: "0.9rem",
+              color: "#555",
+            }}
+          >
+            © {new Date().getFullYear()} Crownstone Vaults Limited — All Rights Reserved
+          </footer>
+        </div>
       </body>
     </html>
   );
