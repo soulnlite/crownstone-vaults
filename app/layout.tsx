@@ -9,53 +9,77 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         style={{
           margin: 0,
-          fontFamily: "Arial, sans-serif",
+          fontFamily: "Inter, Arial, sans-serif",
           minHeight: "100vh",
           display: "flex",
           flexDirection: "row",
+          background: "#F5F6F7",
         }}
       >
-        {/* Sidebar Navigation */}
+        {/* Sidebar */}
         <aside
           style={{
             width: "260px",
             minHeight: "100vh",
-            borderRight: "1px solid #ddd",
-            padding: "2rem 1.5rem",
+            borderRight: "1px solid #444",
+            padding: "2.5rem 1.8rem",
             boxSizing: "border-box",
             position: "fixed",
             left: 0,
             top: 0,
-            background: "#fafafa",
+            background: "#2E3442",
+            color: "white",
           }}
         >
-          <div style={{ fontSize: "1.4rem", fontWeight: "bold", marginBottom: "2rem" }}>
+          <div
+            style={{
+              fontSize: "1.6rem",
+              fontFamily: "Merriweather, serif",
+              fontWeight: 700,
+              marginBottom: "2.5rem",
+            }}
+          >
             Crownstone Vaults Limited
           </div>
 
-          <nav style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-            <a href="/" style={{ textDecoration: "none", color: "black" }}>Home</a>
-            <a href="/about" style={{ textDecoration: "none", color: "black" }}>About</a>
-            <a href="/services" style={{ textDecoration: "none", color: "black" }}>Services</a>
-            <a href="/governance" style={{ textDecoration: "none", color: "black" }}>Governance</a>
-            <a href="/compliance" style={{ textDecoration: "none", color: "black" }}>Compliance</a>
-            <a href="/accreditation" style={{ textDecoration: "none", color: "black" }}>Accreditation</a>
-            <a href="/risk" style={{ textDecoration: "none", color: "black" }}>Risk Management</a>
-            <a href="/preservation" style={{ textDecoration: "none", color: "black" }}>Preservation</a>
-            <a href="/infrastructure" style={{ textDecoration: "none", color: "black" }}>Infrastructure</a>
-            <a href="/onboarding" style={{ textDecoration: "none", color: "black" }}>Onboarding</a>
-            <a href="/legal" style={{ textDecoration: "none", color: "black" }}>Legal</a>
-            <a href="/terms" style={{ textDecoration: "none", color: "black" }}>Terms</a>
-            <a href="/contact" style={{ textDecoration: "none", color: "black" }}>Contact</a>
+          <nav style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
+            {[
+              ["Home", "/"],
+              ["About", "/about"],
+              ["Services", "/services"],
+              ["Governance", "/governance"],
+              ["Compliance", "/compliance"],
+              ["Accreditation", "/accreditation"],
+              ["Risk Management", "/risk"],
+              ["Preservation", "/preservation"],
+              ["Infrastructure", "/infrastructure"],
+              ["Onboarding", "/onboarding"],
+              ["Legal", "/legal"],
+              ["Terms", "/terms"],
+              ["Contact", "/contact"],
+            ].map(([label, href]) => (
+              <a
+                key={href}
+                href={href}
+                style={{
+                  textDecoration: "none",
+                  color: "#F5F6F7",
+                  fontSize: "1rem",
+                  fontWeight: 500,
+                }}
+              >
+                {label}
+              </a>
+            ))}
           </nav>
         </aside>
 
-        {/* Main Content Area */}
+        {/* Main Content */}
         <div
           style={{
             marginLeft: "260px",
             flex: 1,
-            padding: "2rem",
+            padding: "3rem",
             maxWidth: "900px",
             boxSizing: "border-box",
           }}
@@ -66,7 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             style={{
               marginTop: "3rem",
               paddingTop: "2rem",
-              borderTop: "1px solid #ddd",
+              borderTop: "2px solid #C9A86A",
               textAlign: "center",
               fontSize: "0.9rem",
               color: "#555",
