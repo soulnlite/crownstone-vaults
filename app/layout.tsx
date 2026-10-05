@@ -48,6 +48,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               Governance
             </a>
             <a
+              href="/compliance"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              Compliance
+            </a>
+            <a
               href="/contact"
               style={{ textDecoration: "none", color: "black" }}
             >
@@ -56,7 +62,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </nav>
         </header>
 
-        {/* Global Wrapper */}
         <div
           style={{
             flex: 1,
