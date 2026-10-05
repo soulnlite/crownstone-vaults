@@ -16,7 +16,6 @@ export default function HomePage() {
           individuals, families, and institutions.
         </p>
       </section>
-<div style={{ height: "200vh" }}></div>
 
       <section style={{ marginTop: "2rem" }}>
         <h2>Core Services</h2>
