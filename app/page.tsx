@@ -8,15 +8,24 @@ export default function HomePage() {
         lineHeight: 1.6,
       }}
     >
-      <section style={{ marginBottom: "3rem" }}>
-        <h1 style={{ marginBottom: "1rem" }}>Crownstone Vaults Limited</h1>
-        <p>
-          Crownstone Vaults Limited provides secure institutional vaulting and
-          storage solutions for valuables, heirlooms, documents, and critical
-          organizational records.
+      {/* Hero Section */}
+      <section
+        style={{
+          marginBottom: "4rem",
+          padding: "2rem 0",
+        }}
+      >
+        <h1 style={{ marginBottom: "1rem", fontSize: "2rem" }}>
+          Crownstone Vaults Limited
+        </h1>
+        <p style={{ fontSize: "1.1rem" }}>
+          Secure institutional vaulting and preservation services for valuables,
+          documents, and critical records — delivered with confidentiality,
+          governance, and operational integrity.
         </p>
       </section>
 
+      {/* Mission */}
       <section style={{ marginBottom: "3rem" }}>
         <h2 style={{ marginBottom: "0.5rem" }}>Our Mission</h2>
         <p>
@@ -26,6 +35,7 @@ export default function HomePage() {
         </p>
       </section>
 
+      {/* Core Services */}
       <section style={{ marginBottom: "3rem" }}>
         <h2 style={{ marginBottom: "0.5rem" }}>Core Services</h2>
         <p>
@@ -34,6 +44,7 @@ export default function HomePage() {
         </p>
       </section>
 
+      {/* Institutional Assurance */}
       <section style={{ marginBottom: "3rem" }}>
         <h2 style={{ marginBottom: "0.5rem" }}>Institutional Assurance</h2>
         <p>
