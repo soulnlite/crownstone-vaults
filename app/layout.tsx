@@ -29,36 +29,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
 
           <nav style={{ display: "flex", gap: "2rem" }}>
-            <a href="/" style={{ textDecoration: "none", color: "black" }}>
-              Home
-            </a>
-            <a href="/about" style={{ textDecoration: "none", color: "black" }}>
-              About
-            </a>
-            <a
-              href="/services"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              Services
-            </a>
-            <a
-              href="/governance"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              Governance
-            </a>
-            <a
-              href="/compliance"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              Compliance
-            </a>
-            <a
-              href="/contact"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              Contact
-            </a>
+            <a href="/" style={{ textDecoration: "none", color: "black" }}>Home</a>
+            <a href="/about" style={{ textDecoration: "none", color: "black" }}>About</a>
+            <a href="/services" style={{ textDecoration: "none", color: "black" }}>Services</a>
+            <a href="/governance" style={{ textDecoration: "none", color: "black" }}>Governance</a>
+            <a href="/compliance" style={{ textDecoration: "none", color: "black" }}>Compliance</a>
+            <a href="/accreditation" style={{ textDecoration: "none", color: "black" }}>Accreditation</a>
+            <a href="/contact" style={{ textDecoration: "none", color: "black" }}>Contact</a>
           </nav>
         </header>
 
@@ -84,8 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             color: "#555",
           }}
         >
-          © {new Date().getFullYear()} Crownstone Vaults Limited — All Rights
-          Reserved
+          © {new Date().getFullYear()} Crownstone Vaults Limited — All Rights Reserved
         </footer>
       </body>
     </html>
