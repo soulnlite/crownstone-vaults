@@ -1,32 +1,28 @@
 export default function AboutPage() {
   return (
-    <main style={{ padding: "2rem", maxWidth: "900px", margin: "0 auto" }}>
-      <h1>About Crownstone Vaults</h1>
-
-      <section style={{ marginTop: "1.5rem" }}>
-        <h2>Who We Are</h2>
+    <main
+      style={{
+        padding: "2rem",
+        maxWidth: "900px",
+        margin: "0 auto",
+        lineHeight: 1.6,
+      }}
+    >
+      <section style={{ marginBottom: "3rem" }}>
+        <h1 style={{ marginBottom: "1rem" }}>About Crownstone Vaults Limited</h1>
         <p>
-          Crownstone Vaults Limited is an institutional-grade vault and secure
-          storage provider focused on protecting valuables, heirlooms,
-          documents, and critical organizational records.
+          Crownstone Vaults Limited provides secure institutional vaulting and
+          preservation services for valuables, documents, and critical records.
+          Our operations are built on confidentiality, governance, and
+          long-term reliability.
         </p>
       </section>
 
-      <section style={{ marginTop: "2rem" }}>
-        <h2>Our Institutional Role</h2>
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ marginBottom: "0.5rem" }}>Our Commitment</h2>
         <p>
-          We operate as a governance-driven security institution, offering
-          structured protection, confidentiality, and operational integrity for
-          individuals, families, and organizations.
-        </p>
-      </section>
-
-      <section style={{ marginTop: "2rem" }}>
-        <h2>Our Commitment</h2>
-        <p>
-          Crownstone Vaults is committed to long-term stewardship, responsible
-          asset protection, and maintaining trust through transparent and
-          accountable operations.
+          We maintain strict operational standards to ensure the protection and
+          preservation of sensitive materials entrusted to our care.
         </p>
       </section>
     </main>
