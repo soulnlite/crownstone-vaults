@@ -1,29 +1,36 @@
 export default function ServicesPage() {
   return (
-    <main style={{ padding: "2rem", maxWidth: "900px", margin: "0 auto" }}>
-      <h1>Our Services</h1>
-
-      <section style={{ marginTop: "1.5rem" }}>
-        <h2>Secure Vaulting</h2>
+    <main
+      style={{
+        padding: "2rem",
+        maxWidth: "900px",
+        margin: "0 auto",
+        lineHeight: 1.6,
+      }}
+    >
+      <section style={{ marginBottom: "3rem" }}>
+        <h1 style={{ marginBottom: "1rem" }}>Our Services</h1>
         <p>
-          Controlled-access vaulting for valuables, heirlooms, and sensitive
-          materials requiring institutional-grade protection.
+          Crownstone Vaults Limited offers secure vaulting, document
+          preservation, controlled-access storage, and institutional-grade
+          protection for sensitive materials.
         </p>
       </section>
 
-      <section style={{ marginTop: "2rem" }}>
-        <h2>Document Preservation</h2>
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ marginBottom: "0.5rem" }}>Secure Vaulting</h2>
         <p>
-          Long-term preservation and secure storage of legal documents,
-          historical records, and organizational archives.
+          Our vaulting facilities are designed to safeguard valuables and
+          sensitive materials with strict access controls and environmental
+          protections.
         </p>
       </section>
 
-      <section style={{ marginTop: "2rem" }}>
-        <h2>Institutional Storage Solutions</h2>
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ marginBottom: "0.5rem" }}>Document Preservation</h2>
         <p>
-          Structured storage services designed for organizations requiring
-          confidentiality, compliance, and operational reliability.
+          We provide long-term preservation solutions for critical documents,
+          ensuring they remain protected and accessible when needed.
         </p>
       </section>
     </main>
