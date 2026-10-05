@@ -1,11 +1,3 @@
-export const metadata = {
-  title: "Crownstone Vaults Limited",
-  description: "Institutional vault and secure storage services",
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
 <body style={{ margin: 0, fontFamily: "Arial, sans-serif" }}>
   <header style={{
     display: "flex",
@@ -28,8 +20,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   </header>
 
   {children}
-</body>
 
-    </html>
-  );
-}
+  <footer style={{
+    marginTop: "3rem",
+    padding: "2rem",
+    borderTop: "1px solid #ddd",
+    textAlign: "center",
+    fontSize: "0.9rem",
+    color: "#555"
+  }}>
+    © {new Date().getFullYear()} Crownstone Vaults Limited — All Rights Reserved
+  </footer>
+</body>
