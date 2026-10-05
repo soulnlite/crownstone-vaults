@@ -1,29 +1,27 @@
 export default function GovernancePage() {
   return (
-    <main style={{ padding: "2rem", maxWidth: "900px", margin: "0 auto" }}>
-      <h1>Governance</h1>
-
-      <section style={{ marginTop: "1.5rem" }}>
-        <h2>Operational Oversight</h2>
+    <main
+      style={{
+        padding: "2rem",
+        maxWidth: "900px",
+        margin: "0 auto",
+        lineHeight: 1.6,
+      }}
+    >
+      <section style={{ marginBottom: "3rem" }}>
+        <h1 style={{ marginBottom: "1rem" }}>Governance</h1>
         <p>
-          Crownstone Vaults operates under structured oversight to ensure
-          compliance, accountability, and institutional trust.
+          Crownstone Vaults Limited operates under strict governance and
+          compliance frameworks to ensure transparency, accountability, and
+          operational integrity.
         </p>
       </section>
 
-      <section style={{ marginTop: "2rem" }}>
-        <h2>Security Protocols</h2>
+      <section style={{ marginBottom: "3rem" }}>
+        <h2 style={{ marginBottom: "0.5rem" }}>Compliance Standards</h2>
         <p>
-          Our vaulting operations follow strict security protocols designed to
-          protect sensitive materials and maintain confidentiality.
-        </p>
-      </section>
-
-      <section style={{ marginTop: "2rem" }}>
-        <h2>Compliance Standards</h2>
-        <p>
-          We adhere to regulatory and industry standards to ensure responsible
-          stewardship and transparent operations.
+          Our operations adhere to rigorous compliance protocols designed to
+          protect clients and maintain institutional trust.
         </p>
       </section>
     </main>
