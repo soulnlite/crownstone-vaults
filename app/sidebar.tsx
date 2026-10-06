@@ -79,7 +79,10 @@ export default function Sidebar() {
       <aside
         style={{
           width: "260px",
-          minHeight: "100vh",
+          height: "100vh",
+          overflowY: "auto",
+          scrollbarWidth: "thin",
+          scrollbarColor: "#C9A86A rgba(255,255,255,0.1)",
           borderRight: "1px solid rgba(255,255,255,0.08)",
           padding: "2.5rem 1.8rem",
           boxSizing: "border-box",
@@ -95,6 +98,19 @@ export default function Sidebar() {
           zIndex: 1002,
         }}
       >
+        <style>{`
+          aside::-webkit-scrollbar {
+            width: 6px;
+          }
+          aside::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.05);
+          }
+          aside::-webkit-scrollbar-thumb {
+            background: #C9A86A;
+            border-radius: 10px;
+          }
+        `}</style>
+
         <div
           style={{
             fontSize: "1.7rem",
