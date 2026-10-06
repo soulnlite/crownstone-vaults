@@ -1,48 +1,23 @@
-import Sidebar from "./Sidebar";
+import "./globals.css";
+import type { Metadata } from "next";
+import Sidebar from "./sidebar";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Crownstone Vaults Limited",
-  description: "Institutional vault and secure storage services",
+  description: "Institutional Vaulting & Preservation Infrastructure",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body
-        style={{
-          margin: 0,
-          fontFamily: "Inter, Arial, sans-serif",
-          minHeight: "100vh",
-          display: "flex",
-          flexDirection: "row",
-          background: "#F5F6F7",
-        }}
-      >
-        <Sidebar />
-
-        <div
-          style={{
-            marginLeft: "260px",
-            flex: 1,
-            padding: "3rem",
-            maxWidth: "900px",
-            boxSizing: "border-box",
-          }}
-        >
-          {children}
-
-          <footer
-            style={{
-              marginTop: "3rem",
-              paddingTop: "2rem",
-              borderTop: "2px solid #C9A86A",
-              textAlign: "center",
-              fontSize: "0.9rem",
-              color: "#555",
-            }}
-          >
-            © {new Date().getFullYear()} Crownstone Vaults Limited — All Rights Reserved
-          </footer>
+      <body>
+        <div style={{ display: "flex", minHeight: "100vh" }}>
+          <Sidebar />
+          <main style={{ marginLeft: "260px", width: "100%" }}>{children}</main>
         </div>
       </body>
     </html>
