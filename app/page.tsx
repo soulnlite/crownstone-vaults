@@ -8,36 +8,12 @@ export default function HomePage() {
           padding: "3rem 3rem",
           borderRadius: "22px",
           background:
-            "linear-gradient(135deg, rgba(201,168,106,0.22) 0%, rgba(10,23,40,0.85) 35%, #0A1728 100%)",
+            "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
           boxShadow: "0 28px 70px rgba(0,0,0,0.65)",
           border: "1px solid rgba(201,168,106,0.35)",
           position: "relative",
-          overflow: "hidden",
         }}
       >
-        {/* Subtle animated gold shimmer */}
-        <div
-          style={{
-            position: "absolute",
-            top: "-40%",
-            left: "-20%",
-            width: "140%",
-            height: "140%",
-            background:
-              "radial-gradient(circle, rgba(201,168,106,0.12) 0%, transparent 70%)",
-            animation: "pulseGold 6s ease-in-out infinite",
-            pointerEvents: "none",
-          }}
-        ></div>
-
-        <style>{`
-          @keyframes pulseGold {
-            0% { opacity: 0.25; transform: scale(1); }
-            50% { opacity: 0.45; transform: scale(1.05); }
-            100% { opacity: 0.25; transform: scale(1); }
-          }
-        `}</style>
-
         <h1
           style={{
             fontFamily: "Merriweather, serif",
@@ -50,6 +26,17 @@ export default function HomePage() {
         >
           Crownstone Vaults Limited
         </h1>
+
+        {/* Gold micro-divider */}
+        <div
+          style={{
+            height: "3px",
+            width: "120px",
+            background:
+              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.3) 70%, transparent 100%)",
+            marginBottom: "1.6rem",
+          }}
+        ></div>
 
         <p
           style={{
@@ -77,6 +64,17 @@ export default function HomePage() {
               fontSize: "1rem",
               textDecoration: "none",
               boxShadow: "0 12px 32px rgba(201,168,106,0.55)",
+              transition: "transform 0.25s ease, box-shadow 0.25s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-3px)";
+              e.currentTarget.style.boxShadow =
+                "0 16px 38px rgba(201,168,106,0.65)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0px)";
+              e.currentTarget.style.boxShadow =
+                "0 12px 32px rgba(201,168,106,0.55)";
             }}
           >
             Institutional Services
@@ -93,6 +91,17 @@ export default function HomePage() {
               fontSize: "1rem",
               textDecoration: "none",
               background: "rgba(10,23,40,0.7)",
+              transition: "transform 0.25s ease, box-shadow 0.25s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-3px)";
+              e.currentTarget.style.boxShadow =
+                "0 16px 38px rgba(201,168,106,0.45)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0px)";
+              e.currentTarget.style.boxShadow =
+                "0 12px 32px rgba(201,168,106,0.35)";
             }}
           >
             Governance Framework
@@ -106,7 +115,7 @@ export default function HomePage() {
           marginBottom: "3.5rem",
           padding: "2.5rem 2.5rem",
           borderLeft: "4px solid #C9A86A",
-          background: "rgba(9,18,32,0.85)",
+          background: "rgba(9,18,32,0.9)",
           borderRadius: "12px",
         }}
       >
@@ -162,9 +171,20 @@ export default function HomePage() {
               padding: "1.8rem 1.6rem",
               borderRadius: "16px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.05), rgba(10,23,40,0.9))",
+                "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(10,23,40,0.95))",
               border: "1px solid rgba(255,255,255,0.08)",
               boxShadow: "0 10px 28px rgba(0,0,0,0.45)",
+              transition: "transform 0.25s ease, box-shadow 0.25s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-4px)";
+              e.currentTarget.style.boxShadow =
+                "0 14px 34px rgba(0,0,0,0.55)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0px)";
+              e.currentTarget.style.boxShadow =
+                "0 10px 28px rgba(0,0,0,0.45)";
             }}
           >
             <h3
@@ -189,9 +209,20 @@ export default function HomePage() {
               padding: "1.8rem 1.6rem",
               borderRadius: "16px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.05), rgba(10,23,40,0.9))",
+                "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(10,23,40,0.95))",
               border: "1px solid rgba(255,255,255,0.08)",
               boxShadow: "0 10px 28px rgba(0,0,0,0.45)",
+              transition: "transform 0.25s ease, box-shadow 0.25s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-4px)";
+              e.currentTarget.style.boxShadow =
+                "0 14px 34px rgba(0,0,0,0.55)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0px)";
+              e.currentTarget.style.boxShadow =
+                "0 10px 28px rgba(0,0,0,0.45)";
             }}
           >
             <h3
@@ -215,9 +246,20 @@ export default function HomePage() {
               padding: "1.8rem 1.6rem",
               borderRadius: "16px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.05), rgba(10,23,40,0.9))",
+                "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(10,23,40,0.95))",
               border: "1px solid rgba(255,255,255,0.08)",
               boxShadow: "0 10px 28px rgba(0,0,0,0.45)",
+              transition: "transform 0.25s ease, box-shadow 0.25s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-4px)";
+              e.currentTarget.style.boxShadow =
+                "0 14px 34px rgba(0,0,0,0.55)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0px)";
+              e.currentTarget.style.boxShadow =
+                "0 10px 28px rgba(0,0,0,0.45)";
             }}
           >
             <h3
@@ -239,6 +281,17 @@ export default function HomePage() {
 
       {/* ONBOARDING */}
       <section>
+        {/* Gold micro-divider */}
+        <div
+          style={{
+            height: "2px",
+            width: "100px",
+            background:
+              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.3) 70%, transparent 100%)",
+            marginBottom: "1rem",
+          }}
+        ></div>
+
         <h2
           style={{
             fontFamily: "Merriweather, serif",
@@ -277,6 +330,17 @@ export default function HomePage() {
             fontSize: "1rem",
             textDecoration: "none",
             background: "rgba(10,23,40,0.85)",
+            transition: "transform 0.25s ease, box-shadow 0.25s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "translateY(-3px)";
+            e.currentTarget.style.boxShadow =
+              "0 16px 38px rgba(201,168,106,0.45)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "translateY(0px)";
+            e.currentTarget.style.boxShadow =
+              "0 12px 32px rgba(201,168,106,0.35)";
           }}
         >
           Initiate Institutional Contact
