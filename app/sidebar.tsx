@@ -40,7 +40,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Mobile Menu Button */}
       {isMobile && (
         <button
           onClick={() => setOpen(true)}
@@ -62,7 +61,6 @@ export default function Sidebar() {
         </button>
       )}
 
-      {/* Overlay (mobile only) */}
       {isMobile && open && (
         <div
           onClick={() => setOpen(false)}
@@ -78,7 +76,6 @@ export default function Sidebar() {
         ></div>
       )}
 
-      {/* Sidebar */}
       <aside
         style={{
           width: "260px",
@@ -98,7 +95,6 @@ export default function Sidebar() {
           zIndex: 1002,
         }}
       >
-        {/* Brand Title */}
         <div
           style={{
             fontSize: "1.7rem",
@@ -121,7 +117,6 @@ export default function Sidebar() {
           ></div>
         </div>
 
-        {/* Navigation */}
         <nav style={{ display: "flex", flexDirection: "column", gap: "1.1rem" }}>
           {links.map((link) => {
             const active = isActive(link.href);
@@ -168,7 +163,6 @@ export default function Sidebar() {
                   }
                 }}
               >
-                {/* Gold Accent Bar */}
                 <div
                   style={{
                     width: "5px",
