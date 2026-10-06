@@ -1,4 +1,4 @@
-      {/* HERO SECTION — SUBTLE INSTITUTIONAL VAULT */}
+      {/* HERO SECTION — RESPONSIVE VAULT, NO OVERLAP */}
       <section
         style={{
           marginBottom: "3.5rem",
@@ -12,66 +12,67 @@
           overflow: "hidden",
         }}
       >
-        {/* Subtle vault divider line */}
+        {/* RESPONSIVE VAULT CONTAINER */}
         <div
           style={{
             position: "absolute",
-            right: "260px",
+            right: "0",
             top: "0",
             height: "100%",
-            width: "2px",
-            background: "linear-gradient(180deg, #C9A86A, rgba(201,168,106,0.1))",
-            opacity: 0.35,
+            width: "40%", // vault stays in right 40% only
+            minWidth: "260px", // never shrinks too small
+            maxWidth: "420px", // never grows too large
+            pointerEvents: "none",
           }}
-        ></div>
+        >
+          {/* Outer vault ring */}
+          <div
+            style={{
+              position: "absolute",
+              right: "-60px",
+              top: "40px",
+              width: "260px",
+              height: "260px",
+              borderRadius: "50%",
+              border: "2px solid rgba(201,168,106,0.35)",
+              boxShadow:
+                "0 0 40px rgba(201,168,106,0.25), inset 0 0 25px rgba(5,9,20,0.9)",
+              background:
+                "radial-gradient(circle, rgba(10,23,40,0.85) 0%, rgba(5,9,20,1) 60%)",
+              opacity: 0.55,
+            }}
+          ></div>
 
-        {/* Outer vault ring */}
-        <div
-          style={{
-            position: "absolute",
-            right: "-140px",
-            top: "20px",
-            width: "260px",
-            height: "260px",
-            borderRadius: "50%",
-            border: "2px solid rgba(201,168,106,0.35)",
-            boxShadow:
-              "0 0 40px rgba(201,168,106,0.25), inset 0 0 25px rgba(5,9,20,0.9)",
-            background:
-              "radial-gradient(circle, rgba(10,23,40,0.85) 0%, rgba(5,9,20,1) 60%)",
-            opacity: 0.55,
-          }}
-        ></div>
+          {/* Inner vault ring */}
+          <div
+            style={{
+              position: "absolute",
+              right: "-10px",
+              top: "100px",
+              width: "160px",
+              height: "160px",
+              borderRadius: "50%",
+              border: "1px solid rgba(201,168,106,0.55)",
+              boxShadow: "0 0 22px rgba(201,168,106,0.35)",
+              opacity: 0.45,
+            }}
+          ></div>
 
-        {/* Inner vault ring */}
-        <div
-          style={{
-            position: "absolute",
-            right: "-80px",
-            top: "80px",
-            width: "160px",
-            height: "160px",
-            borderRadius: "50%",
-            border: "1px solid rgba(201,168,106,0.55)",
-            boxShadow: "0 0 22px rgba(201,168,106,0.35)",
-            opacity: 0.45,
-          }}
-        ></div>
-
-        {/* Metallic vault grooves */}
-        <div
-          style={{
-            position: "absolute",
-            right: "-140px",
-            top: "20px",
-            width: "260px",
-            height: "260px",
-            borderRadius: "50%",
-            background:
-              "repeating-conic-gradient(rgba(255,255,255,0.05) 0deg, rgba(255,255,255,0.0) 10deg)",
-            opacity: 0.15,
-          }}
-        ></div>
+          {/* Metallic grooves */}
+          <div
+            style={{
+              position: "absolute",
+              right: "-60px",
+              top: "40px",
+              width: "260px",
+              height: "260px",
+              borderRadius: "50%",
+              background:
+                "repeating-conic-gradient(rgba(255,255,255,0.05) 0deg, rgba(255,255,255,0.0) 10deg)",
+              opacity: 0.15,
+            }}
+          ></div>
+        </div>
 
         {/* Gold shimmer pulse */}
         <div
@@ -96,76 +97,67 @@
           }
         `}</style>
 
-        <h1
-          style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "2.8rem",
-            marginBottom: "1.2rem",
-            letterSpacing: "0.06em",
-            color: "#FDF4E3",
-            textShadow: "0 0 18px rgba(201,168,106,0.35)",
-            position: "relative",
-            zIndex: 10,
-          }}
-        >
-          Crownstone Vaults Limited
-        </h1>
-
-        <p
-          style={{
-            fontSize: "1.15rem",
-            lineHeight: "1.85",
-            maxWidth: "760px",
-            marginBottom: "2.2rem",
-            position: "relative",
-            zIndex: 10,
-          }}
-        >
-          A sovereign‑grade preservation authority engineered to safeguard institutional memory,
-          regulatory artefacts, and critical records across generations. Our vaulting mandate
-          ensures continuity, integrity, and controlled custodial access.
-        </p>
-
-        <div
-          style={{
-            display: "flex",
-            gap: "1.3rem",
-            flexWrap: "wrap",
-            position: "relative",
-            zIndex: 10,
-          }}
-        >
-          <a
-            href="/services"
+        {/* TEXT ALWAYS ABOVE VAULT */}
+        <div style={{ position: "relative", zIndex: 10, maxWidth: "60%" }}>
+          <h1
             style={{
-              padding: "0.95rem 1.8rem",
-              borderRadius: "999px",
-              background:
-                "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
-              color: "#0A1728",
-              fontWeight: 600,
-              fontSize: "1rem",
-              textDecoration: "none",
-              boxShadow: "0 12px 32px rgba(201,168,106,0.55)",
-            }}
-          >
-            Institutional Services
-          </a>
-
-          <a
-            href="/governance"
-            style={{
-              padding: "0.95rem 1.8rem",
-              borderRadius: "999px",
-              border: "1px solid rgba(201,168,106,0.6)",
+              fontFamily: "Merriweather, serif",
+              fontSize: "2.8rem",
+              marginBottom: "1.2rem",
+              letterSpacing: "0.06em",
               color: "#FDF4E3",
-              fontWeight: 500,
-              fontSize: "1rem",
-              textDecoration: "none",
-              background: "rgba(10,23,40,0.7)",
+              textShadow: "0 0 18px rgba(201,168,106,0.35)",
             }}
           >
-            Governance Framework
-          </a>
+            Crownstone Vaults Limited
+          </h1>
+
+          <p
+            style={{
+              fontSize: "1.15rem",
+              lineHeight: "1.85",
+              maxWidth: "760px",
+              marginBottom: "2.2rem",
+            }}
+          >
+            A sovereign‑grade preservation authority engineered to safeguard institutional memory,
+            regulatory artefacts, and critical records across generations. Our vaulting mandate
+            ensures continuity, integrity, and controlled custodial access.
+          </p>
+
+          <div style={{ display: "flex", gap: "1.3rem", flexWrap: "wrap" }}>
+            <a
+              href="/services"
+              style={{
+                padding: "0.95rem 1.8rem",
+                borderRadius: "999px",
+                background:
+                  "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
+                color: "#0A1728",
+                fontWeight: 600,
+                fontSize: "1rem",
+                textDecoration: "none",
+                boxShadow: "0 12px 32px rgba(201,168,106,0.55)",
+              }}
+            >
+              Institutional Services
+            </a>
+
+            <a
+              href="/governance"
+              style={{
+                padding: "0.95rem 1.8rem",
+                borderRadius: "999px",
+                border: "1px solid rgba(201,168,106,0.6)",
+                color: "#FDF4E3",
+                fontWeight: 500,
+                fontSize: "1rem",
+                textDecoration: "none",
+                background: "rgba(10,23,40,0.7)",
+              }}
+            >
+              Governance Framework
+            </a>
+          </div>
         </div>
       </section>
