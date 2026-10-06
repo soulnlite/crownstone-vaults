@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -23,9 +23,11 @@ export default function Sidebar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const isActive = (href: string) => pathname === href;
 
+  // Detect mobile
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth <= 900);
     check();
@@ -33,10 +35,29 @@ export default function Sidebar() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
+  // Open/close sidebar on mobile
   useEffect(() => {
     if (isMobile) setOpen(false);
     else setOpen(true);
   }, [isMobile]);
+
+  // Restore scroll position on navigation
+  useEffect(() => {
+    const saved = sessionStorage.getItem("sidebar-scroll");
+    if (scrollRef.current && saved) {
+      scrollRef.current.scrollTop = parseInt(saved, 10);
+    }
+  }, [pathname]);
+
+  // Save scroll position continuously
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      sessionStorage.setItem(
+        "sidebar-scroll",
+        scrollRef.current.scrollTop.toString()
+      );
+    }
+  };
 
   return (
     <>
@@ -77,6 +98,8 @@ export default function Sidebar() {
       )}
 
       <aside
+        ref={scrollRef}
+        onScroll={handleScroll}
         style={{
           width: "260px",
           height: "100vh",
