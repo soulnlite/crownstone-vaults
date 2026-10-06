@@ -4,12 +4,12 @@ export default function HomePage() {
       {/* HERO SECTION */}
       <section
         style={{
-          marginBottom: "3.5rem",
-          padding: "3rem 3rem",
+          marginBottom: "4rem",
+          padding: "3.5rem 3rem",
           borderRadius: "22px",
           background:
             "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
-          boxShadow: "0 28px 70px rgba(0,0,0,0.65)",
+          boxShadow: "0 32px 80px rgba(0,0,0,0.7)",
           border: "1px solid rgba(201,168,106,0.35)",
           position: "relative",
         }}
@@ -17,33 +17,34 @@ export default function HomePage() {
         <h1
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "2.8rem",
-            marginBottom: "1.2rem",
-            letterSpacing: "0.06em",
+            fontSize: "3rem",
+            marginBottom: "1.4rem",
+            letterSpacing: "0.065em",
             color: "#FDF4E3",
-            textShadow: "0 0 18px rgba(201,168,106,0.35)",
+            textShadow: "0 0 22px rgba(201,168,106,0.35)",
           }}
         >
           Crownstone Vaults Limited
         </h1>
 
-        {/* Gold micro-divider */}
+        {/* Strong Institutional Divider */}
         <div
           style={{
-            height: "3px",
-            width: "120px",
+            height: "4px",
+            width: "150px",
             background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.3) 70%, transparent 100%)",
-            marginBottom: "1.6rem",
+              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
+            marginBottom: "2rem",
           }}
         ></div>
 
         <p
           style={{
-            fontSize: "1.15rem",
-            lineHeight: "1.85",
-            maxWidth: "760px",
-            marginBottom: "2.2rem",
+            fontSize: "1.18rem",
+            lineHeight: "1.9",
+            maxWidth: "780px",
+            marginBottom: "2.4rem",
+            letterSpacing: "0.01em",
           }}
         >
           A sovereign‑grade preservation authority engineered to safeguard institutional memory,
@@ -51,30 +52,36 @@ export default function HomePage() {
           ensures continuity, integrity, and controlled custodial access.
         </p>
 
-        <div style={{ display: "flex", gap: "1.3rem", flexWrap: "wrap" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "1.4rem",
+            flexWrap: "wrap",
+          }}
+        >
           <a
             href="/services"
             style={{
-              padding: "0.95rem 1.8rem",
+              padding: "1rem 1.9rem",
               borderRadius: "999px",
               background:
                 "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
               color: "#0A1728",
               fontWeight: 600,
-              fontSize: "1rem",
+              fontSize: "1.05rem",
               textDecoration: "none",
-              boxShadow: "0 12px 32px rgba(201,168,106,0.55)",
+              boxShadow: "0 14px 34px rgba(201,168,106,0.55)",
               transition: "transform 0.25s ease, box-shadow 0.25s ease",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-3px)";
+              e.currentTarget.style.transform = "translateY(-4px)";
               e.currentTarget.style.boxShadow =
-                "0 16px 38px rgba(201,168,106,0.65)";
+                "0 18px 44px rgba(201,168,106,0.65)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0px)";
               e.currentTarget.style.boxShadow =
-                "0 12px 32px rgba(201,168,106,0.55)";
+                "0 14px 34px rgba(201,168,106,0.55)";
             }}
           >
             Institutional Services
@@ -83,25 +90,25 @@ export default function HomePage() {
           <a
             href="/governance"
             style={{
-              padding: "0.95rem 1.8rem",
+              padding: "1rem 1.9rem",
               borderRadius: "999px",
               border: "1px solid rgba(201,168,106,0.6)",
               color: "#FDF4E3",
               fontWeight: 500,
-              fontSize: "1rem",
+              fontSize: "1.05rem",
               textDecoration: "none",
-              background: "rgba(10,23,40,0.7)",
+              background: "rgba(10,23,40,0.75)",
               transition: "transform 0.25s ease, box-shadow 0.25s ease",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-3px)";
+              e.currentTarget.style.transform = "translateY(-4px)";
               e.currentTarget.style.boxShadow =
-                "0 16px 38px rgba(201,168,106,0.45)";
+                "0 18px 44px rgba(201,168,106,0.45)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0px)";
               e.currentTarget.style.boxShadow =
-                "0 12px 32px rgba(201,168,106,0.35)";
+                "0 14px 34px rgba(201,168,106,0.35)";
             }}
           >
             Governance Framework
@@ -112,19 +119,20 @@ export default function HomePage() {
       {/* MANDATE STATEMENT */}
       <section
         style={{
-          marginBottom: "3.5rem",
-          padding: "2.5rem 2.5rem",
-          borderLeft: "4px solid #C9A86A",
-          background: "rgba(9,18,32,0.9)",
-          borderRadius: "12px",
+          marginBottom: "4rem",
+          padding: "3rem 2.8rem",
+          borderLeft: "5px solid #C9A86A",
+          background: "rgba(9,18,32,0.92)",
+          borderRadius: "14px",
         }}
       >
         <h2
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "1.6rem",
-            marginBottom: "1rem",
+            fontSize: "1.7rem",
+            marginBottom: "1.2rem",
             color: "#FDF4E3",
+            letterSpacing: "0.03em",
           }}
         >
           Preservation Mandate
@@ -132,9 +140,10 @@ export default function HomePage() {
 
         <p
           style={{
-            fontSize: "1.05rem",
-            lineHeight: "1.8",
-            maxWidth: "820px",
+            fontSize: "1.08rem",
+            lineHeight: "1.85",
+            maxWidth: "840px",
+            letterSpacing: "0.01em",
           }}
         >
           Our mandate is to ensure that institutional records, governance artefacts, and
@@ -144,13 +153,13 @@ export default function HomePage() {
       </section>
 
       {/* THREE PILLARS */}
-      <section style={{ marginBottom: "3.5rem" }}>
+      <section style={{ marginBottom: "4rem" }}>
         <h2
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "1.45rem",
-            marginBottom: "1.5rem",
-            letterSpacing: "0.08em",
+            fontSize: "1.55rem",
+            marginBottom: "1.8rem",
+            letterSpacing: "0.085em",
             textTransform: "uppercase",
             color: "#FDF4E3",
           }}
@@ -161,42 +170,43 @@ export default function HomePage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: "1.8rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))",
+            gap: "2rem",
           }}
         >
           {/* Pillar 1 */}
           <div
             style={{
-              padding: "1.8rem 1.6rem",
-              borderRadius: "16px",
+              padding: "2rem 1.8rem",
+              borderRadius: "18px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(10,23,40,0.95))",
-              border: "1px solid rgba(255,255,255,0.08)",
-              boxShadow: "0 10px 28px rgba(0,0,0,0.45)",
+                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
+              border: "1px solid rgba(255,255,255,0.1)",
+              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
               transition: "transform 0.25s ease, box-shadow 0.25s ease",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-4px)";
+              e.currentTarget.style.transform = "translateY(-5px)";
               e.currentTarget.style.boxShadow =
-                "0 14px 34px rgba(0,0,0,0.55)";
+                "0 18px 44px rgba(0,0,0,0.6)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0px)";
               e.currentTarget.style.boxShadow =
-                "0 10px 28px rgba(0,0,0,0.45)";
+                "0 12px 32px rgba(0,0,0,0.5)";
             }}
           >
             <h3
               style={{
-                fontSize: "1.1rem",
-                marginBottom: "0.7rem",
+                fontSize: "1.15rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
+                letterSpacing: "0.02em",
               }}
             >
               Custodial Infrastructure
             </h3>
-            <p style={{ fontSize: "0.98rem", lineHeight: "1.75" }}>
+            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
               Engineered for continuity, resilience, and controlled access. Crownstone Vaults
               operates as a neutral, institutional-grade custodian for records that must remain
               intact beyond operational cycles.
@@ -206,35 +216,36 @@ export default function HomePage() {
           {/* Pillar 2 */}
           <div
             style={{
-              padding: "1.8rem 1.6rem",
-              borderRadius: "16px",
+              padding: "2rem 1.8rem",
+              borderRadius: "18px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(10,23,40,0.95))",
-              border: "1px solid rgba(255,255,255,0.08)",
-              boxShadow: "0 10px 28px rgba(0,0,0,0.45)",
+                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
+              border: "1px solid rgba(255,255,255,0.1)",
+              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
               transition: "transform 0.25s ease, box-shadow 0.25s ease",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-4px)";
+              e.currentTarget.style.transform = "translateY(-5px)";
               e.currentTarget.style.boxShadow =
-                "0 14px 34px rgba(0,0,0,0.55)";
+                "0 18px 44px rgba(0,0,0,0.6)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0px)";
               e.currentTarget.style.boxShadow =
-                "0 10px 28px rgba(0,0,0,0.45)";
+                "0 12px 32px rgba(0,0,0,0.5)";
             }}
           >
             <h3
               style={{
-                fontSize: "1.1rem",
-                marginBottom: "0.7rem",
+                fontSize: "1.15rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
+                letterSpacing: "0.02em",
               }}
             >
               Governance & Compliance
             </h3>
-            <p style={{ fontSize: "0.98rem", lineHeight: "1.75" }}>
+            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
               Governance structures, oversight mechanisms, and compliance protocols are designed
               to withstand scrutiny from regulators, auditors, and institutional stakeholders.
             </p>
@@ -243,35 +254,36 @@ export default function HomePage() {
           {/* Pillar 3 */}
           <div
             style={{
-              padding: "1.8rem 1.6rem",
-              borderRadius: "16px",
+              padding: "2rem 1.8rem",
+              borderRadius: "18px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(10,23,40,0.95))",
-              border: "1px solid rgba(255,255,255,0.08)",
-              boxShadow: "0 10px 28px rgba(0,0,0,0.45)",
+                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
+              border: "1px solid rgba(255,255,255,0.1)",
+              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
               transition: "transform 0.25s ease, box-shadow 0.25s ease",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "translateY(-4px)";
+              e.currentTarget.style.transform = "translateY(-5px)";
               e.currentTarget.style.boxShadow =
-                "0 14px 34px rgba(0,0,0,0.55)";
+                "0 18px 44px rgba(0,0,0,0.6)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0px)";
               e.currentTarget.style.boxShadow =
-                "0 10px 28px rgba(0,0,0,0.45)";
+                "0 12px 32px rgba(0,0,0,0.5)";
             }}
           >
             <h3
               style={{
-                fontSize: "1.1rem",
-                marginBottom: "0.7rem",
+                fontSize: "1.15rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
+                letterSpacing: "0.02em",
               }}
             >
               Preservation Mandate
             </h3>
-            <p style={{ fontSize: "0.98rem", lineHeight: "1.75" }}>
+            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
               Our preservation mandate extends beyond storage. It encompasses integrity,
               traceability, and the ability to demonstrate continuity of custody over time.
             </p>
@@ -281,23 +293,23 @@ export default function HomePage() {
 
       {/* ONBOARDING */}
       <section>
-        {/* Gold micro-divider */}
+        {/* Strong Institutional Divider */}
         <div
           style={{
-            height: "2px",
-            width: "100px",
+            height: "4px",
+            width: "150px",
             background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.3) 70%, transparent 100%)",
-            marginBottom: "1rem",
+              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
+            marginBottom: "1.4rem",
           }}
         ></div>
 
         <h2
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "1.45rem",
-            marginBottom: "1rem",
-            letterSpacing: "0.08em",
+            fontSize: "1.55rem",
+            marginBottom: "1.2rem",
+            letterSpacing: "0.085em",
             textTransform: "uppercase",
             color: "#FDF4E3",
           }}
@@ -307,10 +319,11 @@ export default function HomePage() {
 
         <p
           style={{
-            fontSize: "1rem",
-            lineHeight: "1.8",
-            maxWidth: "780px",
-            marginBottom: "1.8rem",
+            fontSize: "1.05rem",
+            lineHeight: "1.85",
+            maxWidth: "800px",
+            marginBottom: "2rem",
+            letterSpacing: "0.01em",
           }}
         >
           Crownstone Vaults engages with institutions through a structured onboarding process,
@@ -322,25 +335,25 @@ export default function HomePage() {
         <a
           href="/contact"
           style={{
-            padding: "0.9rem 1.7rem",
+            padding: "1rem 1.8rem",
             borderRadius: "999px",
             border: "1px solid rgba(201,168,106,0.7)",
             color: "#FDF4E3",
             fontWeight: 500,
-            fontSize: "1rem",
+            fontSize: "1.05rem",
             textDecoration: "none",
             background: "rgba(10,23,40,0.85)",
             transition: "transform 0.25s ease, box-shadow 0.25s ease",
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "translateY(-3px)";
+            e.currentTarget.style.transform = "translateY(-4px)";
             e.currentTarget.style.boxShadow =
-              "0 16px 38px rgba(201,168,106,0.45)";
+              "0 18px 44px rgba(201,168,106,0.45)";
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = "translateY(0px)";
             e.currentTarget.style.boxShadow =
-              "0 12px 32px rgba(201,168,106,0.35)";
+              "0 14px 34px rgba(201,168,106,0.35)";
           }}
         >
           Initiate Institutional Contact
