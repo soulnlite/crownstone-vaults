@@ -1,20 +1,51 @@
 export default function HomePage() {
   return (
     <div style={{ color: "#E3E6EB" }}>
-      {/* HERO SECTION */}
+      {/* HERO SECTION WITH VAULT FEEL */}
       <section
         style={{
           marginBottom: "3.5rem",
           padding: "3rem 3rem",
           borderRadius: "22px",
           background:
-            "linear-gradient(135deg, rgba(201,168,106,0.22) 0%, rgba(10,23,40,0.85) 35%, #0A1728 100%)",
-          boxShadow: "0 28px 70px rgba(0,0,0,0.65)",
+            "linear-gradient(135deg, rgba(201,168,106,0.22) 0%, rgba(10,23,40,0.9) 35%, #050914 100%)",
+          boxShadow: "0 28px 70px rgba(0,0,0,0.7)",
           border: "1px solid rgba(201,168,106,0.35)",
           position: "relative",
           overflow: "hidden",
         }}
       >
+        {/* Vault ring impression (CSS only, no image) */}
+        <div
+          style={{
+            position: "absolute",
+            right: "-120px",
+            top: "-40px",
+            width: "320px",
+            height: "320px",
+            borderRadius: "50%",
+            border: "2px solid rgba(201,168,106,0.45)",
+            boxShadow:
+              "0 0 40px rgba(201,168,106,0.45), inset 0 0 25px rgba(5,9,20,0.9)",
+            background:
+              "radial-gradient(circle, rgba(10,23,40,0.9) 0%, rgba(5,9,20,1) 60%)",
+          }}
+        ></div>
+
+        {/* Inner vault ring */}
+        <div
+          style={{
+            position: "absolute",
+            right: "-60px",
+            top: "20px",
+            width: "220px",
+            height: "220px",
+            borderRadius: "50%",
+            border: "1px solid rgba(201,168,106,0.6)",
+            boxShadow: "0 0 30px rgba(201,168,106,0.4)",
+          }}
+        ></div>
+
         {/* Subtle animated gold shimmer */}
         <div
           style={{
@@ -106,7 +137,7 @@ export default function HomePage() {
           marginBottom: "3.5rem",
           padding: "2.5rem 2.5rem",
           borderLeft: "4px solid #C9A86A",
-          background: "rgba(9,18,32,0.85)",
+          background: "rgba(9,18,32,0.9)",
           borderRadius: "12px",
         }}
       >
@@ -156,7 +187,6 @@ export default function HomePage() {
             gap: "1.8rem",
           }}
         >
-          {/* Pillar 1 */}
           <div
             style={{
               padding: "1.8rem 1.6rem",
@@ -183,7 +213,6 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Pillar 2 */}
           <div
             style={{
               padding: "1.8rem 1.6rem",
@@ -209,7 +238,6 @@ export default function HomePage() {
             </p>
           </div>
 
-          {/* Pillar 3 */}
           <div
             style={{
               padding: "1.8rem 1.6rem",
