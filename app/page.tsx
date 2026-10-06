@@ -1,58 +1,215 @@
 export default function HomePage() {
   return (
-    <main
-      style={{
-        padding: "2rem",
-        maxWidth: "900px",
-        margin: "0 auto",
-        lineHeight: 1.6,
-      }}
-    >
+    <div style={{ color: "#E3E6EB" }}>
       {/* Hero Section */}
       <section
         style={{
-          marginBottom: "4rem",
-          padding: "2rem 0",
+          marginBottom: "3rem",
+          padding: "2.5rem 2.5rem",
+          borderRadius: "18px",
+          background:
+            "radial-gradient(circle at top left, rgba(201,168,106,0.18) 0%, transparent 45%), linear-gradient(135deg, #0A1728 0%, #111F36 50%, #0B1523 100%)",
+          boxShadow: "0 22px 60px rgba(0,0,0,0.65)",
+          border: "1px solid rgba(201,168,106,0.35)",
         }}
       >
-        <h1 style={{ marginBottom: "1rem", fontSize: "2rem" }}>
-          Crownstone Vaults Limited
+        <h1
+          style={{
+            fontFamily: "Merriweather, serif",
+            fontSize: "2.4rem",
+            marginBottom: "1rem",
+            letterSpacing: "0.06em",
+            color: "#FDF4E3",
+          }}
+        >
+          Institutional Vaulting & Preservation Infrastructure
         </h1>
-        <p style={{ fontSize: "1.1rem" }}>
-          Secure institutional vaulting and preservation services for valuables,
-          documents, and critical records — delivered with confidentiality,
-          governance, and operational integrity.
+        <p
+          style={{
+            fontSize: "1.05rem",
+            lineHeight: "1.8",
+            maxWidth: "720px",
+            marginBottom: "1.8rem",
+          }}
+        >
+          Crownstone Vaults Limited provides custodial-grade infrastructure for the long-term
+          preservation of critical records, artefacts, and institutional memory. Our mandate is
+          to safeguard what must not be lost—across generations, regimes, and market cycles.
         </p>
+
+        <div style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap" }}>
+          <a
+            href="/services"
+            style={{
+              padding: "0.85rem 1.6rem",
+              borderRadius: "999px",
+              background:
+                "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
+              color: "#0A1728",
+              fontWeight: 600,
+              fontSize: "0.95rem",
+              textDecoration: "none",
+              boxShadow: "0 10px 30px rgba(201,168,106,0.55)",
+            }}
+          >
+            View Institutional Services
+          </a>
+          <a
+            href="/governance"
+            style={{
+              padding: "0.85rem 1.6rem",
+              borderRadius: "999px",
+              border: "1px solid rgba(201,168,106,0.6)",
+              color: "#FDF4E3",
+              fontWeight: 500,
+              fontSize: "0.95rem",
+              textDecoration: "none",
+              background: "rgba(10,23,40,0.7)",
+            }}
+          >
+            Explore Governance Framework
+          </a>
+        </div>
       </section>
 
-      {/* Mission */}
+      {/* Three Pillars */}
       <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ marginBottom: "0.5rem" }}>Our Mission</h2>
-        <p>
-          To deliver uncompromising security, confidentiality, and reliability
-          through professionally managed vaulting services designed for
-          individuals, families, and institutions.
-        </p>
+        <h2
+          style={{
+            fontFamily: "Merriweather, serif",
+            fontSize: "1.4rem",
+            marginBottom: "1.5rem",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            color: "#FDF4E3",
+          }}
+        >
+          Core Institutional Pillars
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+            gap: "1.5rem",
+          }}
+        >
+          <div
+            style={{
+              padding: "1.6rem 1.5rem",
+              borderRadius: "14px",
+              background: "rgba(9,18,32,0.9)",
+              border: "1px solid rgba(255,255,255,0.06)",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "1.05rem",
+                marginBottom: "0.6rem",
+                color: "#F3D39A",
+              }}
+            >
+              Custodial Infrastructure
+            </h3>
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
+              Engineered for continuity, resilience, and controlled access. Crownstone Vaults
+              operates as a neutral, institutional-grade custodian for records that must remain
+              intact beyond operational cycles.
+            </p>
+          </div>
+
+          <div
+            style={{
+              padding: "1.6rem 1.5rem",
+              borderRadius: "14px",
+              background: "rgba(9,18,32,0.9)",
+              border: "1px solid rgba(255,255,255,0.06)",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "1.05rem",
+                marginBottom: "0.6rem",
+                color: "#F3D39A",
+              }}
+            >
+              Governance & Compliance
+            </h3>
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
+              Governance structures, oversight mechanisms, and compliance protocols are designed
+              to withstand scrutiny from regulators, auditors, and institutional stakeholders.
+            </p>
+          </div>
+
+          <div
+            style={{
+              padding: "1.6rem 1.5rem",
+              borderRadius: "14px",
+              background: "rgba(9,18,32,0.9)",
+              border: "1px solid rgba(255,255,255,0.06)",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "1.05rem",
+                marginBottom: "0.6rem",
+                color: "#F3D39A",
+              }}
+            >
+              Preservation Mandate
+            </h3>
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
+              Our preservation mandate extends beyond storage. It encompasses integrity,
+              traceability, and the ability to demonstrate continuity of custody over time.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Core Services */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ marginBottom: "0.5rem" }}>Core Services</h2>
-        <p>
-          We offer secure vaulting, document preservation, controlled-access
-          storage, and institutional-grade protection for sensitive materials.
+      {/* Onboarding / Next Steps */}
+      <section>
+        <h2
+          style={{
+            fontFamily: "Merriweather, serif",
+            fontSize: "1.4rem",
+            marginBottom: "1rem",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            color: "#FDF4E3",
+          }}
+        >
+          Institutional Onboarding
+        </h2>
+        <p
+          style={{
+            fontSize: "0.98rem",
+            lineHeight: "1.8",
+            maxWidth: "780px",
+            marginBottom: "1.6rem",
+          }}
+        >
+          Crownstone Vaults engages with institutions through a structured onboarding process,
+          beginning with an assessment of preservation needs, governance requirements, and
+          regulatory expectations. Each engagement is configured to align with the institution’s
+          risk appetite and oversight model.
         </p>
-      </section>
 
-      {/* Institutional Assurance */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ marginBottom: "0.5rem" }}>Institutional Assurance</h2>
-        <p>
-          Crownstone Vaults operates with strict governance, compliance
-          oversight, and operational transparency to ensure trust at every
-          level.
-        </p>
+        <a
+          href="/contact"
+          style={{
+            padding: "0.8rem 1.5rem",
+            borderRadius: "999px",
+            border: "1px solid rgba(201,168,106,0.7)",
+            color: "#FDF4E3",
+            fontWeight: 500,
+            fontSize: "0.95rem",
+            textDecoration: "none",
+            background: "rgba(10,23,40,0.85)",
+          }}
+        >
+          Initiate Institutional Contact
+        </a>
       </section>
-    </main>
+    </div>
   );
 }
