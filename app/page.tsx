@@ -74,7 +74,7 @@ export default function HomePage() {
                 View Institutional Services
               </a>
 
-              {/* CHROME METALLIC FINGER — NEAR CENTER, ANGLED ~110° LEFTWARDS */}
+              {/* TRUE METALLIC GOLD-SILVER FINGER — NEAR CENTER, ANGLED ~110° */}
               <div
                 style={{
                   position: "absolute",
@@ -83,10 +83,7 @@ export default function HomePage() {
                   transform: "translateX(-50%) rotate(-110deg)",
                   fontSize: "1.1rem",
                   opacity: 1,
-                  color: "#E5E7EB", // bright chrome silver
-                  textShadow:
-                    "0 0 4px rgba(255,255,255,0.9), 0 0 8px rgba(200,200,200,0.8), 0 0 12px rgba(255,255,255,0.6)",
-                  filter: "drop-shadow(0 0 6px rgba(255,255,255,0.7))",
+                  color: "#C9B27A", // metallic gold-silver alloy tone
                   pointerEvents: "none",
                 }}
               >
