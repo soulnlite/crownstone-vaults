@@ -11,12 +11,13 @@ export default function HomePage() {
             "linear-gradient(135deg, #0A1728 0%, #13233D 50%, #0B1523 100%)",
           boxShadow: "0 28px 75px rgba(0,0,0,0.7)",
           border: "1px solid rgba(201,168,106,0.38)",
+          textAlign: "center",
         }}
       >
         <h1
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "2.55rem",
+            fontSize: "2.45rem",
             marginBottom: "1.2rem",
             letterSpacing: "0.065em",
             color: "#FDF4E3",
@@ -28,10 +29,10 @@ export default function HomePage() {
 
         <p
           style={{
-            fontSize: "1.08rem",
+            fontSize: "1.06rem",
             lineHeight: "1.85",
             maxWidth: "720px",
-            marginBottom: "2.2rem",
+            margin: "0 auto 2.2rem auto",
           }}
         >
           Crownstone Vaults Limited provides custodial-grade infrastructure for the long-term
@@ -39,37 +40,55 @@ export default function HomePage() {
           to safeguard what must not be lost—across generations, regimes, and market cycles.
         </p>
 
-        {/* UNIFIED 3D CTA COMPONENT */}
+        {/* CENTERED LARGE PLAQUE + SMALLER 3D CTA */}
         <div
           style={{
             display: "inline-block",
-            padding: "1.8rem 2rem",
-            borderRadius: "26px",
+            padding: "2.2rem 2.4rem",
+            borderRadius: "28px",
             background: "linear-gradient(145deg, #0D1A2F, #091224)",
             border: "1px solid rgba(201,168,106,0.32)",
             boxShadow:
               "inset 0 3px 6px rgba(255,255,255,0.08), inset 0 -4px 8px rgba(0,0,0,0.45), 0 14px 32px rgba(0,0,0,0.55)",
-            transform: "translateY(-4px)",
+            transform: "translateY(-2px)",
           }}
         >
-          <a
-            href="/services"
-            style={{
-              padding: "1.05rem 2rem",
-              borderRadius: "999px",
-              background:
-                "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
-              color: "#0A1728",
-              fontWeight: 600,
-              fontSize: "1rem",
-              textDecoration: "none",
-              boxShadow:
-                "0 12px 34px rgba(201,168,106,0.55), 0 0 16px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
-              display: "inline-block",
-            }}
-          >
-            View Institutional Services
-          </a>
+          <div style={{ position: "relative", display: "inline-block" }}>
+            {/* PRIMARY CTA (smaller) */}
+            <a
+              href="/services"
+              style={{
+                padding: "0.85rem 1.6rem",
+                borderRadius: "999px",
+                background:
+                  "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
+                color: "#0A1728",
+                fontWeight: 600,
+                fontSize: "0.92rem",
+                textDecoration: "none",
+                boxShadow:
+                  "0 10px 26px rgba(201,168,106,0.55), 0 0 12px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
+                display: "inline-block",
+              }}
+            >
+              View Institutional Services
+            </a>
+
+            {/* OPTIONAL TINY HAND CURSOR */}
+            <div
+              style={{
+                position: "absolute",
+                right: "-22px",
+                top: "50%",
+                transform: "translateY(-50%)",
+                fontSize: "1.2rem",
+                opacity: 0.75,
+                pointerEvents: "none",
+              }}
+            >
+              🤚
+            </div>
+          </div>
         </div>
       </section>
 
