@@ -74,13 +74,13 @@ export default function HomePage() {
                 View Institutional Services
               </a>
 
-              {/* 45° ANGLED FINGER TOUCHING THE “S” */}
+              {/* 45° ANGLED FINGER — NEAR CENTER OF BUTTON */}
               <div
                 style={{
                   position: "absolute",
-                  right: "-12px",
-                  top: "78%",
-                  transform: "translateY(-50%) rotate(-45deg)",
+                  left: "50%",
+                  top: "82%",
+                  transform: "translateX(-50%) rotate(-45deg)",
                   fontSize: "1.05rem",
                   opacity: 0.9,
                   color: "#F5F7FA", // contrasting silver-white
