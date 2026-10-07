@@ -1,15 +1,15 @@
 export default function HomePage() {
   return (
     <div style={{ color: "#E3E6EB" }}>
-      {/* Hero Section */}
+      {/* HERO */}
       <section
         style={{
-          marginBottom: "3.4rem",
-          padding: "2.8rem 2.8rem",
-          borderRadius: "20px",
+          marginBottom: "3.8rem",
+          padding: "3rem 2.8rem",
+          borderRadius: "22px",
           background:
-            "radial-gradient(circle at top left, rgba(201,168,106,0.22) 0%, transparent 50%), linear-gradient(135deg, #0A1728 0%, #13233D 50%, #0B1523 100%)",
-          boxShadow: "0 26px 70px rgba(0,0,0,0.68)",
+            "radial-gradient(circle at 40% 30%, rgba(201,168,106,0.22) 0%, transparent 55%), linear-gradient(135deg, #0A1728 0%, #13233D 50%, #0B1523 100%)",
+          boxShadow: "0 28px 75px rgba(0,0,0,0.7)",
           border: "1px solid rgba(201,168,106,0.38)",
         }}
       >
@@ -17,59 +17,21 @@ export default function HomePage() {
           style={{
             fontFamily: "Merriweather, serif",
             fontSize: "2.55rem",
-            marginBottom: "1rem",
+            marginBottom: "1.2rem",
             letterSpacing: "0.065em",
             color: "#FDF4E3",
-            textShadow: "0 0 18px rgba(201,168,106,0.28)",
+            textShadow: "0 0 20px rgba(201,168,106,0.28)",
           }}
         >
           Institutional Vaulting & Preservation Infrastructure
         </h1>
-
-        {/* Gold Dot Cluster Accent */}
-        <div
-          style={{
-            display: "flex",
-            gap: "6px",
-            marginBottom: "1.4rem",
-            paddingLeft: "2px",
-          }}
-        >
-          <div
-            style={{
-              width: "6px",
-              height: "6px",
-              borderRadius: "50%",
-              background: "#C9A86A",
-              boxShadow: "0 0 6px rgba(201,168,106,0.55)",
-            }}
-          ></div>
-          <div
-            style={{
-              width: "4px",
-              height: "4px",
-              borderRadius: "50%",
-              background: "#F3D39A",
-              boxShadow: "0 0 5px rgba(201,168,106,0.45)",
-            }}
-          ></div>
-          <div
-            style={{
-              width: "5px",
-              height: "5px",
-              borderRadius: "50%",
-              background: "#C9A86A",
-              boxShadow: "0 0 5px rgba(201,168,106,0.45)",
-            }}
-          ></div>
-        </div>
 
         <p
           style={{
             fontSize: "1.08rem",
             lineHeight: "1.85",
             maxWidth: "720px",
-            marginBottom: "2rem",
+            marginBottom: "2.4rem",
           }}
         >
           Crownstone Vaults Limited provides custodial-grade infrastructure for the long-term
@@ -77,9 +39,21 @@ export default function HomePage() {
           to safeguard what must not be lost—across generations, regimes, and market cycles.
         </p>
 
-        {/* CTA Row */}
-        <div style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap" }}>
-          {/* Medium Glow CTA (Homepage Signature) */}
+        {/* CTA CLUSTER */}
+        <div
+          style={{
+            display: "flex",
+            gap: "1.2rem",
+            flexWrap: "wrap",
+            padding: "1.2rem 1.4rem",
+            borderRadius: "18px",
+            background:
+              "linear-gradient(135deg, rgba(201,168,106,0.08), rgba(10,23,40,0.65))",
+            boxShadow: "0 0 22px rgba(201,168,106,0.18)",
+            border: "1px solid rgba(201,168,106,0.22)",
+          }}
+        >
+          {/* PRIMARY CTA */}
           <a
             href="/services"
             style={{
@@ -92,13 +66,13 @@ export default function HomePage() {
               fontSize: "0.97rem",
               textDecoration: "none",
               boxShadow:
-                "0 10px 30px rgba(201,168,106,0.55), 0 0 12px rgba(201,168,106,0.35)",
+                "0 10px 30px rgba(201,168,106,0.55), 0 0 14px rgba(201,168,106,0.35)",
             }}
           >
             View Institutional Services
           </a>
 
-          {/* Secondary CTA */}
+          {/* SECONDARY CTA */}
           <a
             href="/governance"
             style={{
@@ -117,7 +91,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Three Pillars */}
+      {/* THREE PILLARS */}
       <section style={{ marginBottom: "3rem" }}>
         <h2
           style={{
@@ -211,7 +185,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Onboarding / Next Steps */}
+      {/* ONBOARDING */}
       <section>
         <h2
           style={{
