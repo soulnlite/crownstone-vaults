@@ -45,13 +45,13 @@ export default function ServicesPage() {
             letterSpacing: "0.01em",
           }}
         >
-          Crownstone Vaults provides institutional-grade custodial, governance, and preservation
+          Crownstone Vaults delivers institutional-grade custodial, governance, and preservation
           services engineered to safeguard critical records, regulatory artefacts, and compliance
           documentation across operational cycles.
         </p>
       </section>
 
-      {/* SERVICE BLOCKS */}
+      {/* SERVICE CATEGORIES */}
       <section style={{ marginBottom: "4rem" }}>
         <h2
           style={{
@@ -63,7 +63,7 @@ export default function ServicesPage() {
             color: "#FDF4E3",
           }}
         >
-          Core Service Lines
+          Core Institutional Services
         </h2>
 
         <div
@@ -92,11 +92,11 @@ export default function ServicesPage() {
                 letterSpacing: "0.02em",
               }}
             >
-              Custodial Record Vaulting
+              Custodial Preservation
             </h3>
             <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Secure, neutral, institutional-grade vaulting for records requiring long-term
-              preservation, controlled access, and demonstrable continuity of custody.
+              Long-term preservation environments engineered for institutional continuity,
+              traceability, and secure archival retention.
             </p>
           </div>
 
@@ -119,11 +119,11 @@ export default function ServicesPage() {
                 letterSpacing: "0.02em",
               }}
             >
-              Governance Framework Support
+              Governance Support
             </h3>
             <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Structural governance support for institutions requiring oversight mechanisms,
-              compliance alignment, and regulatory continuity.
+              Structured governance alignment ensuring oversight, compliance resilience, and
+              institutional stability across operational cycles.
             </p>
           </div>
 
@@ -146,11 +146,11 @@ export default function ServicesPage() {
                 letterSpacing: "0.02em",
               }}
             >
-              Preservation Mandate Execution
+              Compliance Reinforcement
             </h3>
             <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              End-to-end preservation mandate execution ensuring integrity, traceability, and
-              institutional continuity across generational transitions.
+              Compliance structures engineered to withstand regulatory scrutiny and maintain
+              institutional integrity across transitions.
             </p>
           </div>
         </div>
@@ -178,7 +178,7 @@ export default function ServicesPage() {
             color: "#FDF4E3",
           }}
         >
-          Engage With Crownstone Vaults
+          Service Engagement
         </h2>
 
         <p
@@ -190,5 +190,26 @@ export default function ServicesPage() {
             letterSpacing: "0.01em",
           }}
         >
-          Institutions seeking custodial, governance, or preservation support may initiate contact
-          through our formal engagement pathway
+          Institutions requiring custodial, governance, or compliance support may initiate contact
+          through our formal engagement pathway.
+        </p>
+
+        <a
+          href="/contact"
+          style={{
+            padding: "1rem 1.8rem",
+            borderRadius: "999px",
+            border: "1px solid rgba(201,168,106,0.7)",
+            color: "#FDF4E3",
+            fontWeight: 500,
+            fontSize: "1.05rem",
+            textDecoration: "none",
+            background: "rgba(10,23,40,0.85)",
+          }}
+        >
+          Initiate Institutional Contact
+        </a>
+      </section>
+    </div>
+  );
+}
