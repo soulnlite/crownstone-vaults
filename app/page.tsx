@@ -31,7 +31,7 @@ export default function HomePage() {
             fontSize: "1.08rem",
             lineHeight: "1.85",
             maxWidth: "720px",
-            marginBottom: "2.4rem",
+            marginBottom: "2.2rem",
           }}
         >
           Crownstone Vaults Limited provides custodial-grade infrastructure for the long-term
@@ -39,31 +39,31 @@ export default function HomePage() {
           to safeguard what must not be lost—across generations, regimes, and market cycles.
         </p>
 
-        {/* CTA FRAME */}
+        {/* 3D CTA CLUSTER */}
         <div
           style={{
-            padding: "1.4rem 1.6rem",
-            borderRadius: "18px",
-            background: "rgba(10,23,40,0.55)",
-            border: "1px solid rgba(201,168,106,0.22)",
-            boxShadow: "0 0 18px rgba(201,168,106,0.18)",
             display: "inline-block",
+            padding: "1.6rem 1.8rem",
+            borderRadius: "20px",
+            background: "linear-gradient(145deg, #0D1A2F, #091224)",
+            border: "1px solid rgba(201,168,106,0.28)",
+            boxShadow:
+              "inset 0 2px 4px rgba(255,255,255,0.08), inset 0 -3px 6px rgba(0,0,0,0.45), 0 12px 28px rgba(0,0,0,0.55)",
           }}
         >
-          {/* PRIMARY CTA ONLY */}
           <a
             href="/services"
             style={{
-              padding: "0.9rem 1.7rem",
+              padding: "1rem 1.9rem",
               borderRadius: "999px",
               background:
                 "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
               color: "#0A1728",
               fontWeight: 600,
-              fontSize: "0.97rem",
+              fontSize: "1rem",
               textDecoration: "none",
               boxShadow:
-                "0 10px 30px rgba(201,168,106,0.55), 0 0 14px rgba(201,168,106,0.35)",
+                "0 10px 30px rgba(201,168,106,0.55), 0 0 14px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
               display: "inline-block",
             }}
           >
