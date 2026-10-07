@@ -8,7 +8,7 @@ export default function HomePage() {
           padding: "3rem 2.8rem",
           borderRadius: "22px",
           background:
-            "radial-gradient(circle at 40% 30%, rgba(201,168,106,0.22) 0%, transparent 55%), linear-gradient(135deg, #0A1728 0%, #13233D 50%, #0B1523 100%)",
+            "linear-gradient(135deg, #0A1728 0%, #13233D 50%, #0B1523 100%)",
           boxShadow: "0 28px 75px rgba(0,0,0,0.7)",
           border: "1px solid rgba(201,168,106,0.38)",
         }}
@@ -20,7 +20,7 @@ export default function HomePage() {
             marginBottom: "1.2rem",
             letterSpacing: "0.065em",
             color: "#FDF4E3",
-            textShadow: "0 0 20px rgba(201,168,106,0.28)",
+            textShadow: "0 0 14px rgba(201,168,106,0.22)",
           }}
         >
           Institutional Vaulting & Preservation Infrastructure
@@ -39,21 +39,18 @@ export default function HomePage() {
           to safeguard what must not be lost—across generations, regimes, and market cycles.
         </p>
 
-        {/* CTA CLUSTER */}
+        {/* CTA FRAME */}
         <div
           style={{
-            display: "flex",
-            gap: "1.2rem",
-            flexWrap: "wrap",
-            padding: "1.2rem 1.4rem",
+            padding: "1.4rem 1.6rem",
             borderRadius: "18px",
-            background:
-              "linear-gradient(135deg, rgba(201,168,106,0.08), rgba(10,23,40,0.65))",
-            boxShadow: "0 0 22px rgba(201,168,106,0.18)",
+            background: "rgba(10,23,40,0.55)",
             border: "1px solid rgba(201,168,106,0.22)",
+            boxShadow: "0 0 18px rgba(201,168,106,0.18)",
+            display: "inline-block",
           }}
         >
-          {/* PRIMARY CTA */}
+          {/* PRIMARY CTA ONLY */}
           <a
             href="/services"
             style={{
@@ -67,26 +64,10 @@ export default function HomePage() {
               textDecoration: "none",
               boxShadow:
                 "0 10px 30px rgba(201,168,106,0.55), 0 0 14px rgba(201,168,106,0.35)",
+              display: "inline-block",
             }}
           >
             View Institutional Services
-          </a>
-
-          {/* SECONDARY CTA */}
-          <a
-            href="/governance"
-            style={{
-              padding: "0.9rem 1.7rem",
-              borderRadius: "999px",
-              border: "1px solid rgba(201,168,106,0.6)",
-              color: "#FDF4E3",
-              fontWeight: 500,
-              fontSize: "0.97rem",
-              textDecoration: "none",
-              background: "rgba(10,23,40,0.7)",
-            }}
-          >
-            Explore Governance Framework
           </a>
         </div>
       </section>
