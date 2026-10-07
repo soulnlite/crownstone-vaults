@@ -11,7 +11,6 @@ export default function HomePage() {
             "linear-gradient(135deg, #0A1728 0%, #13233D 50%, #0B1523 100%)",
           boxShadow: "0 28px 75px rgba(0,0,0,0.7)",
           border: "1px solid rgba(201,168,106,0.38)",
-          textAlign: "center",
         }}
       >
         <h1
@@ -32,7 +31,7 @@ export default function HomePage() {
             fontSize: "1.06rem",
             lineHeight: "1.85",
             maxWidth: "720px",
-            margin: "0 auto 2.2rem auto",
+            marginBottom: "2.2rem",
           }}
         >
           Crownstone Vaults Limited provides custodial-grade infrastructure for the long-term
@@ -40,12 +39,12 @@ export default function HomePage() {
           to safeguard what must not be lost—across generations, regimes, and market cycles.
         </p>
 
-        {/* CENTERED LARGE PLAQUE + SMALLER 3D CTA */}
+        {/* LEFT-ALIGNED PLAQUE + SMALLER 3D CTA */}
         <div
           style={{
             display: "inline-block",
-            padding: "2.2rem 2.4rem",
-            borderRadius: "28px",
+            padding: "1.8rem 2rem",
+            borderRadius: "26px",
             background: "linear-gradient(145deg, #0D1A2F, #091224)",
             border: "1px solid rgba(201,168,106,0.32)",
             boxShadow:
@@ -58,13 +57,13 @@ export default function HomePage() {
             <a
               href="/services"
               style={{
-                padding: "0.85rem 1.6rem",
+                padding: "0.8rem 1.55rem",
                 borderRadius: "999px",
                 background:
                   "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
                 color: "#0A1728",
                 fontWeight: 600,
-                fontSize: "0.92rem",
+                fontSize: "0.9rem",
                 textDecoration: "none",
                 boxShadow:
                   "0 10px 26px rgba(201,168,106,0.55), 0 0 12px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
@@ -74,19 +73,19 @@ export default function HomePage() {
               View Institutional Services
             </a>
 
-            {/* OPTIONAL TINY HAND CURSOR */}
+            {/* POINTING FINGER CURSOR (placed after + slightly below last letter) */}
             <div
               style={{
                 position: "absolute",
-                right: "-22px",
-                top: "50%",
+                right: "-18px",
+                top: "60%",
                 transform: "translateY(-50%)",
-                fontSize: "1.2rem",
-                opacity: 0.75,
+                fontSize: "1.1rem",
+                opacity: 0.8,
                 pointerEvents: "none",
               }}
             >
-              🤚
+              👉
             </div>
           </div>
         </div>
