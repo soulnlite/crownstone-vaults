@@ -1,244 +1,163 @@
-export default function HomePage() {
-  return (
-    <div style={{ color: "#E3E6EB" }}>
-      {/* HERO */}
+      {/* HERO SECTION — RESPONSIVE VAULT, NO OVERLAP */}
       <section
         style={{
-          marginBottom: "4rem",
-          padding: "3.5rem 3rem",
+          marginBottom: "3.5rem",
+          padding: "3rem 3rem",
           borderRadius: "22px",
           background:
-            "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
-          boxShadow: "0 32px 80px rgba(0,0,0,0.7)",
+            "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.9) 35%, #050914 100%)",
+          boxShadow: "0 28px 70px rgba(0,0,0,0.7)",
           border: "1px solid rgba(201,168,106,0.35)",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <h1
-          style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "2.9rem",
-            marginBottom: "1.4rem",
-            letterSpacing: "0.065em",
-            color: "#FDF4E3",
-            textShadow: "0 0 22px rgba(201,168,106,0.35)",
-          }}
-        >
-          Crownstone Vaults Limited
-        </h1>
-
+        {/* RESPONSIVE VAULT CONTAINER */}
         <div
           style={{
-            height: "4px",
-            width: "150px",
+            position: "absolute",
+            right: "0",
+            top: "0",
+            height: "100%",
+            width: "40%", // vault stays in right 40% only
+            minWidth: "260px", // never shrinks too small
+            maxWidth: "420px", // never grows too large
+            pointerEvents: "none",
+          }}
+        >
+          {/* Outer vault ring */}
+          <div
+            style={{
+              position: "absolute",
+              right: "-60px",
+              top: "40px",
+              width: "260px",
+              height: "260px",
+              borderRadius: "50%",
+              border: "2px solid rgba(201,168,106,0.35)",
+              boxShadow:
+                "0 0 40px rgba(201,168,106,0.25), inset 0 0 25px rgba(5,9,20,0.9)",
+              background:
+                "radial-gradient(circle, rgba(10,23,40,0.85) 0%, rgba(5,9,20,1) 60%)",
+              opacity: 0.55,
+            }}
+          ></div>
+
+          {/* Inner vault ring */}
+          <div
+            style={{
+              position: "absolute",
+              right: "-10px",
+              top: "100px",
+              width: "160px",
+              height: "160px",
+              borderRadius: "50%",
+              border: "1px solid rgba(201,168,106,0.55)",
+              boxShadow: "0 0 22px rgba(201,168,106,0.35)",
+              opacity: 0.45,
+            }}
+          ></div>
+
+          {/* Metallic grooves */}
+          <div
+            style={{
+              position: "absolute",
+              right: "-60px",
+              top: "40px",
+              width: "260px",
+              height: "260px",
+              borderRadius: "50%",
+              background:
+                "repeating-conic-gradient(rgba(255,255,255,0.05) 0deg, rgba(255,255,255,0.0) 10deg)",
+              opacity: 0.15,
+            }}
+          ></div>
+        </div>
+
+        {/* Gold shimmer pulse */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-40%",
+            left: "-20%",
+            width: "140%",
+            height: "140%",
             background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "2rem",
+              "radial-gradient(circle, rgba(201,168,106,0.12) 0%, transparent 70%)",
+            animation: "pulseGold 6s ease-in-out infinite",
+            pointerEvents: "none",
           }}
         ></div>
 
-        <p
-          style={{
-            fontSize: "1.18rem",
-            lineHeight: "1.9",
-            maxWidth: "780px",
-            marginBottom: "2.4rem",
-            letterSpacing: "0.01em",
-          }}
-        >
-          Crownstone Vaults Limited provides institutional-grade custodial, governance, and
-          preservation services engineered to safeguard critical records, regulatory artefacts,
-          and compliance documentation across operational cycles.
-        </p>
-      </section>
+        <style>{`
+          @keyframes pulseGold {
+            0% { opacity: 0.25; transform: scale(1); }
+            50% { opacity: 0.45; transform: scale(1.05); }
+            100% { opacity: 0.25; transform: scale(1); }
+          }
+        `}</style>
 
-      {/* MANDATE */}
-      <section style={{ marginBottom: "4rem" }}>
-        <h2
-          style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "1.55rem",
-            marginBottom: "1.8rem",
-            letterSpacing: "0.085em",
-            textTransform: "uppercase",
-            color: "#FDF4E3",
-          }}
-        >
-          Institutional Mandate
-        </h2>
-
-        <p
-          style={{
-            fontSize: "1.05rem",
-            lineHeight: "1.85",
-            maxWidth: "800px",
-            marginBottom: "2rem",
-            letterSpacing: "0.01em",
-          }}
-        >
-          Our mandate is to ensure the long-term preservation, controlled access, and governance
-          continuity of institutional records and artefacts requiring neutral custodial oversight.
-        </p>
-      </section>
-
-      {/* PILLARS */}
-      <section style={{ marginBottom: "4rem" }}>
-        <h2
-          style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "1.55rem",
-            marginBottom: "1.8rem",
-            letterSpacing: "0.085em",
-            textTransform: "uppercase",
-            color: "#FDF4E3",
-          }}
-        >
-          Operational Pillars
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))",
-            gap: "2rem",
-          }}
-        >
-          {/* Pillar 1 */}
-          <div
+        {/* TEXT ALWAYS ABOVE VAULT */}
+        <div style={{ position: "relative", zIndex: 10, maxWidth: "60%" }}>
+          <h1
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
-              background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              fontFamily: "Merriweather, serif",
+              fontSize: "2.8rem",
+              marginBottom: "1.2rem",
+              letterSpacing: "0.06em",
+              color: "#FDF4E3",
+              textShadow: "0 0 18px rgba(201,168,106,0.35)",
             }}
           >
-            <h3
-              style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
-              }}
-            >
-              Custodial Integrity
-            </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Neutral, secure, and controlled custodial environments engineered for long-term
-              preservation and institutional continuity.
-            </p>
-          </div>
+            Crownstone Vaults Limited
+          </h1>
 
-          {/* Pillar 2 */}
-          <div
+          <p
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
-              background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              fontSize: "1.15rem",
+              lineHeight: "1.85",
+              maxWidth: "760px",
+              marginBottom: "2.2rem",
             }}
           >
-            <h3
-              style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
-              }}
-            >
-              Governance Continuity
-            </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Structural governance support ensuring oversight, compliance alignment, and
-              regulatory resilience.
-            </p>
-          </div>
+            A sovereign‑grade preservation authority engineered to safeguard institutional memory,
+            regulatory artefacts, and critical records across generations. Our vaulting mandate
+            ensures continuity, integrity, and controlled custodial access.
+          </p>
 
-          {/* Pillar 3 */}
-          <div
-            style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
-              background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
-            }}
-          >
-            <h3
+          <div style={{ display: "flex", gap: "1.3rem", flexWrap: "wrap" }}>
+            <a
+              href="/services"
               style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
+                padding: "0.95rem 1.8rem",
+                borderRadius: "999px",
+                background:
+                  "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
+                color: "#0A1728",
+                fontWeight: 600,
+                fontSize: "1rem",
+                textDecoration: "none",
+                boxShadow: "0 12px 32px rgba(201,168,106,0.55)",
               }}
             >
-              Preservation Mandate
-            </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              End-to-end preservation mandate execution ensuring integrity, traceability, and
-              institutional memory across generational transitions.
-            </p>
+              Institutional Services
+            </a>
+
+            <a
+              href="/governance"
+              style={{
+                padding: "0.95rem 1.8rem",
+                borderRadius: "999px",
+                border: "1px solid rgba(201,168,106,0.6)",
+                color: "#FDF4E3",
+                fontWeight: 500,
+                fontSize: "1rem",
+                textDecoration: "none",
+                background: "rgba(10,23,40,0.7)",
+              }}
+            >
+              Governance Framework
+            </a>
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      <section>
-        <div
-          style={{
-            height: "4px",
-            width: "150px",
-            background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "1.4rem",
-          }}
-        ></div>
-
-        <h2
-          style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "1.55rem",
-            marginBottom: "1.2rem",
-            letterSpacing: "0.085em",
-            textTransform: "uppercase",
-            color: "#FDF4E3",
-          }}
-        >
-          Engage With Crownstone Vaults
-        </h2>
-
-        <p
-          style={{
-            fontSize: "1.05rem",
-            lineHeight: "1.85",
-            maxWidth: "800px",
-            marginBottom: "2rem",
-            letterSpacing: "0.01em",
-          }}
-        >
-          Institutions seeking custodial, governance, or preservation support may initiate contact
-          through our formal engagement pathway.
-        </p>
-
-        <a
-          href="/contact"
-          style={{
-            padding: "1rem 1.8rem",
-            borderRadius: "999px",
-            border: "1px solid rgba(201,168,106,0.7)",
-            color: "#FDF4E3",
-            fontWeight: 500,
-            fontSize: "1.05rem",
-            textDecoration: "none",
-            background: "rgba(10,23,40,0.85)",
-          }}
-        >
-          Initiate Institutional Contact
-        </a>
-      </section>
-    </div>
-  );
-}
