@@ -39,22 +39,23 @@ export default function HomePage() {
           to safeguard what must not be lost—across generations, regimes, and market cycles.
         </p>
 
-        {/* 3D CTA CLUSTER */}
+        {/* UNIFIED 3D CTA COMPONENT */}
         <div
           style={{
             display: "inline-block",
-            padding: "1.6rem 1.8rem",
-            borderRadius: "20px",
+            padding: "1.8rem 2rem",
+            borderRadius: "26px",
             background: "linear-gradient(145deg, #0D1A2F, #091224)",
-            border: "1px solid rgba(201,168,106,0.28)",
+            border: "1px solid rgba(201,168,106,0.32)",
             boxShadow:
-              "inset 0 2px 4px rgba(255,255,255,0.08), inset 0 -3px 6px rgba(0,0,0,0.45), 0 12px 28px rgba(0,0,0,0.55)",
+              "inset 0 3px 6px rgba(255,255,255,0.08), inset 0 -4px 8px rgba(0,0,0,0.45), 0 14px 32px rgba(0,0,0,0.55)",
+            transform: "translateY(-4px)",
           }}
         >
           <a
             href="/services"
             style={{
-              padding: "1rem 1.9rem",
+              padding: "1.05rem 2rem",
               borderRadius: "999px",
               background:
                 "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
@@ -63,7 +64,7 @@ export default function HomePage() {
               fontSize: "1rem",
               textDecoration: "none",
               boxShadow:
-                "0 10px 30px rgba(201,168,106,0.55), 0 0 14px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
+                "0 12px 34px rgba(201,168,106,0.55), 0 0 16px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
               display: "inline-block",
             }}
           >
