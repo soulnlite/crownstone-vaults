@@ -39,53 +39,60 @@ export default function HomePage() {
           to safeguard what must not be lost—across generations, regimes, and market cycles.
         </p>
 
-        {/* LEFT-ALIGNED PLAQUE + SMALLER 3D CTA */}
+        {/* CENTERED PLAQUE + SMALL CTA */}
         <div
           style={{
-            display: "inline-block",
-            padding: "1.8rem 2rem",
-            borderRadius: "26px",
-            background: "linear-gradient(145deg, #0D1A2F, #091224)",
-            border: "1px solid rgba(201,168,106,0.32)",
-            boxShadow:
-              "inset 0 3px 6px rgba(255,255,255,0.08), inset 0 -4px 8px rgba(0,0,0,0.45), 0 14px 32px rgba(0,0,0,0.55)",
-            transform: "translateY(-2px)",
+            display: "flex",
+            justifyContent: "center",
           }}
         >
-          <div style={{ position: "relative", display: "inline-block" }}>
-            {/* PRIMARY CTA (smaller) */}
-            <a
-              href="/services"
-              style={{
-                padding: "0.8rem 1.55rem",
-                borderRadius: "999px",
-                background:
-                  "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
-                color: "#0A1728",
-                fontWeight: 600,
-                fontSize: "0.9rem",
-                textDecoration: "none",
-                boxShadow:
-                  "0 10px 26px rgba(201,168,106,0.55), 0 0 12px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
-                display: "inline-block",
-              }}
-            >
-              View Institutional Services
-            </a>
+          <div
+            style={{
+              display: "inline-block",
+              padding: "1.8rem 2rem",
+              borderRadius: "26px",
+              background: "linear-gradient(145deg, #0D1A2F, #091224)",
+              border: "1px solid rgba(201,168,106,0.32)",
+              boxShadow:
+                "inset 0 3px 6px rgba(255,255,255,0.08), inset 0 -4px 8px rgba(0,0,0,0.45), 0 14px 32px rgba(0,0,0,0.55)",
+              transform: "translateY(-2px)",
+            }}
+          >
+            <div style={{ position: "relative", display: "inline-block" }}>
+              {/* PRIMARY CTA */}
+              <a
+                href="/services"
+                style={{
+                  padding: "0.8rem 1.55rem",
+                  borderRadius: "999px",
+                  background:
+                    "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
+                  color: "#0A1728",
+                  fontWeight: 600,
+                  fontSize: "0.9rem",
+                  textDecoration: "none",
+                  boxShadow:
+                    "0 10px 26px rgba(201,168,106,0.55), 0 0 12px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
+                  display: "inline-block",
+                }}
+              >
+                View Institutional Services
+              </a>
 
-            {/* POINTING FINGER CURSOR (placed after + slightly below last letter) */}
-            <div
-              style={{
-                position: "absolute",
-                right: "-18px",
-                top: "60%",
-                transform: "translateY(-50%)",
-                fontSize: "1.1rem",
-                opacity: 0.8,
-                pointerEvents: "none",
-              }}
-            >
-              👉
+              {/* POINTING FINGER — touching the “S” */}
+              <div
+                style={{
+                  position: "absolute",
+                  right: "-10px",
+                  top: "70%",
+                  transform: "translateY(-50%)",
+                  fontSize: "1.05rem",
+                  opacity: 0.85,
+                  pointerEvents: "none",
+                }}
+              >
+                👉
+              </div>
             </div>
           </div>
         </div>
