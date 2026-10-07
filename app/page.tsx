@@ -39,13 +39,8 @@ export default function HomePage() {
           to safeguard what must not be lost—across generations, regimes, and market cycles.
         </p>
 
-        {/* CENTERED PLAQUE + SMALL CTA */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
+        {/* CENTERED PLAQUE + CTA */}
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <div
             style={{
               display: "inline-block",
@@ -59,7 +54,7 @@ export default function HomePage() {
             }}
           >
             <div style={{ position: "relative", display: "inline-block" }}>
-              {/* PRIMARY CTA */}
+              {/* CTA BUTTON */}
               <a
                 href="/services"
                 style={{
@@ -79,15 +74,16 @@ export default function HomePage() {
                 View Institutional Services
               </a>
 
-              {/* POINTING FINGER — touching the “S” */}
+              {/* 45° ANGLED FINGER TOUCHING THE “S” */}
               <div
                 style={{
                   position: "absolute",
-                  right: "-10px",
-                  top: "70%",
-                  transform: "translateY(-50%)",
+                  right: "-12px",
+                  top: "78%",
+                  transform: "translateY(-50%) rotate(-45deg)",
                   fontSize: "1.05rem",
-                  opacity: 0.85,
+                  opacity: 0.9,
+                  color: "#F5F7FA", // contrasting silver-white
                   pointerEvents: "none",
                 }}
               >
