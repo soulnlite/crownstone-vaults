@@ -5,7 +5,7 @@ export default function ServicesPage() {
       <section
         style={{
           marginBottom: "3.8rem",
-          padding: "3rem 2.8rem",
+          padding: "3.2rem 2.8rem",
           borderRadius: "22px",
           background:
             "linear-gradient(135deg, #0A1728 0%, #13233D 50%, #0B1523 100%)",
@@ -16,32 +16,31 @@ export default function ServicesPage() {
         <h1
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "2.2rem",
-            marginBottom: "1.1rem",
+            fontSize: "2.35rem",
+            marginBottom: "1.2rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
             color: "#FDF4E3",
           }}
         >
-          Institutional Subscription Services
+          Institutional Custodial Subscription Services
         </h1>
 
         <p
           style={{
-            fontSize: "1.02rem",
+            fontSize: "1.05rem",
             lineHeight: "1.85",
             maxWidth: "760px",
-            marginBottom: "2.1rem",
+            marginBottom: "2.2rem",
           }}
         >
-          Crownstone Vaults Limited operates exclusively on a subscription basis. Every client is
-          enrolled into a custodial subscription tier that governs access to document storage,
-          valuables custody, digital clearance, and cross-generational heritage services. No
-          subscription—no service.
+          Every Crownstone Vaults client is enrolled in a custodial subscription tier. Your tier
+          determines the scope of custody, access privileges, digital clearance, and heritage
+          continuity. Subscription is the foundation of service.
         </p>
 
-        {/* PRIMARY CTA PLAQUE */}
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        {/* CTA */}
+        <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <div
             style={{
               display: "inline-block",
@@ -51,14 +50,13 @@ export default function ServicesPage() {
               border: "1px solid rgba(201,168,106,0.32)",
               boxShadow:
                 "inset 0 3px 6px rgba(255,255,255,0.08), inset 0 -4px 8px rgba(0,0,0,0.45), 0 14px 32px rgba(0,0,0,0.55)",
-              transform: "translateY(-2px)",
             }}
           >
             <div style={{ position: "relative", display: "inline-block" }}>
               <a
                 href="/contact"
                 style={{
-                  padding: "0.8rem 1.7rem",
+                  padding: "0.85rem 1.7rem",
                   borderRadius: "999px",
                   background:
                     "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
@@ -68,13 +66,12 @@ export default function ServicesPage() {
                   textDecoration: "none",
                   boxShadow:
                     "0 10px 26px rgba(201,168,106,0.55), 0 0 12px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
-                  display: "inline-block",
                 }}
               >
-                Initiate Subscription Onboarding
+                Begin Subscription Onboarding
               </a>
 
-              {/* METALLIC GOLD-SILVER FINGER */}
+              {/* Metallic Finger */}
               <div
                 style={{
                   position: "absolute",
@@ -82,7 +79,6 @@ export default function ServicesPage() {
                   top: "84%",
                   transform: "translateX(-50%) rotate(-110deg)",
                   fontSize: "1.1rem",
-                  opacity: 1,
                   color: "#C9B27A",
                   pointerEvents: "none",
                 }}
@@ -94,149 +90,140 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* SUBSCRIPTION TIERS OVERVIEW */}
-      <section style={{ marginBottom: "3.2rem" }}>
+      {/* SUBSCRIPTION TIERS */}
+      <section style={{ marginBottom: "3.4rem" }}>
         <h2
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "1.4rem",
+            fontSize: "1.45rem",
             marginBottom: "1.4rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
             color: "#FDF4E3",
           }}
         >
-          Subscription Architecture
+          Subscription Tiers
         </h2>
-
-        <p
-          style={{
-            fontSize: "0.98rem",
-            lineHeight: "1.8",
-            maxWidth: "780px",
-            marginBottom: "1.8rem",
-          }}
-        >
-          All services are delivered through tiered subscriptions. Each tier defines the scope of
-          custody, the level of access, and the depth of cross-generational continuity. Clients
-          may upgrade tiers over time as their custodial and heritage requirements evolve.
-        </p>
 
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "1.5rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "1.6rem",
           }}
         >
           {/* Tier I */}
           <div
             style={{
-              padding: "1.6rem 1.5rem",
-              borderRadius: "14px",
-              background: "rgba(9,18,32,0.95)",
-              border: "1px solid rgba(255,255,255,0.06)",
+              padding: "1.7rem 1.6rem",
+              borderRadius: "16px",
+              background: "rgba(9,18,32,0.96)",
+              border: "1px solid rgba(255,255,255,0.08)",
             }}
           >
             <h3
               style={{
-                fontSize: "1.02rem",
-                marginBottom: "0.5rem",
+                fontSize: "1.05rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
               }}
             >
               Tier I — Custodial Access
             </h3>
-            <p style={{ fontSize: "0.94rem", lineHeight: "1.7" }}>
-              Base subscription for physical custody of critical personal documents and small
-              valuables. Establishes sovereign-grade storage conditions and controlled physical
-              access, without digital retrieval or lineage services.
-            </p>
+            <ul style={{ lineHeight: "1.8", fontSize: "0.95rem", paddingLeft: "1.1rem" }}>
+              <li>Physical custody of critical documents</li>
+              <li>Custody of small valuables</li>
+              <li>Baseline compliance protocols</li>
+              <li>Controlled physical retrieval</li>
+            </ul>
           </div>
 
           {/* Tier II */}
           <div
             style={{
-              padding: "1.6rem 1.5rem",
-              borderRadius: "14px",
-              background: "rgba(9,18,32,0.95)",
-              border: "1px solid rgba(255,255,255,0.06)",
+              padding: "1.7rem 1.6rem",
+              borderRadius: "16px",
+              background: "rgba(9,18,32,0.96)",
+              border: "1px solid rgba(255,255,255,0.08)",
             }}
           >
             <h3
               style={{
-                fontSize: "1.02rem",
-                marginBottom: "0.5rem",
+                fontSize: "1.05rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
               }}
             >
               Tier II — Digital Access Clearance
             </h3>
-            <p style={{ fontSize: "0.94rem", lineHeight: "1.7" }}>
-              Extends custody with encrypted digital copies of registered documents. Access is
-              granted only to pre-approved individuals under pre-stated conditions, with full
-              logging and high-level clearance protocols.
-            </p>
+            <ul style={{ lineHeight: "1.8", fontSize: "0.95rem", paddingLeft: "1.1rem" }}>
+              <li>Encrypted digital copies</li>
+              <li>Multi-factor clearance</li>
+              <li>Pre-approved access list</li>
+              <li>Logged digital retrievals</li>
+            </ul>
           </div>
 
           {/* Tier III */}
           <div
             style={{
-              padding: "1.6rem 1.5rem",
-              borderRadius: "14px",
-              background: "rgba(9,18,32,0.95)",
-              border: "1px solid rgba(255,255,255,0.06)",
+              padding: "1.7rem 1.6rem",
+              borderRadius: "16px",
+              background: "rgba(9,18,32,0.96)",
+              border: "1px solid rgba(255,255,255,0.08)",
             }}
           >
             <h3
               style={{
-                fontSize: "1.02rem",
-                marginBottom: "0.5rem",
+                fontSize: "1.05rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
               }}
             >
               Tier III — Heritage & Lineage Continuity
             </h3>
-            <p style={{ fontSize: "0.94rem", lineHeight: "1.7" }}>
-              Designed for families seeking cross-generational continuity. Enables the issuance of
-              lineage excellence certificates based on stored academic, professional, and artistic
-              records, for use in applications and prestige documentation.
-            </p>
+            <ul style={{ lineHeight: "1.8", fontSize: "0.95rem", paddingLeft: "1.1rem" }}>
+              <li>Lineage excellence certificates</li>
+              <li>Academic & professional heritage documentation</li>
+              <li>Cross-generational profile building</li>
+              <li>Prestige continuity services</li>
+            </ul>
           </div>
 
           {/* Tier IV */}
           <div
             style={{
-              padding: "1.6rem 1.5rem",
-              borderRadius: "14px",
-              background: "rgba(9,18,32,0.95)",
-              border: "1px solid rgba(255,255,255,0.06)",
+              padding: "1.7rem 1.6rem",
+              borderRadius: "16px",
+              background: "rgba(9,18,32,0.96)",
+              border: "1px solid rgba(255,255,255,0.08)",
             }}
           >
             <h3
               style={{
-                fontSize: "1.02rem",
-                marginBottom: "0.5rem",
+                fontSize: "1.05rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
               }}
             >
               Tier IV — Sovereign Family Office Custody
             </h3>
-            <p style={{ fontSize: "0.94rem", lineHeight: "1.7" }}>
-              Ultra-elite custodial subscription for high-paying clients. Provides bespoke vaulting
-              conditions, dedicated heritage archivists, and multi-decade custodial agreements
-              spanning generations.
-            </p>
+            <ul style={{ lineHeight: "1.8", fontSize: "0.95rem", paddingLeft: "1.1rem" }}>
+              <li>Bespoke vaulting conditions</li>
+              <li>Dedicated heritage archivist</li>
+              <li>Multi-decade custodial agreements</li>
+              <li>Elite valuation & continuity services</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* CORE SERVICES: DOCUMENT & VALUABLES CUSTODY */}
-      <section style={{ marginBottom: "3.2rem" }}>
+      {/* CORE SERVICES */}
+      <section style={{ marginBottom: "3.4rem" }}>
         <h2
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "1.4rem",
+            fontSize: "1.45rem",
             marginBottom: "1.4rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
@@ -253,7 +240,7 @@ export default function ServicesPage() {
             gap: "1.6rem",
           }}
         >
-          {/* Document Custody */}
+          {/* Documents */}
           <div
             style={{
               padding: "1.7rem 1.6rem",
@@ -264,25 +251,22 @@ export default function ServicesPage() {
           >
             <h3
               style={{
-                fontSize: "1.04rem",
-                marginBottom: "0.6rem",
+                fontSize: "1.05rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
               }}
             >
               Critical Document Custody
             </h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.8", marginBottom: "0.9rem" }}>
-              Secure storage of wills, deeds, certificates, contracts, estate papers, and identity
-              documents. Each item is catalogued, preserved, and held under custodial protocols
-              designed to withstand generational transitions and institutional scrutiny.
-            </p>
-            <p style={{ fontSize: "0.9rem", lineHeight: "1.7", color: "#C7CCD6" }}>
-              Access to originals is governed by pre-defined conditions and pre-approved
-              beneficiaries, ensuring continuity of intent and controlled release.
-            </p>
+            <ul style={{ lineHeight: "1.8", fontSize: "0.95rem", paddingLeft: "1.1rem" }}>
+              <li>Wills, deeds, certificates</li>
+              <li>Contracts & estate papers</li>
+              <li>Identity documents</li>
+              <li>Controlled release conditions</li>
+            </ul>
           </div>
 
-          {/* Valuables Custody */}
+          {/* Valuables */}
           <div
             style={{
               padding: "1.7rem 1.6rem",
@@ -293,54 +277,37 @@ export default function ServicesPage() {
           >
             <h3
               style={{
-                fontSize: "1.04rem",
-                marginBottom: "0.6rem",
+                fontSize: "1.05rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
               }}
             >
               Small Valuables Custody
             </h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.8", marginBottom: "0.9rem" }}>
-              Custody of small, high-value items such as jewelry, medals, collectibles, and
-              heritage artefacts. Each item must be accompanied by valuation certificates from
-              approved sources to qualify for custody.
-            </p>
-            <p style={{ fontSize: "0.9rem", lineHeight: "1.7", color: "#C7CCD6" }}>
-              Where valuation certificates are not available, Crownstone Vaults can arrange
-              valuation services as an integrated, compliant offering under the client’s
-              subscription.
-            </p>
+            <ul style={{ lineHeight: "1.8", fontSize: "0.95rem", paddingLeft: "1.1rem" }}>
+              <li>Jewelry, medals, collectibles</li>
+              <li>Heritage artefacts</li>
+              <li>Valuation certificate requirement</li>
+              <li>In-house valuation available</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* DIGITAL ACCESS & CONTROLLED RETRIEVAL */}
-      <section style={{ marginBottom: "3.2rem" }}>
+      {/* DIGITAL ACCESS */}
+      <section style={{ marginBottom: "3.4rem" }}>
         <h2
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "1.4rem",
+            fontSize: "1.45rem",
             marginBottom: "1.4rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
             color: "#FDF4E3",
           }}
         >
-          Digital Access & Controlled Retrieval
+          Digital Access & Retrieval
         </h2>
-
-        <p
-          style={{
-            fontSize: "0.98rem",
-            lineHeight: "1.8",
-            maxWidth: "780px",
-            marginBottom: "1.7rem",
-          }}
-        >
-          For clients enrolled in higher clearance tiers, Crownstone Vaults provides encrypted
-          digital access to registered document copies. Access is strictly controlled, logged, and
-          limited to pre-approved individuals under pre-stated conditions.
-        </p>
 
         <div
           style={{
@@ -352,61 +319,63 @@ export default function ServicesPage() {
           {/* Encrypted Copies */}
           <div
             style={{
-              padding: "1.6rem 1.5rem",
-              borderRadius: "15px",
+              padding: "1.7rem 1.6rem",
+              borderRadius: "16px",
               background: "rgba(9,18,32,0.96)",
-              border: "1px solid rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.08)",
             }}
           >
             <h3
               style={{
-                fontSize: "1.02rem",
-                marginBottom: "0.6rem",
+                fontSize: "1.05rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
               }}
             >
               Encrypted Document Copies
             </h3>
-            <p style={{ fontSize: "0.94rem", lineHeight: "1.8" }}>
-              Digitized copies of critical documents are stored in encrypted form and made
-              available only to clients registered for digital access clearance at the time of
-              custody onboarding.
-            </p>
+            <ul style={{ lineHeight: "1.8", fontSize: "0.95rem", paddingLeft: "1.1rem" }}>
+              <li>Digitized custody records</li>
+              <li>Encrypted storage</li>
+              <li>High-clearance access</li>
+              <li>Registered at onboarding</li>
+            </ul>
           </div>
 
-          {/* Pre-Approved Access */}
+          {/* Access Protocols */}
           <div
             style={{
-              padding: "1.6rem 1.5rem",
-              borderRadius: "15px",
+              padding: "1.7rem 1.6rem",
+              borderRadius: "16px",
               background: "rgba(9,18,32,0.96)",
-              border: "1px solid rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.08)",
             }}
           >
             <h3
               style={{
-                fontSize: "1.02rem",
-                marginBottom: "0.6rem",
+                fontSize: "1.05rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
               }}
             >
-              Pre-Approved Access Protocols
+              Controlled Access Protocols
             </h3>
-            <p style={{ fontSize: "0.94rem", lineHeight: "1.8" }}>
-              Access to digital copies and physical items is granted only to pre-approved persons,
-              under conditions defined at subscription onboarding. All retrievals are logged and
-              subject to custodial oversight.
-            </p>
+            <ul style={{ lineHeight: "1.8", fontSize: "0.95rem", paddingLeft: "1.1rem" }}>
+              <li>Pre-approved individuals only</li>
+              <li>Pre-stated conditions</li>
+              <li>Full retrieval logging</li>
+              <li>Custodial oversight</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* HERITAGE & LINEAGE SERVICES */}
-      <section style={{ marginBottom: "3.2rem" }}>
+      {/* HERITAGE */}
+      <section style={{ marginBottom: "3.4rem" }}>
         <h2
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "1.4rem",
+            fontSize: "1.45rem",
             marginBottom: "1.4rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
@@ -416,20 +385,6 @@ export default function ServicesPage() {
           Heritage & Lineage Continuity
         </h2>
 
-        <p
-          style={{
-            fontSize: "0.98rem",
-            lineHeight: "1.8",
-            maxWidth: "780px",
-            marginBottom: "1.7rem",
-          }}
-        >
-          For qualifying families in higher subscription tiers, Crownstone Vaults issues
-          cross-generational profile certificates that document academic, professional, and
-          artistic excellence across lineage. These certificates are designed for presentation in
-          applications for further studies, scholarships, and employment.
-        </p>
-
         <div
           style={{
             display: "grid",
@@ -437,7 +392,7 @@ export default function ServicesPage() {
             gap: "1.6rem",
           }}
         >
-          {/* Lineage Certificates */}
+          {/* Certificates */}
           <div
             style={{
               padding: "1.7rem 1.6rem",
@@ -448,22 +403,22 @@ export default function ServicesPage() {
           >
             <h3
               style={{
-                fontSize: "1.04rem",
-                marginBottom: "0.6rem",
+                fontSize: "1.05rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
               }}
             >
               Lineage Excellence Certificates
             </h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.8" }}>
-              Certificates referencing parental or ancestral achievements—such as Ivy League
-              alumni status, advanced degrees, professional distinctions, or artistic training—are
-              issued to participating family members upon key milestones, such as high school
-              graduation.
-            </p>
+            <ul style={{ lineHeight: "1.8", fontSize: "0.95rem", paddingLeft: "1.1rem" }}>
+              <li>Ivy League lineage references</li>
+              <li>Advanced degree lineage</li>
+              <li>Professional distinction lineage</li>
+              <li>Artistic training lineage</li>
+            </ul>
           </div>
 
-          {/* Eligibility & Tiering */}
+          {/* Eligibility */}
           <div
             style={{
               padding: "1.7rem 1.6rem",
@@ -474,18 +429,19 @@ export default function ServicesPage() {
           >
             <h3
               style={{
-                fontSize: "1.04rem",
-                marginBottom: "0.6rem",
+                fontSize: "1.05rem",
+                marginBottom: "0.8rem",
                 color: "#F3D39A",
               }}
             >
-              Eligibility & High-Value Tiers
+              Eligibility & Tier Requirements
             </h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.8" }}>
-              These heritage services are reserved for high-paying subscription categories and
-              require that qualifying documents and records be held under custody with Crownstone
-              Vaults over time, creating multi-generational continuity.
-            </p>
+            <ul style={{ lineHeight: "1.8", fontSize: "0.95rem", paddingLeft: "1.1rem" }}>
+              <li>High-paying subscription tiers</li>
+              <li>Custody of qualifying documents</li>
+              <li>Multi-year participation</li>
+              <li>Cross-generational continuity</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -495,7 +451,7 @@ export default function ServicesPage() {
         <h2
           style={{
             fontFamily: "Merriweather, serif",
-            fontSize: "1.35rem",
+            fontSize: "1.4rem",
             marginBottom: "1.1rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
@@ -504,6 +460,7 @@ export default function ServicesPage() {
         >
           Begin Subscription Onboarding
         </h2>
+
         <p
           style={{
             fontSize: "0.98rem",
@@ -512,27 +469,11 @@ export default function ServicesPage() {
             marginBottom: "1.7rem",
           }}
         >
-          Prospective clients and families are invited to initiate a structured onboarding process
-          to determine the appropriate subscription tier, custodial scope, and heritage
-          configuration. Crownstone Vaults is designed to remain in place across generations.
+          Select your subscription tier and initiate institutional onboarding. Crownstone Vaults
+          is designed to remain in place across generations.
         </p>
 
         <a
           href="/contact"
           style={{
             padding: "0.85rem 1.7rem",
-            borderRadius: "999px",
-            border: "1px solid rgba(201,168,106,0.7)",
-            color: "#FDF4E3",
-            fontWeight: 500,
-            fontSize: "0.95rem",
-            textDecoration: "none",
-            background: "rgba(10,23,40,0.9)",
-          }}
-        >
-          Initiate Institutional Contact
-        </a>
-      </section>
-    </div>
-  );
-}
