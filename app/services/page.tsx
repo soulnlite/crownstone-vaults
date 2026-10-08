@@ -477,3 +477,18 @@ export default function ServicesPage() {
           href="/contact"
           style={{
             padding: "0.85rem 1.7rem",
+            borderRadius: "999px",
+            border: "1px solid rgba(201,168,106,0.7)",
+            color: "#FDF4E3",
+            fontWeight: 500,
+            fontSize: "0.95rem",
+            textDecoration: "none",
+            background: "rgba(10,23,40,0.9)",
+          }}
+        >
+          Initiate Institutional Contact
+        </a>
+      </section>
+    </div>
+  );
+}
