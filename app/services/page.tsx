@@ -4,7 +4,7 @@ import { useState } from "react";
 
 type Tier = "Silver" | "Gold" | "Platinum" | "Crown";
 
-const tiers: Tier[] = ["Silver", "Gold", "Platinum", "Crown"];
+const tierOrder: Tier[] = ["Silver", "Gold", "Platinum", "Crown"];
 
 const services: Record<Tier, { title: string; description: string }[]> = {
   Silver: [
@@ -24,6 +24,7 @@ const services: Record<Tier, { title: string; description: string }[]> = {
         "Core compliance features aligned with institutional minimums.",
     },
   ],
+
   Gold: [
     {
       title: "Enhanced Vault Access",
@@ -41,6 +42,7 @@ const services: Record<Tier, { title: string; description: string }[]> = {
         "Broader compliance tooling aligned with elevated governance expectations.",
     },
   ],
+
   Platinum: [
     {
       title: "Strategic Vault Architecture",
@@ -58,6 +60,7 @@ const services: Record<Tier, { title: string; description: string }[]> = {
         "Deep compliance instrumentation for multi-layered oversight environments.",
     },
   ],
+
   Crown: [
     {
       title: "Crownstone Signature Vault",
@@ -77,8 +80,6 @@ const services: Record<Tier, { title: string; description: string }[]> = {
   ],
 };
 
-const tierOrder: Tier[] = ["Silver", "Gold", "Platinum", "Crown"];
-
 export default function ServicesPage() {
   const [selectedTier, setSelectedTier] = useState<Tier>("Silver");
 
@@ -95,7 +96,8 @@ export default function ServicesPage() {
         margin: "0 auto",
         padding: "3rem 1.5rem 4rem",
         color: "#FDF4E3",
-        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        fontFamily:
+          "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       }}
     >
       {/* Header */}
@@ -106,17 +108,19 @@ export default function ServicesPage() {
             letterSpacing: "0.04em",
             textTransform: "uppercase",
             marginBottom: "0.75rem",
+            color: "rgba(201,168,106,0.92)", // GOLD HEADER TONE
           }}
         >
           Crownstone Vaults Services
         </h1>
+
         <p
           style={{
             maxWidth: "640px",
             margin: "0 auto",
             fontSize: "0.98rem",
             lineHeight: 1.6,
-            color: "rgba(253,244,227,0.82)",
+            color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
           }}
         >
           Service tiers are structured to accumulate. Selecting a higher tier
@@ -125,7 +129,7 @@ export default function ServicesPage() {
         </p>
       </section>
 
-      {/* Tier selector */}
+      {/* Tier Selector */}
       <section
         style={{
           marginBottom: "2.5rem",
@@ -142,12 +146,13 @@ export default function ServicesPage() {
               fontSize: "0.9rem",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
-              color: "rgba(201,168,106,0.85)",
+              color: "rgba(201,168,106,0.92)", // GOLD HEADER TONE
             }}
           >
             Select service tier
           </span>
         </div>
+
         <div
           style={{
             display: "flex",
@@ -167,7 +172,7 @@ export default function ServicesPage() {
                   padding: "0.55rem 1.1rem",
                   borderRadius: "999px",
                   border: isActive
-                    ? "1px solid rgba(201,168,106,0.9)"
+                    ? "1px solid rgba(201,168,106,0.92)"
                     : "1px solid rgba(201,168,106,0.35)",
                   background: isActive
                     ? "rgba(201,168,106,0.16)"
@@ -185,22 +190,23 @@ export default function ServicesPage() {
             );
           })}
         </div>
+
         <div
           style={{
             marginTop: "0.75rem",
             textAlign: "center",
             fontSize: "0.85rem",
-            color: "rgba(253,244,227,0.7)",
+            color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
           }}
         >
           Currently viewing:{" "}
-          <span style={{ color: "rgba(201,168,106,0.9)", fontWeight: 500 }}>
+          <span style={{ color: "rgba(201,168,106,0.92)", fontWeight: 500 }}>
             {selectedTier} tier (includes all prior tiers)
           </span>
         </div>
       </section>
 
-      {/* Services grid */}
+      {/* Services Grid */}
       <section>
         <div
           style={{
@@ -220,21 +226,26 @@ export default function ServicesPage() {
                 padding: "1.1rem 1rem",
               }}
             >
+              {/* HEADER — gold tone */}
               <h2
                 style={{
-                  fontSize: "0.98rem",
-                  marginBottom: "0.4rem",
-                  color: "#FDF4E3",
-                  letterSpacing: "0.03em",
+                  fontSize: "1rem",
+                  marginBottom: "0.45rem",
+                  color: "rgba(201,168,106,0.92)", // GOLD HEADER TONE
+                  letterSpacing: "0.04em",
+                  textTransform: "uppercase",
+                  fontWeight: 600,
                 }}
               >
                 {service.title}
               </h2>
+
+              {/* BODY — parchment tone */}
               <p
                 style={{
                   fontSize: "0.9rem",
                   lineHeight: 1.6,
-                  color: "rgba(253,244,227,0.8)",
+                  color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
                 }}
               >
                 {service.description}
@@ -244,7 +255,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
+      {/* CTA */}
       <section style={{ marginTop: "3rem", textAlign: "center" }}>
         <a
           href="/onboarding"
@@ -254,7 +265,7 @@ export default function ServicesPage() {
             borderRadius: "6px",
             border: "1px solid rgba(201,168,106,0.7)",
             background: "rgba(10,23,40,0.9)",
-            color: "#FDF4E3",
+            color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
             fontWeight: 500,
             fontSize: "0.95rem",
             textDecoration: "none",
