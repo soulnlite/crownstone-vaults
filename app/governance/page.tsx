@@ -1,216 +1,182 @@
+"use client";
+
+import { useState } from "react";
+
 export default function GovernancePage() {
   return (
-    <div style={{ color: "#E3E6EB" }}>
-      {/* HERO */}
-      <section
-        style={{
-          marginBottom: "4rem",
-          padding: "3.5rem 3rem",
-          borderRadius: "22px",
-          background:
-            "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
-          boxShadow: "0 32px 80px rgba(0,0,0,0.7)",
-          border: "1px solid rgba(201,168,106,0.35)",
-        }}
-      >
+    <main
+      style={{
+        maxWidth: "960px",
+        margin: "0 auto",
+        padding: "3rem 1.5rem 4rem",
+        color: "#FDF4E3",
+        fontFamily:
+          "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      }}
+    >
+      {/* Header */}
+      <section style={{ marginBottom: "2.5rem", textAlign: "center" }}>
         <h1
           style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "2.7rem",
-            marginBottom: "1.4rem",
-            letterSpacing: "0.065em",
-            color: "#FDF4E3",
-            textShadow: "0 0 22px rgba(201,168,106,0.35)",
+            fontSize: "2.1rem",
+            letterSpacing: "0.04em",
+            textTransform: "uppercase",
+            marginBottom: "0.75rem",
+            color: "rgba(201,168,106,0.92)", // GOLD HEADER TONE
           }}
         >
           Governance Framework
         </h1>
 
-        <div
-          style={{
-            height: "4px",
-            width: "150px",
-            background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "2rem",
-          }}
-        ></div>
-
         <p
           style={{
-            fontSize: "1.15rem",
-            lineHeight: "1.9",
-            maxWidth: "780px",
-            marginBottom: "2.4rem",
-            letterSpacing: "0.01em",
+            maxWidth: "640px",
+            margin: "0 auto",
+            fontSize: "0.98rem",
+            lineHeight: 1.6,
+            color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
           }}
         >
-          Crownstone Vaults operates under a structured governance framework engineered to ensure
-          oversight, compliance alignment, and institutional continuity across operational cycles
-          and regulatory transitions.
+          Crownstone Vaults governance architecture ensures institutional
+          alignment, oversight continuity, and structured operational discipline
+          across all vault tiers and preservation mandates.
         </p>
       </section>
 
-      {/* GOVERNANCE STRUCTURE */}
-      <section style={{ marginBottom: "4rem" }}>
-        <h2
+      {/* Governance Sections */}
+      <section
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+          gap: "1.25rem",
+        }}
+      >
+        <article
           style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "1.55rem",
-            marginBottom: "1.8rem",
-            letterSpacing: "0.085em",
-            textTransform: "uppercase",
-            color: "#FDF4E3",
+            borderRadius: "10px",
+            border: "1px solid rgba(201,168,106,0.35)",
+            background:
+              "radial-gradient(circle at top left, rgba(201,168,106,0.12), rgba(10,23,40,0.96))",
+            padding: "1.1rem 1rem",
           }}
         >
-          Structural Oversight Components
-        </h2>
+          <h2
+            style={{
+              fontSize: "1rem",
+              marginBottom: "0.45rem",
+              color: "rgba(201,168,106,0.92)", // GOLD HEADER TONE
+              letterSpacing: "0.04em",
+              textTransform: "uppercase",
+              fontWeight: 600,
+            }}
+          >
+            Oversight Structure
+          </h2>
 
-        <div
+          <p
+            style={{
+              fontSize: "0.9rem",
+              lineHeight: 1.6,
+              color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
+            }}
+          >
+            Multi‑layered oversight mechanisms ensure operational integrity,
+            regulatory alignment, and governance continuity across all vault
+            environments.
+          </p>
+        </article>
+
+        <article
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))",
-            gap: "2rem",
+            borderRadius: "10px",
+            border: "1px solid rgba(201,168,106,0.35)",
+            background:
+              "radial-gradient(circle at top left, rgba(201,168,106,0.12), rgba(10,23,40,0.96))",
+            padding: "1.1rem 1rem",
           }}
         >
-          {/* Component 1 */}
-          <div
+          <h2
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
-              background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              fontSize: "1rem",
+              marginBottom: "0.45rem",
+              color: "rgba(201,168,106,0.92)", // GOLD HEADER TONE
+              letterSpacing: "0.04em",
+              textTransform: "uppercase",
+              fontWeight: 600,
             }}
           >
-            <h3
-              style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
-              }}
-            >
-              Oversight Mechanisms
-            </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Governance oversight ensures that custodial, preservation, and compliance operations
-              remain aligned with institutional expectations and regulatory obligations.
-            </p>
-          </div>
+            Governance Protocols
+          </h2>
 
-          {/* Component 2 */}
-          <div
+          <p
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
-              background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              fontSize: "0.9rem",
+              lineHeight: 1.6,
+              color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
             }}
           >
-            <h3
-              style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
-              }}
-            >
-              Compliance Alignment
-            </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Compliance structures ensure that institutional records, governance artefacts, and
-              preservation mandates meet regulatory standards and withstand external scrutiny.
-            </p>
-          </div>
+            Protocols define operational boundaries, escalation pathways, and
+            institutional safeguards that govern all vault interactions.
+          </p>
+        </article>
 
-          {/* Component 3 */}
-          <div
+        <article
+          style={{
+            borderRadius: "10px",
+            border: "1px solid rgba(201,168,106,0.35)",
+            background:
+              "radial-gradient(circle at top left, rgba(201,168,106,0.12), rgba(10,23,40,0.96))",
+            padding: "1.1rem 1rem",
+          }}
+        >
+          <h2
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
-              background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              fontSize: "1rem",
+              marginBottom: "0.45rem",
+              color: "rgba(201,168,106,0.92)", // GOLD HEADER TONE
+              letterSpacing: "0.04em",
+              textTransform: "uppercase",
+              fontWeight: 600,
             }}
           >
-            <h3
-              style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
-              }}
-            >
-              Institutional Continuity
-            </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Continuity protocols ensure that institutional memory, custodial integrity, and
-              governance structures remain stable across leadership changes and generational
-              transitions.
-            </p>
-          </div>
-        </div>
+            Institutional Alignment
+          </h2>
+
+          <p
+            style={{
+              fontSize: "0.9rem",
+              lineHeight: 1.6,
+              color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
+            }}
+          >
+            Governance alignment ensures that Crownstone Vaults operates within
+            institutional expectations, long‑horizon mandates, and regulatory
+            frameworks.
+          </p>
+        </article>
       </section>
 
       {/* CTA */}
-      <section>
-        <div
-          style={{
-            height: "4px",
-            width: "150px",
-            background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "1.4rem",
-          }}
-        ></div>
-
-        <h2
-          style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "1.55rem",
-            marginBottom: "1.2rem",
-            letterSpacing: "0.085em",
-            textTransform: "uppercase",
-            color: "#FDF4E3",
-          }}
-        >
-          Governance Engagement
-        </h2>
-
-        <p
-          style={{
-            fontSize: "1.05rem",
-            lineHeight: "1.85",
-            maxWidth: "800px",
-            marginBottom: "2rem",
-            letterSpacing: "0.01em",
-          }}
-        >
-          Institutions requiring governance support, oversight alignment, or compliance
-          reinforcement may initiate contact through our formal engagement pathway.
-        </p>
-
+      <section style={{ marginTop: "3rem", textAlign: "center" }}>
         <a
-          href="/contact"
+          href="/services"
           style={{
-            padding: "1rem 1.8rem",
-            borderRadius: "999px",
+            display: "inline-block",
+            padding: "0.85rem 1.7rem",
+            borderRadius: "6px",
             border: "1px solid rgba(201,168,106,0.7)",
-            color: "#FDF4E3",
+            background: "rgba(10,23,40,0.9)",
+            color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
             fontWeight: 500,
-            fontSize: "1.05rem",
+            fontSize: "0.95rem",
             textDecoration: "none",
-            background: "rgba(10,23,40,0.85)",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
           }}
         >
-          Initiate Institutional Contact
+          Return to Services
         </a>
       </section>
-    </div>
+    </main>
   );
 }
