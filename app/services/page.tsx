@@ -1,113 +1,112 @@
-const services = [
-  {
-    tier: "Silver",
-    title: "Basic Vault Access",
-    description: "Entry-level access to Crownstone Vaults’ foundational vault environment."
-  },
-  {
-    tier: "Silver",
-    title: "Standard Preservation",
-    description: "Baseline preservation protocols ensuring consistent and reliable containment."
-  },
-  {
-    tier: "Silver",
-    title: "Foundational Compliance",
-    description: "Core compliance features aligned with institutional minimums."
-  },
-  {
-    tier: "Silver",
-    title: "Introductory Infrastructure",
-    description: "Access to essential infrastructure systems without enhanced features."
-  },
-  {
-    tier: "Gold",
-    title: "Priority Vault Access",
-    description: "Enhanced access with prioritized vault operations."
-  },
-  {
-    tier: "Gold",
-    title: "Enhanced Preservation",
-    description: "Improved preservation protocols with extended stability measures."
-  },
-  {
-    tier: "Gold",
-    title: "Extended Compliance",
-    description: "Broader compliance coverage with additional institutional safeguards."
-  },
-  {
-    tier: "Gold",
-    title: "Mid-Tier Infrastructure",
-    description: "Infrastructure with enhanced throughput and reliability."
-  },
-  {
-    tier: "Platinum",
-    title: "Engineered Vault Access",
-    description: "Adaptive, engineered vault access with liquid-alloy precision."
-  },
-  {
-    tier: "Platinum",
-    title: "Artifact-Grade Preservation",
-    description: "High-precision preservation with dynamic alloy behavior."
-  },
-  {
-    tier: "Platinum",
-    title: "Institutional Compliance",
-    description: "Compliance protocols designed for institutional-grade governance."
-  },
-  {
-    tier: "Platinum",
-    title: "Advanced Infrastructure",
-    description: "High-capacity infrastructure with engineered throughput."
-  },
-  {
-    tier: "Crown",
-    title: "Executive Vault Access",
-    description: "Sovereign-level vault access reserved for executive operations."
-  },
-  {
-    tier: "Crown",
-    title: "Sovereign Preservation",
-    description: "Highest-grade preservation protocols with governance-level safeguards."
-  },
-  {
-    tier: "Crown",
-    title: "Governance-Level Compliance",
-    description: "Compliance designed for governance, oversight, and executive review."
-  },
-  {
-    tier: "Crown",
-    title: "Top-Tier Infrastructure",
-    description: "Institutional infrastructure with maximum throughput and authority."
-  }
-];
+"use client";
 
-const tierStyles: Record<
-  string,
-  { border: string; background: string; labelColor: string }
-> = {
-  Silver: {
-    border: "1px solid #C0C0C0",
-    background: "#111827",
-    labelColor: "#E5E7EB"
-  },
-  Gold: {
-    border: "1px solid #D4AF37",
-    background: "#1F2933",
-    labelColor: "#FDE68A"
-  },
-  Platinum: {
-    border: "1px solid #E5E4E2",
-    background: "#111827",
-    labelColor: "#E5E7EB"
-  },
-  Crown: {
-    border: "1px solid #8B6F47",
-    background: "#1F2933",
-    labelColor: "#FDE68A"
-  }
+import { useState } from "react";
+
+const tiers = ["Silver", "Gold", "Platinum", "Crown"];
+
+const services = {
+  Silver: [
+    {
+      title: "Basic Vault Access",
+      description:
+        "Entry-level access to Crownstone Vaults’ foundational vault environment."
+    },
+    {
+      title: "Standard Preservation",
+      description:
+        "Baseline preservation protocols ensuring consistent and reliable containment."
+    },
+    {
+      title: "Foundational Compliance",
+      description:
+        "Core compliance features aligned with institutional minimums."
+    },
+    {
+      title: "Introductory Infrastructure",
+      description:
+        "Access to essential infrastructure systems without enhanced features."
+    }
+  ],
+
+  Gold: [
+    {
+      title: "Priority Vault Access",
+      description: "Enhanced access with prioritized vault operations."
+    },
+    {
+      title: "Enhanced Preservation",
+      description:
+        "Improved preservation protocols with extended stability measures."
+    },
+    {
+      title: "Extended Compliance",
+      description:
+        "Broader compliance coverage with additional institutional safeguards."
+    },
+    {
+      title: "Mid-Tier Infrastructure",
+      description: "Infrastructure with enhanced throughput and reliability."
+    }
+  ],
+
+  Platinum: [
+    {
+      title: "Engineered Vault Access",
+      description:
+        "Adaptive, engineered vault access with liquid-alloy precision."
+    },
+    {
+      title: "Artifact-Grade Preservation",
+      description:
+        "High-precision preservation with dynamic alloy behavior."
+    },
+    {
+      title: "Institutional Compliance",
+      description:
+        "Compliance protocols designed for institutional-grade governance."
+    },
+    {
+      title: "Advanced Infrastructure",
+      description:
+        "High-capacity infrastructure with engineered throughput."
+    }
+  ],
+
+  Crown: [
+    {
+      title: "Executive Vault Access",
+      description:
+        "Sovereign-level vault access reserved for executive operations."
+    },
+    {
+      title: "Sovereign Preservation",
+      description:
+        "Highest-grade preservation protocols with governance-level safeguards."
+    },
+    {
+      title: "Governance-Level Compliance",
+      description:
+        "Compliance designed for governance, oversight, and executive review."
+    },
+    {
+      title: "Top-Tier Infrastructure",
+      description:
+        "Institutional infrastructure with maximum throughput and authority."
+    }
+  ]
 };
 
 export default function ServicesPage() {
+  const [activeTier, setActiveTier] = useState("Silver");
+
+  const accumulatedServices = (() => {
+    const order = ["Silver", "Gold", "Platinum", "Crown"];
+    const index = order.indexOf(activeTier);
+    const tiersToInclude = order.slice(0, index + 1);
+
+    return tiersToInclude.flatMap((tier) => services[tier]);
+  })();
+
   return (
     <div
       style={{
@@ -117,114 +116,145 @@ export default function ServicesPage() {
         minHeight: "100vh"
       }}
     >
-      <section style={{ marginBottom: "2.8rem" }}>
+      {/* Top CTA */}
+      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "2rem" }}>
         <a
+          href="/subscription"
+          style={{
+            padding: "0.75rem 1.4rem",
+            borderRadius: "6px",
+            border: "1px solid rgba(201,168,106,0.7)",
+            background: "rgba(10,23,40,0.9)",
+            color: "#FDF4E3",
+            fontWeight: 500,
+            fontSize: "0.9rem",
+            textDecoration: "none"
+          }}
+        >
+          Proceed to Subscription
+        </a>
+      </div>
+
+      {/* Title */}
+      <h1
+        style={{
+          fontSize: "2.4rem",
+          marginBottom: "1.2rem",
+          color: "#F9FAFB"
+        }}
+      >
+        Crownstone Vaults — Services
+      </h1>
+
+      <p
+        style={{
+          maxWidth: "46rem",
+          fontSize: "0.98rem",
+          lineHeight: 1.6,
+          color: "#9CA3AF",
+          marginBottom: "2.5rem"
+        }}
+      >
+        Select a tier to view its institutional services. Higher tiers include all services from
+        previous tiers, reflecting hierarchical progression and expanded vault capability.
+      </p>
+
+      {/* Segmented Control */}
+      <div
+        style={{
+          display: "flex",
+          gap: "0.4rem",
+          marginBottom: "2.5rem"
+        }}
+      >
+        {tiers.map((tier) => {
+          const isActive = tier === activeTier;
+
+          return (
+            <button
+              key={tier}
+              onClick={() => setActiveTier(tier)}
+              style={{
+                padding: "0.65rem 1.2rem",
+                borderRadius: "6px",
+                border: isActive
+                  ? "1px solid #D4AF37"
+                  : "1px solid rgba(229,228,226,0.4)",
+                background: isActive ? "rgba(212,175,55,0.15)" : "rgba(255,255,255,0.03)",
+                color: isActive ? "#FDE68A" : "#E5E7EB",
+                fontWeight: 500,
+                fontSize: "0.9rem",
+                cursor: "pointer",
+                transition: "all 0.2s ease"
+              }}
+            >
+              {tier}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Services Grid */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+          gap: "1.8rem"
+        }}
+      >
+        {accumulatedServices.map((service, index) => (
+          <div
+            key={index}
+            style={{
+              padding: "1.6rem 1.5rem",
+              borderRadius: "0.9rem",
+              border: "1px solid rgba(148,163,184,0.4)",
+              background: "#111827",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.45)"
+            }}
+          >
+            <h2
+              style={{
+                fontSize: "1.05rem",
+                fontWeight: 500,
+                color: "#F9FAFB",
+                marginBottom: "0.6rem"
+              }}
+            >
+              {service.title}
+            </h2>
+
+            <p
+              style={{
+                fontSize: "0.9rem",
+                lineHeight: 1.55,
+                color: "#9CA3AF"
+              }}
+            >
+              {service.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom CTA */}
+      <div style={{ marginTop: "3rem", textAlign: "center" }}>
+        <a
+          href="/subscription"
           style={{
             padding: "0.85rem 1.7rem",
-            borderRadius: "999px",
+            borderRadius: "6px",
             border: "1px solid rgba(201,168,106,0.7)",
+            background: "rgba(10,23,40,0.9)",
             color: "#FDF4E3",
             fontWeight: 500,
             fontSize: "0.95rem",
-            textDecoration: "none",
-            background: "rgba(10,23,40,0.9)",
-            display: "inline-block"
+            textDecoration: "none"
           }}
         >
-          Initiate Institutional Contact
+          Proceed to Subscription
         </a>
-      </section>
-
-      <section style={{ marginBottom: "2.4rem" }}>
-        <h1
-          style={{
-            fontSize: "2.4rem",
-            marginBottom: "0.75rem",
-            color: "#F9FAFB"
-          }}
-        >
-          Crownstone Vaults — Services
-        </h1>
-        <p
-          style={{
-            maxWidth: "46rem",
-            fontSize: "0.98rem",
-            lineHeight: 1.6,
-            color: "#9CA3AF"
-          }}
-        >
-          Crownstone Vaults structures its institutional services across four placeholder tiers:
-          Silver, Gold, Platinum, and Crown. Each tier reflects a distinct level of access,
-          preservation, compliance, and infrastructure capability within the vault system.
-        </p>
-      </section>
-
-      <section>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-            gap: "1.8rem"
-          }}
-        >
-          {services.map((service, index) => {
-            const style = tierStyles[service.tier];
-
-            return (
-              <div
-                key={index}
-                style={{
-                  padding: "1.6rem 1.5rem",
-                  borderRadius: "0.9rem",
-                  border: style.border,
-                  background: style.background,
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.45)"
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "baseline",
-                    marginBottom: "0.9rem"
-                  }}
-                >
-                  <h2
-                    style={{
-                      fontSize: "1.05rem",
-                      fontWeight: 500,
-                      color: "#F9FAFB"
-                    }}
-                  >
-                    {service.title}
-                  </h2>
-                  <span
-                    style={{
-                      fontSize: "0.78rem",
-                      fontWeight: 500,
-                      padding: "0.25rem 0.6rem",
-                      borderRadius: "999px",
-                      border: "1px solid rgba(148,163,184,0.6)",
-                      color: style.labelColor
-                    }}
-                  >
-                    {service.tier} Tier
-                  </span>
-                </div>
-                <p
-                  style={{
-                    fontSize: "0.9rem",
-                    lineHeight: 1.55,
-                    color: "#9CA3AF"
-                  }}
-                >
-                  {service.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
