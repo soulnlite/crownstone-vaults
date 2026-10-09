@@ -2,246 +2,254 @@
 
 import { useState } from "react";
 
-const tiers = ["Silver", "Gold", "Platinum", "Crown"];
+type Tier = "Silver" | "Gold" | "Platinum" | "Crown";
 
-const services = {
+const tiers: Tier[] = ["Silver", "Gold", "Platinum", "Crown"];
+
+const services: Record<Tier, { title: string; description: string }[]> = {
   Silver: [
     {
       title: "Basic Vault Access",
       description:
-        "Entry-level access to Crownstone Vaults’ foundational vault environment."
+        "Entry-level access to Crownstone Vaults foundational vault environment.",
     },
     {
       title: "Standard Preservation",
       description:
-        "Baseline preservation protocols ensuring consistent and reliable containment."
+        "Baseline preservation protocols ensuring consistent and reliable containment.",
     },
     {
       title: "Foundational Compliance",
       description:
-        "Core compliance features aligned with institutional minimums."
+        "Core compliance features aligned with institutional minimums.",
     },
-    {
-      title: "Introductory Infrastructure",
-      description:
-        "Access to essential infrastructure systems without enhanced features."
-    }
   ],
-
   Gold: [
     {
-      title: "Priority Vault Access",
-      description: "Enhanced access with prioritized vault operations."
-    },
-    {
-      title: "Enhanced Preservation",
+      title: "Enhanced Vault Access",
       description:
-        "Improved preservation protocols with extended stability measures."
+        "Priority access to enhanced vault configurations and operational windows.",
     },
     {
-      title: "Extended Compliance",
+      title: "Reinforced Preservation",
       description:
-        "Broader compliance coverage with additional institutional safeguards."
+        "Strengthened preservation measures for more demanding institutional requirements.",
     },
     {
-      title: "Mid-Tier Infrastructure",
-      description: "Infrastructure with enhanced throughput and reliability."
-    }
+      title: "Expanded Compliance Envelope",
+      description:
+        "Broader compliance tooling aligned with elevated governance expectations.",
+    },
   ],
-
   Platinum: [
     {
-      title: "Engineered Vault Access",
+      title: "Strategic Vault Architecture",
       description:
-        "Adaptive, engineered vault access with liquid-alloy precision."
+        "Architected vault structures tailored to complex institutional mandates.",
     },
     {
-      title: "Artifact-Grade Preservation",
+      title: "Advanced Preservation Regimes",
       description:
-        "High-precision preservation with dynamic alloy behavior."
+        "High-intensity preservation protocols for long-horizon containment.",
     },
     {
-      title: "Institutional Compliance",
+      title: "Institutional-Grade Compliance",
       description:
-        "Compliance protocols designed for institutional-grade governance."
+        "Deep compliance instrumentation for multi-layered oversight environments.",
     },
-    {
-      title: "Advanced Infrastructure",
-      description:
-        "High-capacity infrastructure with engineered throughput."
-    }
   ],
-
   Crown: [
     {
-      title: "Executive Vault Access",
+      title: "Crownstone Signature Vault",
       description:
-        "Sovereign-level vault access reserved for executive operations."
+        "Flagship vault configuration reserved for the most sensitive institutional payloads.",
     },
     {
-      title: "Sovereign Preservation",
+      title: "Continuity-Oriented Preservation",
       description:
-        "Highest-grade preservation protocols with governance-level safeguards."
+        "Preservation regimes engineered around continuity, succession, and intergenerational mandates.",
     },
     {
-      title: "Governance-Level Compliance",
+      title: "Crown-Level Governance Alignment",
       description:
-        "Compliance designed for governance, oversight, and executive review."
+        "Governance scaffolding tuned to crown-level, sovereign, or supra-institutional oversight.",
     },
-    {
-      title: "Top-Tier Infrastructure",
-      description:
-        "Institutional infrastructure with maximum throughput and authority."
-    }
-  ]
+  ],
 };
 
+const tierOrder: Tier[] = ["Silver", "Gold", "Platinum", "Crown"];
+
 export default function ServicesPage() {
-  const [activeTier, setActiveTier] = useState("Silver");
+  const [selectedTier, setSelectedTier] = useState<Tier>("Silver");
 
   const accumulatedServices = (() => {
-    const order = ["Silver", "Gold", "Platinum", "Crown"];
-    const index = order.indexOf(activeTier);
-    const tiersToInclude = order.slice(0, index + 1);
-
+    const index = tierOrder.indexOf(selectedTier);
+    const tiersToInclude = tierOrder.slice(0, index + 1);
     return tiersToInclude.flatMap((tier) => services[tier]);
   })();
 
   return (
-    <div
+    <main
       style={{
-        color: "#E3E6EB",
-        padding: "3.5rem 4rem",
-        background: "#020617",
-        minHeight: "100vh"
+        maxWidth: "960px",
+        margin: "0 auto",
+        padding: "3rem 1.5rem 4rem",
+        color: "#FDF4E3",
+        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       }}
     >
-      {/* Top CTA */}
-      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "2rem" }}>
-        <a
-          href="/subscription"
+      {/* Header */}
+      <section style={{ marginBottom: "2.5rem", textAlign: "center" }}>
+        <h1
           style={{
-            padding: "0.75rem 1.4rem",
-            borderRadius: "6px",
-            border: "1px solid rgba(201,168,106,0.7)",
-            background: "rgba(10,23,40,0.9)",
-            color: "#FDF4E3",
-            fontWeight: 500,
-            fontSize: "0.9rem",
-            textDecoration: "none"
+            fontSize: "2.1rem",
+            letterSpacing: "0.04em",
+            textTransform: "uppercase",
+            marginBottom: "0.75rem",
           }}
         >
-          Proceed to Subscription
-        </a>
-      </div>
+          Crownstone Vaults Services
+        </h1>
+        <p
+          style={{
+            maxWidth: "640px",
+            margin: "0 auto",
+            fontSize: "0.98rem",
+            lineHeight: 1.6,
+            color: "rgba(253,244,227,0.82)",
+          }}
+        >
+          Service tiers are structured to accumulate. Selecting a higher tier
+          preserves all foundational capabilities while introducing additional
+          layers of preservation, governance, and institutional alignment.
+        </p>
+      </section>
 
-      {/* Title */}
-      <h1
+      {/* Tier selector */}
+      <section
         style={{
-          fontSize: "2.4rem",
-          marginBottom: "1.2rem",
-          color: "#F9FAFB"
+          marginBottom: "2.5rem",
+          padding: "1rem",
+          borderRadius: "10px",
+          border: "1px solid rgba(201,168,106,0.35)",
+          background:
+            "linear-gradient(135deg, rgba(10,23,40,0.96), rgba(10,23,40,0.88))",
         }}
       >
-        Crownstone Vaults — Services
-      </h1>
-
-      <p
-        style={{
-          maxWidth: "46rem",
-          fontSize: "0.98rem",
-          lineHeight: 1.6,
-          color: "#9CA3AF",
-          marginBottom: "2.5rem"
-        }}
-      >
-        Select a tier to view its institutional services. Higher tiers include all services from
-        previous tiers, reflecting hierarchical progression and expanded vault capability.
-      </p>
-
-      {/* Segmented Control */}
-      <div
-        style={{
-          display: "flex",
-          gap: "0.4rem",
-          marginBottom: "2.5rem"
-        }}
-      >
-        {tiers.map((tier) => {
-          const isActive = tier === activeTier;
-
-          return (
-            <button
-              key={tier}
-              onClick={() => setActiveTier(tier)}
-              style={{
-                padding: "0.65rem 1.2rem",
-                borderRadius: "6px",
-                border: isActive
-                  ? "1px solid #D4AF37"
-                  : "1px solid rgba(229,228,226,0.4)",
-                background: isActive ? "rgba(212,175,55,0.15)" : "rgba(255,255,255,0.03)",
-                color: isActive ? "#FDE68A" : "#E5E7EB",
-                fontWeight: 500,
-                fontSize: "0.9rem",
-                cursor: "pointer",
-                transition: "all 0.2s ease"
-              }}
-            >
-              {tier}
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Services Grid */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-          gap: "1.8rem"
-        }}
-      >
-        {accumulatedServices.map((service, index) => (
-          <div
-            key={index}
+        <div style={{ marginBottom: "0.75rem", textAlign: "center" }}>
+          <span
             style={{
-              padding: "1.6rem 1.5rem",
-              borderRadius: "0.9rem",
-              border: "1px solid rgba(148,163,184,0.4)",
-              background: "#111827",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.45)"
+              fontSize: "0.9rem",
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              color: "rgba(201,168,106,0.85)",
             }}
           >
-            <h2
-              style={{
-                fontSize: "1.05rem",
-                fontWeight: 500,
-                color: "#F9FAFB",
-                marginBottom: "0.6rem"
-              }}
-            >
-              {service.title}
-            </h2>
+            Select service tier
+          </span>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            gap: "0.5rem",
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {tierOrder.map((tier) => {
+            const isActive = tier === selectedTier;
+            return (
+              <button
+                key={tier}
+                type="button"
+                onClick={() => setSelectedTier(tier)}
+                style={{
+                  padding: "0.55rem 1.1rem",
+                  borderRadius: "999px",
+                  border: isActive
+                    ? "1px solid rgba(201,168,106,0.9)"
+                    : "1px solid rgba(201,168,106,0.35)",
+                  background: isActive
+                    ? "rgba(201,168,106,0.16)"
+                    : "rgba(10,23,40,0.9)",
+                  color: "#FDF4E3",
+                  fontSize: "0.85rem",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  cursor: "pointer",
+                  transition: "background 0.18s ease, border-color 0.18s ease",
+                }}
+              >
+                {tier}
+              </button>
+            );
+          })}
+        </div>
+        <div
+          style={{
+            marginTop: "0.75rem",
+            textAlign: "center",
+            fontSize: "0.85rem",
+            color: "rgba(253,244,227,0.7)",
+          }}
+        >
+          Currently viewing:{" "}
+          <span style={{ color: "rgba(201,168,106,0.9)", fontWeight: 500 }}>
+            {selectedTier} tier (includes all prior tiers)
+          </span>
+        </div>
+      </section>
 
-            <p
+      {/* Services grid */}
+      <section>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "1.25rem",
+          }}
+        >
+          {accumulatedServices.map((service, index) => (
+            <article
+              key={`${service.title}-${index}`}
               style={{
-                fontSize: "0.9rem",
-                lineHeight: 1.55,
-                color: "#9CA3AF"
+                borderRadius: "10px",
+                border: "1px solid rgba(201,168,106,0.35)",
+                background:
+                  "radial-gradient(circle at top left, rgba(201,168,106,0.12), rgba(10,23,40,0.96))",
+                padding: "1.1rem 1rem",
               }}
             >
-              {service.description}
-            </p>
-          </div>
-        ))}
-      </div>
+              <h2
+                style={{
+                  fontSize: "0.98rem",
+                  marginBottom: "0.4rem",
+                  color: "#FDF4E3",
+                  letterSpacing: "0.03em",
+                }}
+              >
+                {service.title}
+              </h2>
+              <p
+                style={{
+                  fontSize: "0.9rem",
+                  lineHeight: 1.6,
+                  color: "rgba(253,244,227,0.8)",
+                }}
+              >
+                {service.description}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
 
       {/* Bottom CTA */}
-      <div style={{ marginTop: "3rem", textAlign: "center" }}>
+      <section style={{ marginTop: "3rem", textAlign: "center" }}>
         <a
-          href="/subscription"
+          href="/onboarding"
           style={{
+            display: "inline-block",
             padding: "0.85rem 1.7rem",
             borderRadius: "6px",
             border: "1px solid rgba(201,168,106,0.7)",
@@ -249,12 +257,14 @@ export default function ServicesPage() {
             color: "#FDF4E3",
             fontWeight: 500,
             fontSize: "0.95rem",
-            textDecoration: "none"
+            textDecoration: "none",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
           }}
         >
           Proceed to Subscription
         </a>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
