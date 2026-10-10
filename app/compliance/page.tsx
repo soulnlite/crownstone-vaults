@@ -1,66 +1,72 @@
+import { colors, spacing, fonts, shadows } from "@/styles/tokens";
+
 export default function CompliancePage() {
   return (
-    <div style={{ color: "#E3E6EB" }}>
-      {/* HERO */}
+    <main
+      style={{
+        maxWidth: "960px",
+        margin: "0 auto",
+        padding: `${spacing.pageTop} 1.5rem 3.5rem`,
+        color: colors.textPlatinum,
+        fontFamily: fonts.base,
+      }}
+    >
+      {/* HEADER */}
       <section
         style={{
-          marginBottom: "4rem",
-          padding: "3.5rem 3rem",
+          marginBottom: spacing.headerMarginBottom,
+          padding: spacing.headerPadding,
           borderRadius: "22px",
-          background:
-            "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
-          boxShadow: "0 32px 80px rgba(0,0,0,0.7)",
-          border: "1px solid rgba(201,168,106,0.35)",
+          background: colors.headerPlaqueBg,
+          boxShadow: shadows.header,
+          border: `1px solid ${colors.plaqueBorderGold}`,
         }}
       >
         <h1
           style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "2.7rem",
-            marginBottom: "1.4rem",
-            letterSpacing: "0.065em",
-            color: "#FDF4E3",
-            textShadow: "0 0 22px rgba(201,168,106,0.35)",
+            fontSize: "1.9rem",
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            marginBottom: "0.65rem",
+            color: colors.headerGold,
+            textShadow: "0 0 14px rgba(201,168,106,0.22)",
           }}
         >
-          Compliance Architecture
+          Compliance Framework
         </h1>
 
         <div
           style={{
             height: "4px",
             width: "150px",
-            background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "2rem",
+            background: colors.underlineGold,
+            marginBottom: "1rem",
           }}
         ></div>
 
         <p
           style={{
-            fontSize: "1.15rem",
-            lineHeight: "1.9",
-            maxWidth: "780px",
-            marginBottom: "2.4rem",
-            letterSpacing: "0.01em",
+            fontSize: "1.02rem",
+            lineHeight: "1.7",
+            maxWidth: "760px",
+            color: colors.textPlatinum,
           }}
         >
-          Crownstone Vaults maintains a compliance architecture engineered to withstand regulatory
-          scrutiny, preserve institutional integrity, and ensure alignment across operational,
-          archival, and governance cycles.
+          Crownstone Vaults maintains a compliance architecture engineered to satisfy
+          multi‑jurisdictional regulatory expectations, institutional governance requirements,
+          and sovereign‑grade custodial mandates.
         </p>
       </section>
 
-      {/* COMPLIANCE STRUCTURE */}
-      <section style={{ marginBottom: "4rem" }}>
+      {/* COMPLIANCE PILLARS */}
+      <section style={{ marginBottom: spacing.sectionSpacing }}>
         <h2
           style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "1.55rem",
-            marginBottom: "1.8rem",
-            letterSpacing: "0.085em",
+            fontSize: "1.4rem",
+            marginBottom: "1.3rem",
+            letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: "#FDF4E3",
+            color: colors.headerGold,
           }}
         >
           Compliance Pillars
@@ -69,147 +75,132 @@ export default function CompliancePage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))",
-            gap: "2rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "1.5rem",
           }}
         >
           {/* Pillar 1 */}
           <div
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
-              background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              padding: spacing.plaquePadding,
+              borderRadius: "14px",
+              background: colors.plaqueBgDark,
+              border: `1px solid ${colors.plaqueBorderGold}`,
             }}
           >
             <h3
               style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
+                fontSize: "1.05rem",
+                marginBottom: "0.6rem",
+                color: colors.headerGold,
               }}
             >
               Regulatory Alignment
             </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Ensuring institutional artefacts, custodial environments, and governance structures
-              meet evolving regulatory standards across jurisdictions.
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: colors.textPlatinum }}>
+              Ensuring all custodial operations adhere to applicable regulatory frameworks and
+              institutional oversight requirements.
             </p>
           </div>
 
           {/* Pillar 2 */}
           <div
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
-              background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              padding: spacing.plaquePadding,
+              borderRadius: "14px",
+              background: colors.plaqueBgDark,
+              border: `1px solid ${colors.plaqueBorderGold}`,
             }}
           >
             <h3
               style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
+                fontSize: "1.05rem",
+                marginBottom: "0.6rem",
+                color: colors.headerGold,
               }}
             >
-              Compliance Resilience
+              Compliance Verification
             </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Reinforcing institutional compliance structures to withstand audits, transitions,
-              and external scrutiny without operational disruption.
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: colors.textPlatinum }}>
+              Verification protocols ensure demonstrable compliance across archival, custodial,
+              and operational cycles.
             </p>
           </div>
 
           {/* Pillar 3 */}
           <div
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
-              background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              padding: spacing.plaquePadding,
+              borderRadius: "14px",
+              background: colors.plaqueBgDark,
+              border: `1px solid ${colors.plaqueBorderGold}`,
             }}
           >
             <h3
               style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
+                fontSize: "1.05rem",
+                marginBottom: "0.6rem",
+                color: colors.headerGold,
               }}
             >
-              Institutional Integrity
+              Governance Integration
             </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Safeguarding institutional memory, custodial environments, and governance artefacts
-              through structured compliance protocols.
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: colors.textPlatinum }}>
+              Compliance structures integrate seamlessly with institutional governance and
+              oversight architectures.
             </p>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section>
+      <section style={{ textAlign: "center", marginTop: "2rem" }}>
         <div
           style={{
-            height: "4px",
-            width: "150px",
-            background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "1.4rem",
-          }}
-        ></div>
-
-        <h2
-          style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "1.55rem",
-            marginBottom: "1.2rem",
-            letterSpacing: "0.085em",
-            textTransform: "uppercase",
-            color: "#FDF4E3",
+            display: "inline-block",
+            padding: "1.8rem 2rem",
+            borderRadius: "26px",
+            background: "linear-gradient(145deg, #0D1A2F, #091224)",
+            border: `1px solid ${colors.plaqueBorderGold}`,
+            boxShadow: shadows.cta,
+            transform: "translateY(-2px)",
           }}
         >
-          Compliance Engagement
-        </h2>
+          <div style={{ position: "relative", display: "inline-block" }}>
+            <a
+              href="/contact"
+              style={{
+                padding: "0.8rem 1.55rem",
+                borderRadius: "999px",
+                background: colors.ctaGold,
+                color: "#0A1728",
+                fontWeight: 600,
+                fontSize: "0.9rem",
+                textDecoration: "none",
+                boxShadow: shadows.cta,
+                display: "inline-block",
+              }}
+            >
+              Request Compliance Briefing
+            </a>
 
-        <p
-          style={{
-            fontSize: "1.05rem",
-            lineHeight: "1.85",
-            maxWidth: "800px",
-            marginBottom: "2rem",
-            letterSpacing: "0.01em",
-          }}
-        >
-          Institutions requiring compliance reinforcement, regulatory alignment, or governance
-          support may initiate contact through our formal engagement pathway.
-        </p>
-
-        <a
-          href="/contact"
-          style={{
-            padding: "1rem 1.8rem",
-            borderRadius: "999px",
-            border: "1px solid rgba(201,168,106,0.7)",
-            color: "#FDF4E3",
-            fontWeight: 500,
-            fontSize: "1.05rem",
-            textDecoration: "none",
-            background: "rgba(10,23,40,0.85)",
-          }}
-        >
-          Initiate Institutional Contact
-        </a>
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "84%",
+                transform: "translateX(-50%) rotate(-110deg)",
+                fontSize: "1.1rem",
+                opacity: 1,
+                color: "#C9B27A",
+                pointerEvents: "none",
+              }}
+            >
+              👉
+            </div>
+          </div>
+        </div>
       </section>
-    </div>
+    </main>
   );
 }
