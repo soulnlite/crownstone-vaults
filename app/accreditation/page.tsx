@@ -4,21 +4,21 @@ export default function AccreditationPage() {
       style={{
         maxWidth: "960px",
         margin: "0 auto",
-        padding: "3rem 1.5rem 4rem",
+        padding: "2rem 1.5rem 3.5rem", // REDUCED TOP PADDING
         color: "#FDF4E3",
         fontFamily:
           "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       }}
     >
-      {/* HEADER — Compliance plaque, Services gold text */}
+      {/* HEADER — Raised closer to top */}
       <section
         style={{
-          marginBottom: "3rem",
-          padding: "2.6rem 2.4rem",
+          marginBottom: "2.2rem", // REDUCED FROM 3rem
+          padding: "2.1rem 2.2rem", // REDUCED INTERNAL PADDING
           borderRadius: "22px",
           background:
             "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
-          boxShadow: "0 28px 75px rgba(0,0,0,0.7)",
+          boxShadow: "0 24px 65px rgba(0,0,0,0.7)", // Slightly reduced shadow height
           border: "1px solid rgba(201,168,106,0.35)",
         }}
       >
@@ -27,8 +27,8 @@ export default function AccreditationPage() {
             fontSize: "2rem",
             letterSpacing: "0.06em",
             textTransform: "uppercase",
-            marginBottom: "1.2rem",
-            color: "rgba(201,168,106,0.92)", // SERVICES GOLD — UPDATED
+            marginBottom: "1rem", // Slightly reduced
+            color: "rgba(201,168,106,0.92)",
             textShadow: "0 0 18px rgba(201,168,106,0.22)",
           }}
         >
@@ -41,7 +41,7 @@ export default function AccreditationPage() {
             width: "150px",
             background:
               "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "1.8rem",
+            marginBottom: "1.4rem", // Reduced
           }}
         ></div>
 
@@ -68,7 +68,7 @@ export default function AccreditationPage() {
             marginBottom: "1.5rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: "rgba(201,168,106,0.92)", // MATCHED TO SERVICES GOLD
+            color: "rgba(201,168,106,0.92)",
           }}
         >
           Accreditation Pillars
@@ -156,7 +156,7 @@ export default function AccreditationPage() {
       </section>
 
       {/* CTA — Services signature CTA */}
-      <section style={{ textAlign: "center", marginTop: "2.5rem" }}>
+      <section style={{ textAlign: "center", marginTop: "2.2rem" }}>
         <div
           style={{
             display: "inline-block",
