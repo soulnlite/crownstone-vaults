@@ -83,7 +83,7 @@ export default function GovernancePage() {
               padding: "2rem 1.8rem",
               borderRadius: "18px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
+                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
               border: "1px solid rgba(255,255,255,0.1)",
               boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
             }}
@@ -122,7 +122,7 @@ export default function GovernancePage() {
               padding: "2rem 1.8rem",
               borderRadius: "18px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
+                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
               border: "1px solid rgba(255,255,255,0.1)",
               boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
             }}
@@ -161,7 +161,7 @@ export default function GovernancePage() {
               padding: "2rem 1.8rem",
               borderRadius: "18px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
+                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
               border: "1px solid rgba(255,255,255,0.1)",
               boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
             }}
