@@ -1,34 +1,34 @@
+import { colors, spacing, fonts, shadows } from "@/styles/tokens";
+
 export default function AccreditationPage() {
   return (
     <main
       style={{
         maxWidth: "960px",
         margin: "0 auto",
-        padding: "0.3rem 1.5rem 3.5rem", // MINIMUM SAFE TOP PADDING
-        color: "#FDF4E3",
-        fontFamily:
-          "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        padding: `${spacing.pageTop} 1.5rem 3.5rem`,
+        color: colors.textPlatinum,
+        fontFamily: fonts.base,
       }}
     >
       {/* HEADER — Raised to absolute safe limit */}
       <section
         style={{
-          marginBottom: "1.2rem", // tightened further
-          padding: "1.25rem 1.75rem", // MINIMUM SAFE INTERNAL PADDING
+          marginBottom: spacing.headerMarginBottom,
+          padding: spacing.headerPadding,
           borderRadius: "22px",
-          background:
-            "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
-          boxShadow: "0 16px 42px rgba(0,0,0,0.58)", // reduced height
-          border: "1px solid rgba(201,168,106,0.35)",
+          background: colors.headerPlaqueBg,
+          boxShadow: shadows.header,
+          border: `1px solid ${colors.plaqueBorderGold}`,
         }}
       >
         <h1
           style={{
-            fontSize: "1.9rem", // slightly tightened to match new spacing
+            fontSize: "1.9rem",
             letterSpacing: "0.06em",
             textTransform: "uppercase",
-            marginBottom: "0.65rem", // tightened
-            color: "rgba(201,168,106,0.92)",
+            marginBottom: "0.65rem",
+            color: colors.headerGold,
             textShadow: "0 0 14px rgba(201,168,106,0.22)",
           }}
         >
@@ -39,9 +39,8 @@ export default function AccreditationPage() {
           style={{
             height: "4px",
             width: "150px",
-            background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "1rem", // tightened
+            background: colors.underlineGold,
+            marginBottom: "1rem",
           }}
         ></div>
 
@@ -50,7 +49,7 @@ export default function AccreditationPage() {
             fontSize: "1.02rem",
             lineHeight: "1.7",
             maxWidth: "760px",
-            color: "rgba(253,244,227,0.82)",
+            color: colors.textPlatinum,
           }}
         >
           Crownstone Vaults Limited operates under an accreditation framework engineered to satisfy
@@ -61,14 +60,14 @@ export default function AccreditationPage() {
       </section>
 
       {/* ACCREDITATION PILLARS — Services plaques */}
-      <section style={{ marginBottom: "3rem" }}>
+      <section style={{ marginBottom: spacing.sectionSpacing }}>
         <h2
           style={{
             fontSize: "1.4rem",
-            marginBottom: "1.3rem", // tightened
+            marginBottom: "1.3rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: "rgba(201,168,106,0.92)",
+            color: colors.headerGold,
           }}
         >
           Accreditation Pillars
@@ -83,23 +82,22 @@ export default function AccreditationPage() {
         >
           <div
             style={{
-              padding: "1.6rem 1.5rem",
+              padding: spacing.plaquePadding,
               borderRadius: "14px",
-              background:
-                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
-              border: "1px solid rgba(201,168,106,0.35)",
+              background: colors.plaqueBgDark,
+              border: `1px solid ${colors.plaqueBorderGold}`,
             }}
           >
             <h3
               style={{
                 fontSize: "1.05rem",
                 marginBottom: "0.6rem",
-                color: "rgba(201,168,106,0.92)",
+                color: colors.headerGold,
               }}
             >
               Institutional Accreditation
             </h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: colors.textPlatinum }}>
               Accreditation validates Crownstone Vaults as a neutral custodian capable of
               maintaining integrity, traceability, and continuity of custody.
             </p>
@@ -107,23 +105,22 @@ export default function AccreditationPage() {
 
           <div
             style={{
-              padding: "1.6rem 1.5rem",
+              padding: spacing.plaquePadding,
               borderRadius: "14px",
-              background:
-                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
-              border: "1px solid rgba(201,168,106,0.35)",
+              background: colors.plaqueBgDark,
+              border: `1px solid ${colors.plaqueBorderGold}`,
             }}
           >
             <h3
               style={{
                 fontSize: "1.05rem",
                 marginBottom: "0.6rem",
-                color: "rgba(201,168,106,0.92)",
+                color: colors.headerGold,
               }}
             >
               Compliance Verification
             </h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: colors.textPlatinum }}>
               Verification protocols ensure alignment with regulatory expectations and
               multi-jurisdictional governance standards.
             </p>
@@ -131,23 +128,22 @@ export default function AccreditationPage() {
 
           <div
             style={{
-              padding: "1.6rem 1.5rem",
+              padding: spacing.plaquePadding,
               borderRadius: "14px",
-              background:
-                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
-              border: "1px solid rgba(201,168,106,0.35)",
+              background: colors.plaqueBgDark,
+              border: `1px solid ${colors.plaqueBorderGold}`,
             }}
           >
             <h3
               style={{
                 fontSize: "1.05rem",
                 marginBottom: "0.6rem",
-                color: "rgba(201,168,106,0.92)",
+                color: colors.headerGold,
               }}
             >
               Oversight Integration
             </h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: colors.textPlatinum }}>
               Oversight integration enables institutions to embed Crownstone Vaults within their
               governance and compliance architecture.
             </p>
@@ -163,9 +159,8 @@ export default function AccreditationPage() {
             padding: "1.8rem 2rem",
             borderRadius: "26px",
             background: "linear-gradient(145deg, #0D1A2F, #091224)",
-            border: "1px solid rgba(201,168,106,0.32)",
-            boxShadow:
-              "inset 0 3px 6px rgba(255,255,255,0.08), inset 0 -4px 8px rgba(0,0,0,0.45), 0 14px 32px rgba(0,0,0,0.55)",
+            border: `1px solid ${colors.plaqueBorderGold}`,
+            boxShadow: shadows.cta,
             transform: "translateY(-2px)",
           }}
         >
@@ -175,14 +170,12 @@ export default function AccreditationPage() {
               style={{
                 padding: "0.8rem 1.55rem",
                 borderRadius: "999px",
-                background:
-                  "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
+                background: colors.ctaGold,
                 color: "#0A1728",
                 fontWeight: 600,
                 fontSize: "0.9rem",
                 textDecoration: "none",
-                boxShadow:
-                  "0 10px 26px rgba(201,168,106,0.55), 0 0 12px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
+                boxShadow: shadows.cta,
                 display: "inline-block",
               }}
             >
