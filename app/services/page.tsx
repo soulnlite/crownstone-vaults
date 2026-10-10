@@ -222,7 +222,7 @@ export default function ServicesPage() {
                 borderRadius: "10px",
                 border: "1px solid rgba(201,168,106,0.35)",
                 background:
-                  "radial-gradient(circle at top left, rgba(201,168,106,0.12), rgba(10,23,40,0.96))",
+                  "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
                 padding: "1.1rem 1rem",
               }}
             >
@@ -253,29 +253,56 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA — SIGNATURE BUTTON IMPORTED */}
+      {/* CTA — EXACT SIGNATURE BUTTON IMPORTED */}
       <section style={{ marginTop: "3rem", textAlign: "center" }}>
-        <a
-          href="/onboarding"
+        <div
           style={{
             display: "inline-block",
-            padding: "0.85rem 1.7rem",
-            borderRadius: "999px",
-            border: "1px solid rgba(201,168,106,0.85)",
-            background:
-              "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
-            color: "#FDF4E3",
-            fontWeight: 600,
-            fontSize: "1rem",
-            letterSpacing: "0.07em",
-            textTransform: "uppercase",
-            textDecoration: "none",
+            padding: "1.8rem 2rem",
+            borderRadius: "26px",
+            background: "linear-gradient(145deg, #0D1A2F, #091224)",
+            border: "1px solid rgba(201,168,106,0.32)",
             boxShadow:
-              "0 0 18px rgba(201,168,106,0.45), inset 0 0 12px rgba(201,168,106,0.25)",
+              "inset 0 3px 6px rgba(255,255,255,0.08), inset 0 -4px 8px rgba(0,0,0,0.45), 0 14px 32px rgba(0,0,0,0.55)",
+            transform: "translateY(-2px)",
           }}
         >
-          Subscribe
-        </a>
+          <div style={{ position: "relative", display: "inline-block" }}>
+            <a
+              href="/onboarding"
+              style={{
+                padding: "0.8rem 1.55rem",
+                borderRadius: "999px",
+                background:
+                  "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
+                color: "#0A1728",
+                fontWeight: 600,
+                fontSize: "0.9rem",
+                textDecoration: "none",
+                boxShadow:
+                  "0 10px 26px rgba(201,168,106,0.55), 0 0 12px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
+                display: "inline-block",
+              }}
+            >
+              Subscribe
+            </a>
+
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "84%",
+                transform: "translateX(-50%) rotate(-110deg)",
+                fontSize: "1.1rem",
+                opacity: 1,
+                color: "#C9B27A",
+                pointerEvents: "none",
+              }}
+            >
+              👉
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
