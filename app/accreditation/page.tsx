@@ -4,32 +4,32 @@ export default function AccreditationPage() {
       style={{
         maxWidth: "960px",
         margin: "0 auto",
-        padding: "0.6rem 1.5rem 3.5rem", // RAISED AGAIN (minimal top padding)
+        padding: "0.3rem 1.5rem 3.5rem", // MINIMUM SAFE TOP PADDING
         color: "#FDF4E3",
         fontFamily:
           "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       }}
     >
-      {/* HEADER — Raised to align with "Crownstone" */}
+      {/* HEADER — Raised to absolute safe limit */}
       <section
         style={{
-          marginBottom: "1.4rem", // tightened further
-          padding: "1.45rem 1.9rem", // reduced internal padding again
+          marginBottom: "1.2rem", // tightened further
+          padding: "1.25rem 1.75rem", // MINIMUM SAFE INTERNAL PADDING
           borderRadius: "22px",
           background:
             "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
-          boxShadow: "0 18px 48px rgba(0,0,0,0.6)", // reduced vertical shadow height
+          boxShadow: "0 16px 42px rgba(0,0,0,0.58)", // reduced height
           border: "1px solid rgba(201,168,106,0.35)",
         }}
       >
         <h1
           style={{
-            fontSize: "1.95rem", // slightly tightened to match new spacing
+            fontSize: "1.9rem", // slightly tightened to match new spacing
             letterSpacing: "0.06em",
             textTransform: "uppercase",
-            marginBottom: "0.75rem", // tightened
+            marginBottom: "0.65rem", // tightened
             color: "rgba(201,168,106,0.92)",
-            textShadow: "0 0 16px rgba(201,168,106,0.22)",
+            textShadow: "0 0 14px rgba(201,168,106,0.22)",
           }}
         >
           Accreditation Framework
@@ -41,14 +41,14 @@ export default function AccreditationPage() {
             width: "150px",
             background:
               "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "1.1rem", // tightened
+            marginBottom: "1rem", // tightened
           }}
         ></div>
 
         <p
           style={{
-            fontSize: "1.03rem",
-            lineHeight: "1.72",
+            fontSize: "1.02rem",
+            lineHeight: "1.7",
             maxWidth: "760px",
             color: "rgba(253,244,227,0.82)",
           }}
@@ -65,7 +65,7 @@ export default function AccreditationPage() {
         <h2
           style={{
             fontSize: "1.4rem",
-            marginBottom: "1.35rem", // tightened slightly
+            marginBottom: "1.3rem", // tightened
             letterSpacing: "0.08em",
             textTransform: "uppercase",
             color: "rgba(201,168,106,0.92)",
@@ -156,7 +156,7 @@ export default function AccreditationPage() {
       </section>
 
       {/* CTA — Services signature CTA */}
-      <section style={{ textAlign: "center", marginTop: "2.1rem" }}>
+      <section style={{ textAlign: "center", marginTop: "2rem" }}>
         <div
           style={{
             display: "inline-block",
