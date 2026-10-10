@@ -1,28 +1,35 @@
 export default function AccreditationPage() {
   return (
-    <div style={{ color: "#E3E6EB" }}>
-      {/* HERO — Compliance Header Design Inculcated */}
+    <main
+      style={{
+        maxWidth: "960px",
+        margin: "0 auto",
+        padding: "3rem 1.5rem 4rem",
+        color: "#FDF4E3",
+        fontFamily:
+          "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      }}
+    >
+      {/* HEADER — Compliance-style plaque integrated into Services design */}
       <section
         style={{
-          marginBottom: "4rem",
-          padding: "3.2rem 2.8rem",
+          marginBottom: "3rem",
+          padding: "2.6rem 2.4rem",
           borderRadius: "22px",
           background:
             "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
-          boxShadow: "0 32px 80px rgba(0,0,0,0.7)",
+          boxShadow: "0 28px 75px rgba(0,0,0,0.7)",
           border: "1px solid rgba(201,168,106,0.35)",
         }}
       >
         <h1
           style={{
-            fontFamily:
-              "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-            fontSize: "2.25rem", // scaled down from Compliance 2.7rem
-            marginBottom: "1.3rem",
-            letterSpacing: "0.065em",
-            color: "#FDF4E3",
-            textShadow: "0 0 20px rgba(201,168,106,0.32)",
+            fontSize: "2rem",
+            letterSpacing: "0.06em",
             textTransform: "uppercase",
+            marginBottom: "1.2rem",
+            color: "#FDF4E3",
+            textShadow: "0 0 18px rgba(201,168,106,0.28)",
           }}
         >
           Accreditation Framework
@@ -34,17 +41,16 @@ export default function AccreditationPage() {
             width: "150px",
             background:
               "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "2rem",
+            marginBottom: "1.8rem",
           }}
         ></div>
 
         <p
           style={{
-            fontSize: "1.12rem",
-            lineHeight: "1.9",
-            maxWidth: "780px",
-            marginBottom: "2.4rem",
-            letterSpacing: "0.01em",
+            fontSize: "1.05rem",
+            lineHeight: "1.8",
+            maxWidth: "760px",
+            color: "rgba(253,244,227,0.82)",
           }}
         >
           Crownstone Vaults Limited operates under an accreditation framework engineered to satisfy
@@ -54,15 +60,13 @@ export default function AccreditationPage() {
         </p>
       </section>
 
-      {/* ACCREDITATION STRUCTURE */}
-      <section style={{ marginBottom: "4rem" }}>
+      {/* ACCREDITATION PILLARS — Services-style plaques */}
+      <section style={{ marginBottom: "3rem" }}>
         <h2
           style={{
-            fontFamily:
-              "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-            fontSize: "1.55rem",
-            marginBottom: "1.8rem",
-            letterSpacing: "0.085em",
+            fontSize: "1.4rem",
+            marginBottom: "1.5rem",
+            letterSpacing: "0.08em",
             textTransform: "uppercase",
             color: "#FDF4E3",
           }}
@@ -73,148 +77,135 @@ export default function AccreditationPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))",
-            gap: "2rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "1.5rem",
           }}
         >
-          {/* Pillar 1 */}
           <div
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
+              padding: "1.6rem 1.5rem",
+              borderRadius: "14px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
+              border: "1px solid rgba(201,168,106,0.35)",
             }}
           >
             <h3
               style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
+                fontSize: "1.05rem",
+                marginBottom: "0.6rem",
+                color: "rgba(201,168,106,0.92)",
               }}
             >
               Institutional Accreditation
             </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Accreditation validates Crownstone Vaults as a neutral custodian capable of maintaining
-              integrity, traceability, and continuity of custody across operational cycles.
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
+              Accreditation validates Crownstone Vaults as a neutral custodian capable of
+              maintaining integrity, traceability, and continuity of custody.
             </p>
           </div>
 
-          {/* Pillar 2 */}
           <div
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
+              padding: "1.6rem 1.5rem",
+              borderRadius: "14px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
+              border: "1px solid rgba(201,168,106,0.35)",
             }}
           >
             <h3
               style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
+                fontSize: "1.05rem",
+                marginBottom: "0.6rem",
+                color: "rgba(201,168,106,0.92)",
               }}
             >
               Compliance Verification
             </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
-              Verification protocols ensure alignment with regulatory expectations, audit
-              requirements, and multi-jurisdictional governance standards.
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
+              Verification protocols ensure alignment with regulatory expectations and
+              multi-jurisdictional governance standards.
             </p>
           </div>
 
-          {/* Pillar 3 */}
           <div
             style={{
-              padding: "2rem 1.8rem",
-              borderRadius: "18px",
+              padding: "1.6rem 1.5rem",
+              borderRadius: "14px",
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.045), rgba(10,23,40,0.96))",
-              border: "1px solid rgba(255,255,255,0.1)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
+              border: "1px solid rgba(201,168,106,0.35)",
             }}
           >
             <h3
               style={{
-                fontSize: "1.15rem",
-                marginBottom: "0.8rem",
-                color: "#F3D39A",
-                letterSpacing: "0.02em",
+                fontSize: "1.05rem",
+                marginBottom: "0.6rem",
+                color: "rgba(201,168,106,0.92)",
               }}
             >
               Oversight Integration
             </h3>
-            <p style={{ fontSize: "1rem", lineHeight: "1.78" }}>
+            <p style={{ fontSize: "0.95rem", lineHeight: "1.7" }}>
               Oversight integration enables institutions to embed Crownstone Vaults within their
-              governance, risk, and compliance architecture.
+              governance and compliance architecture.
             </p>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section>
+      {/* CTA — Services signature CTA */}
+      <section style={{ textAlign: "center", marginTop: "2.5rem" }}>
         <div
           style={{
-            height: "4px",
-            width: "150px",
-            background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "1.4rem",
-          }}
-        ></div>
-
-        <h2
-          style={{
-            fontFamily:
-              "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-            fontSize: "1.55rem",
-            marginBottom: "1.2rem",
-            letterSpacing: "0.085em",
-            textTransform: "uppercase",
-            color: "#FDF4E3",
+            display: "inline-block",
+            padding: "1.8rem 2rem",
+            borderRadius: "26px",
+            background: "linear-gradient(145deg, #0D1A2F, #091224)",
+            border: "1px solid rgba(201,168,106,0.32)",
+            boxShadow:
+              "inset 0 3px 6px rgba(255,255,255,0.08), inset 0 -4px 8px rgba(0,0,0,0.45), 0 14px 32px rgba(0,0,0,0.55)",
+            transform: "translateY(-2px)",
           }}
         >
-          Accreditation Engagement
-        </h2>
+          <div style={{ position: "relative", display: "inline-block" }}>
+            <a
+              href="/contact"
+              style={{
+                padding: "0.8rem 1.55rem",
+                borderRadius: "999px",
+                background:
+                  "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
+                color: "#0A1728",
+                fontWeight: 600,
+                fontSize: "0.9rem",
+                textDecoration: "none",
+                boxShadow:
+                  "0 10px 26px rgba(201,168,106,0.55), 0 0 12px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
+                display: "inline-block",
+              }}
+            >
+              Request Accreditation Briefing
+            </a>
 
-        <p
-          style={{
-            fontSize: "1.05rem",
-            lineHeight: "1.85",
-            maxWidth: "800px",
-            marginBottom: "2rem",
-            letterSpacing: "0.01em",
-          }}
-        >
-          Institutions requiring accreditation validation, compliance verification, or governance
-          alignment may initiate contact through our formal engagement pathway.
-        </p>
-
-        <a
-          href="/contact"
-          style={{
-            padding: "1rem 1.8rem",
-            borderRadius: "999px",
-            border: "1px solid rgba(201,168,106,0.7)",
-            color: "#FDF4E3",
-            fontWeight: 500,
-            fontSize: "1.05rem",
-            textDecoration: "none",
-            background: "rgba(10,23,40,0.85)",
-          }}
-        >
-          Request Accreditation Briefing
-        </a>
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "84%",
+                transform: "translateX(-50%) rotate(-110deg)",
+                fontSize: "1.1rem",
+                opacity: 1,
+                color: "#C9B27A",
+                pointerEvents: "none",
+              }}
+            >
+              👉
+            </div>
+          </div>
+        </div>
       </section>
-    </div>
+    </main>
   );
 }
