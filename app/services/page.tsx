@@ -108,7 +108,7 @@ export default function ServicesPage() {
             letterSpacing: "0.04em",
             textTransform: "uppercase",
             marginBottom: "0.75rem",
-            color: "rgba(201,168,106,0.92)", // GOLD HEADER TONE
+            color: "rgba(201,168,106,0.92)",
           }}
         >
           Crownstone Vaults Services
@@ -120,7 +120,7 @@ export default function ServicesPage() {
             margin: "0 auto",
             fontSize: "0.98rem",
             lineHeight: 1.6,
-            color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
+            color: "rgba(253,244,227,0.82)",
           }}
         >
           Service tiers are structured to accumulate. Selecting a higher tier
@@ -137,7 +137,7 @@ export default function ServicesPage() {
           borderRadius: "10px",
           border: "1px solid rgba(201,168,106,0.35)",
           background:
-            "linear-gradient(135deg, rgba(10,23,40,0.96), rgba(10,23,40,0.88))",
+            "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
         }}
       >
         <div style={{ marginBottom: "0.75rem", textAlign: "center" }}>
@@ -146,7 +146,7 @@ export default function ServicesPage() {
               fontSize: "0.9rem",
               letterSpacing: "0.08em",
               textTransform: "uppercase",
-              color: "rgba(201,168,106,0.92)", // GOLD HEADER TONE
+              color: "rgba(201,168,106,0.92)",
             }}
           >
             Select service tier
@@ -196,7 +196,7 @@ export default function ServicesPage() {
             marginTop: "0.75rem",
             textAlign: "center",
             fontSize: "0.85rem",
-            color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
+            color: "rgba(253,244,227,0.82)",
           }}
         >
           Currently viewing:{" "}
@@ -226,12 +226,11 @@ export default function ServicesPage() {
                 padding: "1.1rem 1rem",
               }}
             >
-              {/* HEADER — gold tone */}
               <h2
                 style={{
                   fontSize: "1rem",
                   marginBottom: "0.45rem",
-                  color: "rgba(201,168,106,0.92)", // GOLD HEADER TONE
+                  color: "rgba(201,168,106,0.92)",
                   letterSpacing: "0.04em",
                   textTransform: "uppercase",
                   fontWeight: 600,
@@ -240,12 +239,11 @@ export default function ServicesPage() {
                 {service.title}
               </h2>
 
-              {/* BODY — parchment tone */}
               <p
                 style={{
                   fontSize: "0.9rem",
                   lineHeight: 1.6,
-                  color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
+                  color: "rgba(253,244,227,0.82)",
                 }}
               >
                 {service.description}
@@ -255,25 +253,28 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA — SIGNATURE BUTTON IMPORTED */}
       <section style={{ marginTop: "3rem", textAlign: "center" }}>
         <a
           href="/onboarding"
           style={{
             display: "inline-block",
             padding: "0.85rem 1.7rem",
-            borderRadius: "6px",
-            border: "1px solid rgba(201,168,106,0.7)",
-            background: "rgba(10,23,40,0.9)",
-            color: "rgba(253,244,227,0.82)", // PARCHMENT BODY TONE
-            fontWeight: 500,
-            fontSize: "0.95rem",
-            textDecoration: "none",
-            letterSpacing: "0.06em",
+            borderRadius: "999px",
+            border: "1px solid rgba(201,168,106,0.85)",
+            background:
+              "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
+            color: "#FDF4E3",
+            fontWeight: 600,
+            fontSize: "1rem",
+            letterSpacing: "0.07em",
             textTransform: "uppercase",
+            textDecoration: "none",
+            boxShadow:
+              "0 0 18px rgba(201,168,106,0.45), inset 0 0 12px rgba(201,168,106,0.25)",
           }}
         >
-          Proceed to Subscription
+          Subscribe
         </a>
       </section>
     </main>
