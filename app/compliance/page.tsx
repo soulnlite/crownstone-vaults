@@ -1,4 +1,4 @@
-import { colors, spacing, fonts, shadows } from "../../tokens";
+import { colors, spacing, fonts, shadows } from "../../styles/tokens";
 
 export default function CompliancePage() {
   return (
