@@ -97,7 +97,13 @@ export default function CompliancePage() {
             >
               Regulatory Alignment
             </h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: colors.textPlatinum }}>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                lineHeight: "1.7",
+                color: colors.textPlatinum,
+              }}
+            >
               Ensuring all custodial operations adhere to applicable regulatory frameworks and
               institutional oversight requirements.
             </p>
@@ -121,7 +127,13 @@ export default function CompliancePage() {
             >
               Compliance Verification
             </h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: colors.textPlatinum }}>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                lineHeight: "1.7",
+                color: colors.textPlatinum,
+              }}
+            >
               Verification protocols ensure demonstrable compliance across archival, custodial,
               and operational cycles.
             </p>
@@ -145,7 +157,13 @@ export default function CompliancePage() {
             >
               Governance Integration
             </h3>
-            <p style={{ fontSize: "0.95rem", lineHeight: "1.7", color: colors.textPlatinum }}>
+            <p
+              style={{
+                fontSize: "0.95rem",
+                lineHeight: "1.7",
+                color: colors.textPlatinum,
+              }}
+            >
               Compliance structures integrate seamlessly with institutional governance and
               oversight architectures.
             </p>
