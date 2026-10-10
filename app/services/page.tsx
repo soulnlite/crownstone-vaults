@@ -163,6 +163,7 @@ export default function ServicesPage() {
         >
           {tierOrder.map((tier) => {
             const isActive = tier === selectedTier;
+
             return (
               <button
                 key={tier}
@@ -172,17 +173,18 @@ export default function ServicesPage() {
                   padding: "0.55rem 1.1rem",
                   borderRadius: "999px",
                   border: isActive
-                    ? "1px solid rgba(201,168,106,0.92)"
+                    ? "1px solid rgba(201,168,106,0.85)"
                     : "1px solid rgba(201,168,106,0.35)",
                   background: isActive
-                    ? "rgba(201,168,106,0.16)"
+                    ? "linear-gradient(135deg, #C9A86A 0%, #E8C98A 40%, #8A6F3F 100%)"
                     : "rgba(10,23,40,0.9)",
-                  color: "#FDF4E3",
+                  color: isActive ? "#0A1728" : "#FDF4E3",
                   fontSize: "0.85rem",
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
                   cursor: "pointer",
-                  transition: "background 0.18s ease, border-color 0.18s ease",
+                  transition:
+                    "background 0.18s ease, border-color 0.18s ease, color 0.18s ease",
                 }}
               >
                 {tier}
@@ -253,7 +255,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA — EXACT SIGNATURE BUTTON IMPORTED */}
+      {/* CTA — EXACT SIGNATURE BUTTON */}
       <section style={{ marginTop: "3rem", textAlign: "center" }}>
         <div
           style={{
