@@ -14,13 +14,11 @@ export default function AccreditationPage() {
       <section style={{ marginBottom: "2.8rem" }}>
         <h1
           style={{
-            fontFamily: "Merriweather, serif",
-            fontSize: "2.1rem",
-            letterSpacing: "0.045em",
+            fontSize: "1.85rem",
+            letterSpacing: "0.06em",
             textTransform: "uppercase",
             marginBottom: "1rem",
             color: "rgba(201,168,106,0.92)",
-            textShadow: "0 0 14px rgba(201,168,106,0.22)",
           }}
         >
           Accreditation Framework
