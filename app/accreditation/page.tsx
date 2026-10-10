@@ -10,7 +10,7 @@ export default function AccreditationPage() {
           "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       }}
     >
-      {/* HEADER — Compliance-style plaque integrated into Services design */}
+      {/* HEADER — Compliance plaque, Services gold text */}
       <section
         style={{
           marginBottom: "3rem",
@@ -28,8 +28,8 @@ export default function AccreditationPage() {
             letterSpacing: "0.06em",
             textTransform: "uppercase",
             marginBottom: "1.2rem",
-            color: "#FDF4E3",
-            textShadow: "0 0 18px rgba(201,168,106,0.28)",
+            color: "rgba(201,168,106,0.92)", // SERVICES GOLD — UPDATED
+            textShadow: "0 0 18px rgba(201,168,106,0.22)",
           }}
         >
           Accreditation Framework
@@ -60,7 +60,7 @@ export default function AccreditationPage() {
         </p>
       </section>
 
-      {/* ACCREDITATION PILLARS — Services-style plaques */}
+      {/* ACCREDITATION PILLARS — Services plaques */}
       <section style={{ marginBottom: "3rem" }}>
         <h2
           style={{
@@ -68,7 +68,7 @@ export default function AccreditationPage() {
             marginBottom: "1.5rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: "#FDF4E3",
+            color: "rgba(201,168,106,0.92)", // MATCHED TO SERVICES GOLD
           }}
         >
           Accreditation Pillars
