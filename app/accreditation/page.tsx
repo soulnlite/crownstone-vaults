@@ -4,21 +4,21 @@ export default function AccreditationPage() {
       style={{
         maxWidth: "960px",
         margin: "0 auto",
-        padding: "2rem 1.5rem 3.5rem", // REDUCED TOP PADDING
+        padding: "1.2rem 1.5rem 3.5rem", // RAISED FURTHER (was 2rem)
         color: "#FDF4E3",
         fontFamily:
           "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
       }}
     >
-      {/* HEADER — Raised closer to top */}
+      {/* HEADER — Raised significantly */}
       <section
         style={{
-          marginBottom: "2.2rem", // REDUCED FROM 3rem
-          padding: "2.1rem 2.2rem", // REDUCED INTERNAL PADDING
+          marginBottom: "1.8rem", // RAISED (was 2.2rem)
+          padding: "1.75rem 2rem", // RAISED (was 2.1rem)
           borderRadius: "22px",
           background:
             "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
-          boxShadow: "0 24px 65px rgba(0,0,0,0.7)", // Slightly reduced shadow height
+          boxShadow: "0 20px 55px rgba(0,0,0,0.65)", // Slightly reduced height
           border: "1px solid rgba(201,168,106,0.35)",
         }}
       >
@@ -27,7 +27,7 @@ export default function AccreditationPage() {
             fontSize: "2rem",
             letterSpacing: "0.06em",
             textTransform: "uppercase",
-            marginBottom: "1rem", // Slightly reduced
+            marginBottom: "0.9rem", // tightened
             color: "rgba(201,168,106,0.92)",
             textShadow: "0 0 18px rgba(201,168,106,0.22)",
           }}
@@ -41,14 +41,14 @@ export default function AccreditationPage() {
             width: "150px",
             background:
               "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
-            marginBottom: "1.4rem", // Reduced
+            marginBottom: "1.3rem", // tightened
           }}
         ></div>
 
         <p
           style={{
             fontSize: "1.05rem",
-            lineHeight: "1.8",
+            lineHeight: "1.75",
             maxWidth: "760px",
             color: "rgba(253,244,227,0.82)",
           }}
@@ -65,7 +65,7 @@ export default function AccreditationPage() {
         <h2
           style={{
             fontSize: "1.4rem",
-            marginBottom: "1.5rem",
+            marginBottom: "1.4rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
             color: "rgba(201,168,106,0.92)",
