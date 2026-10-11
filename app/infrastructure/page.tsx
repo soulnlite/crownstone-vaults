@@ -1,25 +1,25 @@
+import { colors, spacing, fonts, shadows } from "@/styles/tokens";
+
 export default function InfrastructurePage() {
   return (
     <main
       style={{
         maxWidth: "960px",
         margin: "0 auto",
-        padding: "0.3rem 1.5rem 3.5rem",
-        color: "rgba(253,244,227,0.82)",
-        fontFamily:
-          "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+        padding: `${spacing.pageTop} 1.5rem 3.5rem`,
+        color: colors.textPlatinum,
+        fontFamily: fonts.base,
       }}
     >
       {/* HEADER */}
       <section
         style={{
-          marginBottom: "1.2rem",
-          padding: "1.25rem 1.75rem",
+          marginBottom: spacing.headerMarginBottom,
+          padding: spacing.headerPadding,
           borderRadius: "22px",
-          background:
-            "linear-gradient(135deg, rgba(201,168,106,0.18) 0%, rgba(10,23,40,0.92) 40%, #07101F 100%)",
-          boxShadow: "0 16px 42px rgba(0,0,0,0.58)",
-          border: "1px solid rgba(201,168,106,0.35)",
+          background: colors.headerPlaqueBg,
+          boxShadow: shadows.header,
+          border: `1px solid ${colors.plaqueBorderGold}`,
         }}
       >
         <h1
@@ -28,7 +28,7 @@ export default function InfrastructurePage() {
             letterSpacing: "0.06em",
             textTransform: "uppercase",
             marginBottom: "0.65rem",
-            color: "rgba(201,168,106,0.92)",
+            color: colors.headerGold,
             textShadow: "0 0 14px rgba(201,168,106,0.22)",
           }}
         >
@@ -39,8 +39,7 @@ export default function InfrastructurePage() {
           style={{
             height: "4px",
             width: "150px",
-            background:
-              "linear-gradient(90deg, #C9A86A 0%, rgba(201,168,106,0.4) 70%, transparent 100%)",
+            background: colors.underlineGold,
             marginBottom: "1rem",
           }}
         ></div>
@@ -50,7 +49,7 @@ export default function InfrastructurePage() {
             fontSize: "1.02rem",
             lineHeight: "1.7",
             maxWidth: "760px",
-            color: "rgba(253,244,227,0.82)",
+            color: colors.textPlatinum,
           }}
         >
           Crownstone Vaults operates on a sovereign‑grade infrastructure stack engineered for
@@ -59,17 +58,17 @@ export default function InfrastructurePage() {
       </section>
 
       {/* INFRASTRUCTURE MODULES */}
-      <section style={{ marginBottom: "3rem" }}>
+      <section style={{ marginBottom: spacing.sectionSpacing }}>
         <h2
           style={{
             fontSize: "1.4rem",
             marginBottom: "1.3rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
-            color: "rgba(201,168,106,0.92)",
+            color: colors.headerGold,
           }}
         >
-          Core Infrastructure Modules
+          Infrastructure Pillars
         </h2>
 
         <div
@@ -79,22 +78,20 @@ export default function InfrastructurePage() {
             gap: "1.5rem",
           }}
         >
-          {/* Module 1 */}
+          {/* Pillar 1 */}
           <div
             style={{
-              padding: "1.6rem 1.5rem",
+              padding: spacing.plaquePadding,
               borderRadius: "14px",
-              background:
-                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
-              border: "1px solid rgba(201,168,106,0.35)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              background: colors.plaqueBgDark,
+              border: `1px solid ${colors.plaqueBorderGold}`,
             }}
           >
             <h3
               style={{
                 fontSize: "1.05rem",
                 marginBottom: "0.6rem",
-                color: "rgba(201,168,106,0.92)",
+                color: colors.headerGold,
               }}
             >
               Redundant Custodial Systems
@@ -103,7 +100,7 @@ export default function InfrastructurePage() {
               style={{
                 fontSize: "0.95rem",
                 lineHeight: "1.7",
-                color: "rgba(253,244,227,0.82)",
+                color: colors.textPlatinum,
               }}
             >
               Multi‑layered redundancy ensures uninterrupted custodial operations across
@@ -111,22 +108,20 @@ export default function InfrastructurePage() {
             </p>
           </div>
 
-          {/* Module 2 */}
+          {/* Pillar 2 */}
           <div
             style={{
-              padding: "1.6rem 1.5rem",
+              padding: spacing.plaquePadding,
               borderRadius: "14px",
-              background:
-                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
-              border: "1px solid rgba(201,168,106,0.35)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              background: colors.plaqueBgDark,
+              border: `1px solid ${colors.plaqueBorderGold}`,
             }}
           >
             <h3
               style={{
                 fontSize: "1.05rem",
                 marginBottom: "0.6rem",
-                color: "rgba(201,168,106,0.92)",
+                color: colors.headerGold,
               }}
             >
               Sovereign‑Grade Continuity
@@ -135,30 +130,27 @@ export default function InfrastructurePage() {
               style={{
                 fontSize: "0.95rem",
                 lineHeight: "1.7",
-                color: "rgba(253,244,227,0.82)",
+                color: colors.textPlatinum,
               }}
             >
-              Infrastructure continuity protocols ensure operational stability under all
-              conditions.
+              Continuity protocols ensure operational stability under all conditions.
             </p>
           </div>
 
-          {/* Module 3 */}
+          {/* Pillar 3 */}
           <div
             style={{
-              padding: "1.6rem 1.5rem",
+              padding: spacing.plaquePadding,
               borderRadius: "14px",
-              background:
-                "linear-gradient(135deg, rgba(10,21,38,0.92), rgba(7,16,31,0.96))",
-              border: "1px solid rgba(201,168,106,0.35)",
-              boxShadow: "0 12px 32px rgba(0,0,0,0.5)",
+              background: colors.plaqueBgDark,
+              border: `1px solid ${colors.plaqueBorderGold}`,
             }}
           >
             <h3
               style={{
                 fontSize: "1.05rem",
                 marginBottom: "0.6rem",
-                color: "rgba(201,168,106,0.92)",
+                color: colors.headerGold,
               }}
             >
               Institutional‑Level Safeguards
@@ -167,7 +159,7 @@ export default function InfrastructurePage() {
               style={{
                 fontSize: "0.95rem",
                 lineHeight: "1.7",
-                color: "rgba(253,244,227,0.82)",
+                color: colors.textPlatinum,
               }}
             >
               Safeguard systems provide institutional‑grade protection across all custodial
@@ -185,28 +177,44 @@ export default function InfrastructurePage() {
             padding: "1.8rem 2rem",
             borderRadius: "26px",
             background: "linear-gradient(145deg, #0D1A2F, #091224)",
-            border: "1px solid rgba(201,168,106,0.35)",
-            boxShadow:
-              "0 10px 26px rgba(201,168,106,0.55), 0 0 12px rgba(201,168,106,0.35), inset 0 2px 4px rgba(255,255,255,0.25)",
+            border: `1px solid ${colors.plaqueBorderGold}`,
+            boxShadow: shadows.cta,
             transform: "translateY(-2px)",
           }}
         >
-          <a
-            href="/contact"
-            style={{
-              padding: "0.8rem 1.55rem",
-              borderRadius: "999px",
-              background:
-                "linear-gradient(135deg, #C9A86A 0%, #F3D39A 40%, #9C7C45 100%)",
-              color: "#0A1728",
-              fontWeight: 600,
-              fontSize: "0.9rem",
-              textDecoration: "none",
-              display: "inline-block",
-            }}
-          >
-            Request Infrastructure Briefing
-          </a>
+          <div style={{ position: "relative", display: "inline-block" }}>
+            <a
+              href="/contact"
+              style={{
+                padding: "0.8rem 1.55rem",
+                borderRadius: "999px",
+                background: colors.ctaGold,
+                color: "#0A1728",
+                fontWeight: 600,
+                fontSize: "0.9rem",
+                textDecoration: "none",
+                boxShadow: shadows.cta,
+                display: "inline-block",
+              }}
+            >
+              Request Infrastructure Briefing
+            </a>
+
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "84%",
+                transform: "translateX(-50%) rotate(-110deg)",
+                fontSize: "1.1rem",
+                opacity: 1,
+                color: "#C9B27A",
+                pointerEvents: "none",
+              }}
+            >
+              👉
+            </div>
+          </div>
         </div>
       </section>
     </main>
